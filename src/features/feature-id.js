@@ -2,7 +2,6 @@
  * An enumeration of feature ids.
  *
  * @class FeatureId
- * @submodule features
  * @static
  */
 

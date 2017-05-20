@@ -1,10 +1,3 @@
-/**
- * Exposure of the library components.
- *
- * @module feature-detector
- * @main feature-detector
- */
-
 export { Detector } from "./core";
 
 export {

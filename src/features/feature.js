@@ -2,7 +2,6 @@
  * An abstract feature.
  *
  * @class Feature
- * @submodule features
  * @constructor
  */
 

@@ -4,7 +4,6 @@ import { Feature } from "./feature.js";
  * The file API feature.
  *
  * @class FileFeature
- * @submodule features
  * @constructor
  */
 

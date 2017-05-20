@@ -11,7 +11,6 @@ import {
  * Detects whether certain features are supported in the current environment.
  *
  * @class Detector
- * @submodule core
  * @constructor
  */
 
@@ -22,9 +21,7 @@ export class Detector {
 		/**
 		 * A feature map.
 		 *
-		 * Each {{#crossLink "Feature"}}{{/crossLink}} in the map can be retrieved
-		 * using its respective {{#crossLink "FeatureId"}}{{/crossLink}}.
-		 *
+		 * Each Feature in the map can be retrieved using its respective FeatureId.
 		 * Custom Features may also be added to this map.
 		 *
 		 * @property features

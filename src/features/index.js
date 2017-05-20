@@ -1,10 +1,3 @@
-/**
- * A collection of feature components.
- *
- * @module feature-detector
- * @submodule features
- */
-
 export { Feature } from "./feature.js";
 export { FeatureId } from "./feature-id.js";
 

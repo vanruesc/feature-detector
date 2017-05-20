@@ -4,7 +4,6 @@ import { Feature } from "./feature.js";
  * The typed array feature.
  *
  * @class TypedArrayFeature
- * @submodule features
  * @constructor
  */
 

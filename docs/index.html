@@ -1,125 +1,1214 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>feature-detector</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
-    <link rel="stylesheet" href="./assets/vendor/prettify/prettify-min.css">
-    <link rel="stylesheet" href="./assets/css/main.css" id="site_styles">
-    <link rel="icon" href="./assets/favicon.ico">
-    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+  <meta charset='utf-8' />
+  <title>feature-detector 0.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
 </head>
-<body class="yui3-skin-sam">
-
-<div id="doc">
-    <div id="hd" class="yui3-g header">
-        <div class="yui3-u-3-4">
-                <h1><img src="./assets/css/logo.png" title="feature-detector" width="117" height="52"></h1>
-        </div>
-        <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.0.0</em>
-        </div>
-    </div>
-    <div id="bd" class="yui3-g">
-
-        <div class="yui3-u-1-4">
-            <div id="docs-sidebar" class="sidebar apidocs">
-                <div id="api-list">
-                    <h2 class="off-left">APIs</h2>
-                    <div id="api-tabview" class="tabview">
-                        <ul class="tabs">
-                            <li><a href="#api-classes">Classes</a></li>
-                            <li><a href="#api-modules">Modules</a></li>
-                        </ul>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>feature-detector</h3>
+          <div class='mb1'><code>0.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
                 
-                        <div id="api-tabview-filter">
-                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
-                        </div>
+                <li><a
+                  href='#detector'
+                  class=" toggle-sibling">
+                  Detector
+                  <span class='icon'>▸</span>
+                </a>
                 
-                        <div id="api-tabview-panel">
-                            <ul id="api-classes" class="apis classes">
-                                <li><a href="./classes/CanvasFeature.html">CanvasFeature</a></li>
-                                <li><a href="./classes/Detector.html">Detector</a></li>
-                                <li><a href="./classes/Feature.html">Feature</a></li>
-                                <li><a href="./classes/FeatureId.html">FeatureId</a></li>
-                                <li><a href="./classes/FileFeature.html">FileFeature</a></li>
-                                <li><a href="./classes/TypedArrayFeature.html">TypedArrayFeature</a></li>
-                                <li><a href="./classes/WebGLFeature.html">WebGLFeature</a></li>
-                                <li><a href="./classes/WorkerFeature.html">WorkerFeature</a></li>
-                            </ul>
-                
-                
-                            <ul id="api-modules" class="apis modules">
-                                <li><a href="./modules/core.html">core</a></li>
-                                <li><a href="./modules/feature-detector.html">feature-detector</a></li>
-                                <li><a href="./modules/features.html">features</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Detector#features'
+                        class='regular pre-open'>
+                        #features
+                      </a></li>
+                      
+                      <li><a
+                        href='#Detector#get'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#Detector#getMessage'
+                        class='regular pre-open'>
+                        #getMessage
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
                 </div>
-            </div>
-        </div>
-        <div class="yui3-u-3-4">
-                <div id="api-options">
-                    Show:
-                    <label for="api-show-inherited">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
+                
+                </li>
+              
+                
+                <li><a
+                  href='#canvasfeature'
+                  class="">
+                  CanvasFeature
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#featureid'
+                  class=" toggle-sibling">
+                  FeatureId
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#.FeatureId.CANVAS'
+                        class='regular pre-open'>
+                        .CANVAS
+                      </a></li>
+                    
+                      <li><a
+                        href='#.FeatureId.FILE'
+                        class='regular pre-open'>
+                        .FILE
+                      </a></li>
+                    
+                      <li><a
+                        href='#.FeatureId.TYPED_ARRAY'
+                        class='regular pre-open'>
+                        .TYPED_ARRAY
+                      </a></li>
+                    
+                      <li><a
+                        href='#.FeatureId.WEBGL'
+                        class='regular pre-open'>
+                        .WEBGL
+                      </a></li>
+                    
+                      <li><a
+                        href='#.FeatureId.WORKER'
+                        class='regular pre-open'>
+                        .WORKER
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
                 </div>
-            
-            <div class="apidocs">
-                <div id="docs-main">
-                    <div class="content">
-    <div class="apidocs">
-        <div id="docs-main" class="content">
-            <p>
-            Browse to a module or class using the sidebar to view its API documentation.
-            </p>
-
-            <h2>Keyboard Shortcuts</h2>
-
-            <ul>
-                <li><p>Press <kbd>s</kbd> to focus the API search box.</p></li>
-
-                <li><p>Use <kbd>Up</kbd> and <kbd>Down</kbd> to select classes, modules, and search results.</p></li>
-
-                <li class="mac-only"><p>With the API search box or sidebar focused, use <kbd><span class="cmd">&#x2318;</span>-Left</kbd> or <kbd><span class="cmd">&#x2318;</span>-Right</kbd> to switch sidebar tabs.</p></li>
-
-                <li class="pc-only"><p>With the API search box or sidebar focused, use <kbd>Ctrl+Left</kbd> and <kbd>Ctrl+Right</kbd> to switch sidebar tabs.</p></li>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#feature'
+                  class=" toggle-sibling">
+                  Feature
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Feature#name'
+                        class='regular pre-open'>
+                        #name
+                      </a></li>
+                      
+                      <li><a
+                        href='#Feature#root'
+                        class='regular pre-open'>
+                        #root
+                      </a></li>
+                      
+                      <li><a
+                        href='#Feature#supported'
+                        class='regular pre-open'>
+                        #supported
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#filefeature'
+                  class="">
+                  FileFeature
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#typedarrayfeature'
+                  class="">
+                  TypedArrayFeature
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#webglfeature'
+                  class="">
+                  WebGLFeature
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#workerfeature'
+                  class="">
+                  WorkerFeature
+                  
+                </a>
+                
+                </li>
+              
             </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='detector'>
+      Detector
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Detects whether certain features are supported in the current environment.</p>
 
 
-                    </div>
-                </div>
-            </div>
+  <div class='pre p1 fill-light mt0'>new Detector()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Detector#features'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>features</span>
         </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>A feature map.</p>
+<p>Each {{#crossLink "Feature"}}{{/crossLink}} in the map can be retrieved
+using its respective {{#crossLink "FeatureId"}}{{/crossLink}}.</p>
+<p>Custom Features may also be added to this map.</p>
+
+
+  <div class='pre p1 fill-light mt0'>features</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
     </div>
+  
+    <div class='border-bottom' id='Detector#get'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(featureId)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Retrieves the requested feature.</p>
+<p>This is a shortcut to the get method of the features map.</p>
+
+
+  <div class='pre p1 fill-light mt0'>get(featureId: FeatureId): <a href="#feature">Feature</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>featureId</span> <code class='quiet'>(FeatureId)</code>
+	    The id of the feature.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#feature">Feature</a></code>:
+        The requested feature or undefined if it doesn't exist.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Detector#getMessage'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getMessage(feature)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Returns a human-readable info message for the given feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getMessage(feature: <a href="#feature">Feature</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>feature</span> <code class='quiet'>(<a href="#feature">Feature</a>)</code>
+	    A feature.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        The info message.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
 </div>
-<script src="./assets/vendor/prettify/prettify-min.js"></script>
-<script>prettyPrint();</script>
-<script src="./assets/js/yui-prettify.js"></script>
-<script src="./assets/../api.js"></script>
-<script src="./assets/js/api-filter.js"></script>
-<script src="./assets/js/api-list.js"></script>
-<script src="./assets/js/api-search.js"></script>
-<script src="./assets/js/apidocs.js"></script>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='canvasfeature'>
+      CanvasFeature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The canvas feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CanvasFeature()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#feature">Feature</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='featureid'>
+      FeatureId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>An enumeration of feature ids.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FeatureId()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='.FeatureId.CANVAS'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>CANVAS</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The identifier of the Canvas feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CANVAS</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='.FeatureId.FILE'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>FILE</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The identifier of the File feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>FILE</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='.FeatureId.TYPED_ARRAY'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>TYPED_ARRAY</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The identifier of the Typed Array feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>TYPED_ARRAY</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='.FeatureId.WEBGL'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>WEBGL</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The identifier of the WebGL feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>WEBGL</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='.FeatureId.WORKER'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>WORKER</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The identifier of the Web Worker feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>WORKER</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='feature'>
+      Feature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>An abstract feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Feature()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Feature#name'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>name</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The name of this feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>name</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Feature#root'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>root</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The global scope of the current environment.</p>
+<p>This field assumes one of the following values depending on the
+environment:</p>
+<ul>
+<li>browser: window</li>
+<li>worker: self</li>
+<li>node.js: global</li>
+<li>unknown: this</li>
+</ul>
+
+
+  <div class='pre p1 fill-light mt0'>root</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Feature#supported'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>supported</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Indicates whether this feature is supported.</p>
+
+
+  <div class='pre p1 fill-light mt0'>supported</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='filefeature'>
+      FileFeature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The file API feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FileFeature()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#feature">Feature</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='typedarrayfeature'>
+      TypedArrayFeature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The typed array feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TypedArrayFeature()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#feature">Feature</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='webglfeature'>
+      WebGLFeature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The webgl feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new WebGLFeature()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#feature">Feature</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='workerfeature'>
+      WorkerFeature
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The web worker feature.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new WorkerFeature()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#feature">Feature</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>

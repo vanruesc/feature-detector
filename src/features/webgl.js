@@ -4,7 +4,6 @@ import { Feature } from "./feature.js";
  * The webgl feature.
  *
  * @class WebGLFeature
- * @submodule features
  * @constructor
  */
 
