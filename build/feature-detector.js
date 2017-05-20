@@ -96,7 +96,6 @@
       * An abstract feature.
       *
       * @class Feature
-      * @submodule features
       * @constructor
       */
 
@@ -156,7 +155,6 @@
       * An enumeration of feature ids.
       *
       * @class FeatureId
-      * @submodule features
       * @static
       */
 
@@ -223,7 +221,6 @@
       * The canvas feature.
       *
       * @class CanvasFeature
-      * @submodule features
       * @constructor
       */
 
@@ -249,7 +246,6 @@
       * The file API feature.
       *
       * @class FileFeature
-      * @submodule features
       * @constructor
       */
 
@@ -275,7 +271,6 @@
       * The typed array feature.
       *
       * @class TypedArrayFeature
-      * @submodule features
       * @constructor
       */
 
@@ -301,7 +296,6 @@
       * The webgl feature.
       *
       * @class WebGLFeature
-      * @submodule features
       * @constructor
       */
 
@@ -348,7 +342,6 @@
       * The web worker feature.
       *
       * @class WorkerFeature
-      * @submodule features
       * @constructor
       */
 
@@ -371,17 +364,9 @@
      }(Feature);
 
      /**
-      * A collection of feature components.
-      *
-      * @module feature-detector
-      * @submodule features
-      */
-
-     /**
       * Detects whether certain features are supported in the current environment.
       *
       * @class Detector
-      * @submodule core
       * @constructor
       */
 
@@ -393,9 +378,7 @@
      		/**
         * A feature map.
         *
-        * Each {{#crossLink "Feature"}}{{/crossLink}} in the map can be retrieved
-        * using its respective {{#crossLink "FeatureId"}}{{/crossLink}}.
-        *
+        * Each Feature in the map can be retrieved using its respective FeatureId.
         * Custom Features may also be added to this map.
         *
         * @property features
@@ -445,20 +428,6 @@
      	}]);
      	return Detector;
      }();
-
-     /**
-      * Core components.
-      *
-      * @module feature-detector
-      * @submodule core
-      */
-
-     /**
-      * Exposure of the library components.
-      *
-      * @module feature-detector
-      * @main feature-detector
-      */
 
      exports.Detector = Detector;
      exports.Feature = Feature;
