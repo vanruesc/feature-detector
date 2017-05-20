@@ -43,13 +43,11 @@ export class MyFeature extends Feature {
 
 		super();
 
-		this.supported = (function() {
+		this.name = "My Feature";
 
-			// Check if your feature is supported in this environment.
-			// Note that this.root serves as a reference to the global scope.
-			return true || false;
-
-		}());
+		// Check if your feature is supported in this environment.
+		// Note that this.root serves as a reference to the global scope.
+		this.supported = true || false;
 
 	}
 
