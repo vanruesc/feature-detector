@@ -1,7 +1,7 @@
 {
     "project": {
         "name": "feature-detector",
-        "description": "A tool that detects browser capabilities.",
+        "description": "A tool for detecting environment features.",
         "version": "0.0.0",
         "url": "https://github.com/vanruesc/feature-detector"
     },
@@ -304,10 +304,50 @@
         {
             "file": "src\\core\\detector.js",
             "line": 22,
-            "description": "A feature map.\n\nEach {{#crossLink \"Feature\"}}{{/crossLink}} in the map can be retrieved\nusing its respective {{#crossLink \"FeatureId\"}}{{/crossLink}}.",
+            "description": "A feature map.\n\nEach {{#crossLink \"Feature\"}}{{/crossLink}} in the map can be retrieved\nusing its respective {{#crossLink \"FeatureId\"}}{{/crossLink}}.\n\nCustom Features may also be added to this map.",
             "itemtype": "property",
             "name": "features",
             "type": "Map",
+            "class": "Detector",
+            "submodule": "core"
+        },
+        {
+            "file": "src\\core\\detector.js",
+            "line": 44,
+            "description": "Retrieves the requested feature.\n\nThis is a shortcut to the get method of the features map.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "featureId",
+                    "description": "- The id of the feature.",
+                    "type": "FeatureId"
+                }
+            ],
+            "return": {
+                "description": "The requested feature or undefined if it doesn't exist.",
+                "type": "Feature"
+            },
+            "class": "Detector",
+            "submodule": "core"
+        },
+        {
+            "file": "src\\core\\detector.js",
+            "line": 60,
+            "description": "Returns a human-readable info message for the given feature.",
+            "itemtype": "method",
+            "name": "getMessage",
+            "params": [
+                {
+                    "name": "feature",
+                    "description": "- A feature.",
+                    "type": "Feature"
+                }
+            ],
+            "return": {
+                "description": "The info message.",
+                "type": "String"
+            },
             "class": "Detector",
             "submodule": "core"
         },
@@ -379,7 +419,18 @@
         {
             "file": "src\\features\\feature.js",
             "line": 13,
-            "description": "The global scope of the current environment.\n\nThis field assumes one of the following values depending on the\nenvironment:\n - browser: window\n - worker: self\n - node.js: global\n\nIf no higher scope can be found, it will point to this Feature instance.",
+            "description": "The name of this feature.",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "Feature",
+            "module": "feature-detector",
+            "submodule": "features"
+        },
+        {
+            "file": "src\\features\\feature.js",
+            "line": 22,
+            "description": "The global scope of the current environment.\n\nThis field assumes one of the following values depending on the\nenvironment:\n - browser: window\n - worker: self\n - node.js: global\n - unknown: this",
             "itemtype": "property",
             "name": "root",
             "type": "Object",
@@ -391,7 +442,7 @@
         },
         {
             "file": "src\\features\\feature.js",
-            "line": 32,
+            "line": 40,
             "description": "Indicates whether this feature is supported.",
             "itemtype": "property",
             "name": "supported",

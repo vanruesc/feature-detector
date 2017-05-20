@@ -117,6 +117,8 @@ export class Detector {
 		 * Each {{#crossLink &quot;Feature&quot;}}{{/crossLink}} in the map can be retrieved
 		 * using its respective {{#crossLink &quot;FeatureId&quot;}}{{/crossLink}}.
 		 *
+		 * Custom Features may also be added to this map.
+		 *
 		 * @property features
 		 * @type Map
 		 */
@@ -128,6 +130,38 @@ export class Detector {
 		this.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());
 		this.features.set(FeatureId.WEBGL, new WebGLFeature());
 		this.features.set(FeatureId.WORKER, new WorkerFeature());
+
+	}
+
+	/**
+	 * Retrieves the requested feature.
+	 *
+	 * This is a shortcut to the get method of the features map.
+	 *
+	 * @method get
+	 * @param {FeatureId} featureId - The id of the feature.
+	 * @return {Feature} The requested feature or undefined if it doesn&#x27;t exist.
+	 */
+
+	get(featureId) {
+
+		return this.features.get(featureId);
+
+	}
+
+	/**
+	 * Returns a human-readable info message for the given feature.
+	 *
+	 * @method getMessage
+	 * @param {Feature} feature - A feature.
+	 * @return {String} The info message.
+	 */
+
+	getMessage(feature) {
+
+		return &quot;The &quot; + feature + &quot; feature is &quot; +
+			(feature.supported ? &quot;supported&quot; : &quot;missing&quot;) +
+			&quot; in the current environment.&quot;;
 
 	}
 
