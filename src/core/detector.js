@@ -41,4 +41,20 @@ export class Detector {
 
 	}
 
+	/**
+	 * Retrieves the requested feature.
+	 *
+	 * This is a shortcut to the get method of the features map.
+	 *
+	 * @method get
+	 * @param {FeatureId} featureId - The id of the feature.
+	 * @return {Feature} The requested feature or undefined if it doesn't exist.
+	 */
+
+	get(featureId) {
+
+		return this.features.get(featureId);
+
+	}
+
 }

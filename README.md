@@ -27,7 +27,7 @@ import { Detector, FeatureId } from "feature-detector";
 
 const detector = new Detector();
 
-console.log(detector.features.get(FeatureId.WEBGL).supported);
+console.log(detector.get(FeatureId.WEBGL).supported);
 ```
 
 ##### Custom Features
