@@ -14,6 +14,8 @@ export class CanvasFeature extends Feature {
 
 		super();
 
+		this.name = "Canvas";
+
 		this.supported = (this.root.CanvasRenderingContext2D !== undefined);
 
 	}

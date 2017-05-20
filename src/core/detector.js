@@ -57,4 +57,20 @@ export class Detector {
 
 	}
 
+	/**
+	 * Returns a human-readable info message for the given feature.
+	 *
+	 * @method getMessage
+	 * @param {Feature} feature - A feature.
+	 * @return {String} The info message.
+	 */
+
+	getMessage(feature) {
+
+		return "The " + feature + " feature is " +
+			(feature.supported ? "supported" : "missing") +
+			" in the current environment.";
+
+	}
+
 }

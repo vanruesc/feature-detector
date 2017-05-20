@@ -14,6 +14,8 @@ export class FileFeature extends Feature {
 
 		super();
 
+		this.name = "File";
+
 		this.supported = (
 			this.root.File !== undefined &&
 			this.root.FileReader !== undefined &&

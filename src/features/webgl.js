@@ -14,6 +14,8 @@ export class WebGLFeature extends Feature {
 
 		super();
 
+		this.name = "WebGL";
+
 		this.supported = (function(root) {
 
 			let supported = (root.WebGLRenderingContext !== undefined);

@@ -11,6 +11,15 @@ export class Feature {
 	constructor() {
 
 		/**
+		 * The name of this feature.
+		 *
+		 * @property name
+		 * @type String
+		 */
+
+		this.name = null;
+
+		/**
 		 * The global scope of the current environment.
 		 *
 		 * This field assumes one of the following values depending on the
@@ -18,8 +27,7 @@ export class Feature {
 		 *  - browser: window
 		 *  - worker: self
 		 *  - node.js: global
-		 *
-		 * If no higher scope can be found, it will point to this Feature instance.
+		 *  - unknown: this
 		 *
 		 * @property root
 		 * @type Object
@@ -38,6 +46,12 @@ export class Feature {
 		 */
 
 		this.supported = false;
+
+	}
+
+	toString() {
+
+		return this.name;
 
 	}
 

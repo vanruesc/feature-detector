@@ -14,6 +14,8 @@ export class WorkerFeature extends Feature {
 
 		super();
 
+		this.name = "Web Worker";
+
 		this.supported = (this.root.Worker !== undefined);
 
 	}

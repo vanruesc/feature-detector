@@ -14,6 +14,8 @@ export class TypedArrayFeature extends Feature {
 
 		super();
 
+		this.name = "Typed Array";
+
 		this.supported = (this.root.ArrayBuffer !== undefined);
 
 	}
