@@ -37,7 +37,7 @@ console.log(detector.getMessage(feature));
 ```javascript
 import { Feature } from "feature-detector";
 
-class MyFeature extends Feature {
+export class MyFeature extends Feature {
 
 	constructor() {
 
@@ -46,6 +46,7 @@ class MyFeature extends Feature {
 		this.supported = (function() {
 
 			// Check if your feature is supported in this environment.
+			// Note that this.root serves as a reference to the global scope.
 			return true || false;
 
 		}());
