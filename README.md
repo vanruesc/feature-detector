@@ -26,8 +26,10 @@ npm install feature-detector
 import { Detector, FeatureId } from "feature-detector";
 
 const detector = new Detector();
+const feature = detector.get(FeatureId.WEBGL);
 
-console.log(detector.get(FeatureId.WEBGL).supported);
+console.log(feature.supported);
+console.log(detector.getMessage(feature));
 ```
 
 ##### Custom Features
