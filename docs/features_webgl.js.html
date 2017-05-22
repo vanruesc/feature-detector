@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: features/webgl.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,61 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: features/webgl.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Feature } from "./feature.js";
 
+/**
+ * The webgl feature.
+ */
 
-    <h3> </h3>
+export class WebGLFeature extends Feature {
 
+	constructor() {
 
+		super();
 
+		this.name = "WebGL";
 
+		this.supported = (function(root) {
 
+			let supported = (root.WebGLRenderingContext !== undefined);
+			let canvas, context;
 
+			if(supported) {
 
+				canvas = document.createElement("canvas");
+				context = canvas.getContext("webgl");
 
+				if(context === null) {
 
+					if(canvas.getContext("experimental-webgl") === null) {
 
-    
+						supported = false;
 
+					}
 
+				}
 
+			}
 
+			return supported;
 
+		}(this.root));
+
+	}
+
+}
+</code></pre>
+        </article>
+    </section>
 
 
 

@@ -2,9 +2,6 @@ import { Feature } from "./feature.js";
 
 /**
  * The canvas feature.
- *
- * @class CanvasFeature
- * @constructor
  */
 
 export class CanvasFeature extends Feature {

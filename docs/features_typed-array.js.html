@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: features/typed-array.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,37 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: features/typed-array.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Feature } from "./feature.js";
 
+/**
+ * The typed array feature.
+ */
 
-    <h3> </h3>
+export class TypedArrayFeature extends Feature {
 
+	constructor() {
 
+		super();
 
+		this.name = "Typed Array";
 
+		this.supported = (this.root.ArrayBuffer !== undefined);
 
+	}
 
-
-
-
-
-    
-
-
-
-
-
+}
+</code></pre>
+        </article>
+    </section>
 
 
 

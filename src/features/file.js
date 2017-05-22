@@ -2,9 +2,6 @@ import { Feature } from "./feature.js";
 
 /**
  * The file API feature.
- *
- * @class FileFeature
- * @constructor
  */
 
 export class FileFeature extends Feature {

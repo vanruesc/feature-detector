@@ -1,8 +1,5 @@
 /**
  * An abstract feature.
- *
- * @class Feature
- * @constructor
  */
 
 export class Feature {
@@ -12,7 +9,6 @@ export class Feature {
 		/**
 		 * The name of this feature.
 		 *
-		 * @property name
 		 * @type String
 		 */
 
@@ -21,14 +17,15 @@ export class Feature {
 		/**
 		 * The global scope of the current environment.
 		 *
-		 * This field assumes one of the following values depending on the
-		 * environment:
-		 *  - browser: window
-		 *  - worker: self
-		 *  - node.js: global
-		 *  - unknown: this
+		 * <p>This field assumes one of the following values depending on the
+		 * environment:</p>
+		 * <ul>
+		 *  <li>browser: window</li>
+		 *  <li>worker: self</li>
+		 *  <li>node.js: global</li>
+		 *  <li>unknown: this</li>
+		 * </ul>
 		 *
-		 * @property root
 		 * @type Object
 		 * @protected
 		 */
@@ -39,7 +36,6 @@ export class Feature {
 		/**
 		 * Indicates whether this feature is supported.
 		 *
-		 * @property supported
 		 * @type Boolean
 		 * @default false
 		 */

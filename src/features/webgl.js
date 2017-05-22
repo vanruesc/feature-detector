@@ -2,9 +2,6 @@ import { Feature } from "./feature.js";
 
 /**
  * The webgl feature.
- *
- * @class WebGLFeature
- * @constructor
  */
 
 export class WebGLFeature extends Feature {

@@ -9,9 +9,6 @@ import {
 
 /**
  * Detects whether certain features are supported in the current environment.
- *
- * @class Detector
- * @constructor
  */
 
 export class Detector {
@@ -24,7 +21,6 @@ export class Detector {
 		 * Each Feature in the map can be retrieved using its respective FeatureId.
 		 * Custom Features may also be added to this map.
 		 *
-		 * @property features
 		 * @type Map
 		 */
 
@@ -43,7 +39,6 @@ export class Detector {
 	 *
 	 * This is a shortcut to the get method of the features map.
 	 *
-	 * @method get
 	 * @param {FeatureId} featureId - The id of the feature.
 	 * @return {Feature} The requested feature or undefined if it doesn't exist.
 	 */
@@ -57,7 +52,6 @@ export class Detector {
 	/**
 	 * Returns a human-readable info message for the given feature.
 	 *
-	 * @method getMessage
 	 * @param {Feature} feature - A feature.
 	 * @return {String} The info message.
 	 */
