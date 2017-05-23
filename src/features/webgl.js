@@ -1,16 +1,24 @@
 import { Feature } from "./feature.js";
 
 /**
- * The webgl feature.
+ * The WebGL feature.
  */
 
 export class WebGLFeature extends Feature {
 
+	/**
+	 * Constructs a new WebGL feature.
+	 */
+
 	constructor() {
 
-		super();
+		super("WebGL");
 
-		this.name = "WebGL";
+		/**
+		 * Indicates whether the WebGL feature is supported.
+		 *
+		 * @type {Boolean}
+		 */
 
 		this.supported = (function(root) {
 

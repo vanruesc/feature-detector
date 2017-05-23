@@ -13,6 +13,10 @@ import {
 
 export class Detector {
 
+	/**
+	 * Constructs a new Detector.
+	 */
+
 	constructor() {
 
 		/**
@@ -21,7 +25,7 @@ export class Detector {
 		 * Each Feature in the map can be retrieved using its respective FeatureId.
 		 * Custom Features may also be added to this map.
 		 *
-		 * @type Map
+		 * @type {Map}
 		 */
 
 		this.features = new Map();

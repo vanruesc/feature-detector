@@ -4,29 +4,33 @@
 
 export class Feature {
 
-	constructor() {
+	/**
+	 * Constructs a new feature.
+	 *
+	 * @param {String} [name=null] - The name of the feature.
+	 */
+
+	constructor(name = null) {
 
 		/**
 		 * The name of this feature.
 		 *
-		 * @type String
+		 * @type {String}
 		 */
 
-		this.name = null;
+		this.name = name;
 
 		/**
 		 * The global scope of the current environment.
 		 *
-		 * <p>This field assumes one of the following values depending on the
-		 * environment:</p>
-		 * <ul>
-		 *  <li>browser: window</li>
-		 *  <li>worker: self</li>
-		 *  <li>node.js: global</li>
-		 *  <li>unknown: this</li>
-		 * </ul>
+		 * This field assumes one of the following values depending on the
+		 * environment:
+		 *  - browser: window
+		 *  - worker: self
+		 *  - node.js: global
+		 *  - unknown: this
 		 *
-		 * @type Object
+		 * @type {Object}
 		 * @protected
 		 */
 
@@ -36,13 +40,19 @@ export class Feature {
 		/**
 		 * Indicates whether this feature is supported.
 		 *
-		 * @type Boolean
+		 * @type {Boolean}
 		 * @default false
 		 */
 
 		this.supported = false;
 
 	}
+
+	/**
+	 * Returns a string representation of this object.
+	 *
+	 * @return {String} The string representation.
+	 */
 
 	toString() {
 

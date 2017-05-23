@@ -1,16 +1,24 @@
 import { Feature } from "./feature.js";
 
 /**
- * The web worker feature.
+ * The Web Worker feature.
  */
 
 export class WorkerFeature extends Feature {
 
+	/**
+	 * Constructs a new Worker feature.
+	 */
+
 	constructor() {
 
-		super();
+		super("Web Worker");
 
-		this.name = "Web Worker";
+		/**
+		 * Indicates whether the Worker feature is supported.
+		 *
+		 * @type {Boolean}
+		 */
 
 		this.supported = (this.root.Worker !== undefined);
 

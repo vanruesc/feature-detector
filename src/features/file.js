@@ -1,16 +1,24 @@
 import { Feature } from "./feature.js";
 
 /**
- * The file API feature.
+ * The File API feature.
  */
 
 export class FileFeature extends Feature {
 
+	/**
+	 * Constructs a new File feature.
+	 */
+
 	constructor() {
 
-		super();
+		super("File");
 
-		this.name = "File";
+		/**
+		 * Indicates whether the File API is supported.
+		 *
+		 * @type {Boolean}
+		 */
 
 		this.supported = (
 			this.root.File !== undefined &&

@@ -1,3 +1,9 @@
+/**
+ * A collection of features.
+ *
+ * @module features
+ */
+
 export { Feature } from "./feature.js";
 export { FeatureId } from "./feature-id.js";
 

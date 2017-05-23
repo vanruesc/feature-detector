@@ -1,0 +1,654 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "FeatureId",
+              "range": [
+                83,
+                92
+              ],
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 13
+                },
+                "end": {
+                  "line": 7,
+                  "column": 22
+                }
+              }
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "CANVAS",
+                    "range": [
+                      158,
+                      164
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 7
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "feature.canvas",
+                    "raw": "\"feature.canvas\"",
+                    "range": [
+                      166,
+                      182
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 25
+                      }
+                    }
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "range": [
+                    158,
+                    182
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 25
+                    }
+                  },
+                  "leadingComments": [
+                    {
+                      "type": "Block",
+                      "value": "*\r\n\t * The identifier of the Canvas feature.\r\n\t ",
+                      "range": [
+                        101,
+                        153
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 1
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 4
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "FILE",
+                    "range": [
+                      243,
+                      247
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 5
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "feature.file",
+                    "raw": "\"feature.file\"",
+                    "range": [
+                      249,
+                      263
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 7
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 21
+                      }
+                    }
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "range": [
+                    243,
+                    263
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 21
+                    }
+                  },
+                  "leadingComments": [
+                    {
+                      "type": "Block",
+                      "value": "*\r\n\t * The identifier of the File feature.\r\n\t ",
+                      "range": [
+                        188,
+                        238
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 1
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 4
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "TYPED_ARRAY",
+                    "range": [
+                      331,
+                      342
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 12
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "feature.typed-array",
+                    "raw": "\"feature.typed-array\"",
+                    "range": [
+                      344,
+                      365
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 35
+                      }
+                    }
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "range": [
+                    331,
+                    365
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 35
+                    }
+                  },
+                  "leadingComments": [
+                    {
+                      "type": "Block",
+                      "value": "*\r\n\t * The identifier of the Typed Array feature.\r\n\t ",
+                      "range": [
+                        269,
+                        326
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 1
+                        },
+                        "end": {
+                          "line": 23,
+                          "column": 4
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "WEBGL",
+                    "range": [
+                      427,
+                      432
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 31,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 6
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "feature.webgl",
+                    "raw": "\"feature.webgl\"",
+                    "range": [
+                      434,
+                      449
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 31,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 23
+                      }
+                    }
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "range": [
+                    427,
+                    449
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 31,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 23
+                    }
+                  },
+                  "leadingComments": [
+                    {
+                      "type": "Block",
+                      "value": "*\r\n\t * The identifier of the WebGL feature.\r\n\t ",
+                      "range": [
+                        371,
+                        422
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 27,
+                          "column": 1
+                        },
+                        "end": {
+                          "line": 29,
+                          "column": 4
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "WORKER",
+                    "range": [
+                      516,
+                      522
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 7
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "Literal",
+                    "value": "feature.worker",
+                    "raw": "\"feature.worker\"",
+                    "range": [
+                      524,
+                      540
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 25
+                      }
+                    }
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "range": [
+                    516,
+                    540
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 37,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 25
+                    }
+                  },
+                  "leadingComments": [
+                    {
+                      "type": "Block",
+                      "value": "*\r\n\t * The identifier of the Web Worker feature.\r\n\t ",
+                      "range": [
+                        455,
+                        511
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 33,
+                          "column": 1
+                        },
+                        "end": {
+                          "line": 35,
+                          "column": 4
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "range": [
+                95,
+                545
+              ],
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 25
+                },
+                "end": {
+                  "line": 39,
+                  "column": 1
+                }
+              }
+            },
+            "range": [
+              83,
+              545
+            ],
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 13
+              },
+              "end": {
+                "line": 39,
+                "column": 1
+              }
+            }
+          }
+        ],
+        "kind": "const",
+        "range": [
+          77,
+          546
+        ],
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 7
+          },
+          "end": {
+            "line": 39,
+            "column": 2
+          }
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+            "range": [
+              0,
+              66
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": []
+      },
+      "specifiers": [],
+      "source": null,
+      "range": [
+        70,
+        546
+      ],
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 39,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+          "range": [
+            0,
+            66
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    70,
+    546
+  ],
+  "loc": {
+    "start": {
+      "line": 7,
+      "column": 0
+    },
+    "end": {
+      "line": 39,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+      "range": [
+        0,
+        66
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\r\n\t * The identifier of the Canvas feature.\r\n\t ",
+      "range": [
+        101,
+        153
+      ],
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 1
+        },
+        "end": {
+          "line": 11,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\r\n\t * The identifier of the File feature.\r\n\t ",
+      "range": [
+        188,
+        238
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 1
+        },
+        "end": {
+          "line": 17,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\r\n\t * The identifier of the Typed Array feature.\r\n\t ",
+      "range": [
+        269,
+        326
+      ],
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 1
+        },
+        "end": {
+          "line": 23,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\r\n\t * The identifier of the WebGL feature.\r\n\t ",
+      "range": [
+        371,
+        422
+      ],
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 1
+        },
+        "end": {
+          "line": 29,
+          "column": 4
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\r\n\t * The identifier of the Web Worker feature.\r\n\t ",
+      "range": [
+        455,
+        511
+      ],
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 1
+        },
+        "end": {
+          "line": 35,
+          "column": 4
+        }
+      }
+    }
+  ]
+}

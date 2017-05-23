@@ -4,7 +4,7 @@
  * @enum {String}
  */
 
-const FeatureId = {
+export const FeatureId = {
 
 	/**
 	 * The identifier of the Canvas feature.
@@ -37,5 +37,3 @@ const FeatureId = {
 	WORKER: "feature.worker"
 
 };
-
-export { FeatureId };
