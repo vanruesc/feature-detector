@@ -12,16 +12,16 @@
               "type": "Identifier",
               "name": "FeatureId",
               "range": [
-                83,
-                92
+                441,
+                450
               ],
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 12,
                   "column": 13
                 },
                 "end": {
-                  "line": 7,
+                  "line": 12,
                   "column": 22
                 }
               }
@@ -35,16 +35,16 @@
                     "type": "Identifier",
                     "name": "CANVAS",
                     "range": [
-                      158,
-                      164
+                      459,
+                      465
                     ],
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 14,
                         "column": 1
                       },
                       "end": {
-                        "line": 13,
+                        "line": 14,
                         "column": 7
                       }
                     }
@@ -54,16 +54,16 @@
                     "value": "feature.canvas",
                     "raw": "\"feature.canvas\"",
                     "range": [
-                      166,
-                      182
+                      467,
+                      483
                     ],
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 14,
                         "column": 9
                       },
                       "end": {
-                        "line": 13,
+                        "line": 14,
                         "column": 25
                       }
                     }
@@ -73,39 +73,19 @@
                   "shorthand": false,
                   "computed": false,
                   "range": [
-                    158,
-                    182
+                    459,
+                    483
                   ],
                   "loc": {
                     "start": {
-                      "line": 13,
+                      "line": 14,
                       "column": 1
                     },
                     "end": {
-                      "line": 13,
+                      "line": 14,
                       "column": 25
                     }
-                  },
-                  "leadingComments": [
-                    {
-                      "type": "Block",
-                      "value": "*\r\n\t * The identifier of the Canvas feature.\r\n\t ",
-                      "range": [
-                        101,
-                        153
-                      ],
-                      "loc": {
-                        "start": {
-                          "line": 9,
-                          "column": 1
-                        },
-                        "end": {
-                          "line": 11,
-                          "column": 4
-                        }
-                      }
-                    }
-                  ]
+                  }
                 },
                 {
                   "type": "Property",
@@ -113,16 +93,16 @@
                     "type": "Identifier",
                     "name": "FILE",
                     "range": [
-                      243,
-                      247
+                      487,
+                      491
                     ],
                     "loc": {
                       "start": {
-                        "line": 19,
+                        "line": 15,
                         "column": 1
                       },
                       "end": {
-                        "line": 19,
+                        "line": 15,
                         "column": 5
                       }
                     }
@@ -132,16 +112,16 @@
                     "value": "feature.file",
                     "raw": "\"feature.file\"",
                     "range": [
-                      249,
-                      263
+                      493,
+                      507
                     ],
                     "loc": {
                       "start": {
-                        "line": 19,
+                        "line": 15,
                         "column": 7
                       },
                       "end": {
-                        "line": 19,
+                        "line": 15,
                         "column": 21
                       }
                     }
@@ -151,39 +131,19 @@
                   "shorthand": false,
                   "computed": false,
                   "range": [
-                    243,
-                    263
+                    487,
+                    507
                   ],
                   "loc": {
                     "start": {
-                      "line": 19,
+                      "line": 15,
                       "column": 1
                     },
                     "end": {
-                      "line": 19,
+                      "line": 15,
                       "column": 21
                     }
-                  },
-                  "leadingComments": [
-                    {
-                      "type": "Block",
-                      "value": "*\r\n\t * The identifier of the File feature.\r\n\t ",
-                      "range": [
-                        188,
-                        238
-                      ],
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 1
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 4
-                        }
-                      }
-                    }
-                  ]
+                  }
                 },
                 {
                   "type": "Property",
@@ -191,16 +151,16 @@
                     "type": "Identifier",
                     "name": "TYPED_ARRAY",
                     "range": [
-                      331,
-                      342
+                      511,
+                      522
                     ],
                     "loc": {
                       "start": {
-                        "line": 25,
+                        "line": 16,
                         "column": 1
                       },
                       "end": {
-                        "line": 25,
+                        "line": 16,
                         "column": 12
                       }
                     }
@@ -210,16 +170,16 @@
                     "value": "feature.typed-array",
                     "raw": "\"feature.typed-array\"",
                     "range": [
-                      344,
-                      365
+                      524,
+                      545
                     ],
                     "loc": {
                       "start": {
-                        "line": 25,
+                        "line": 16,
                         "column": 14
                       },
                       "end": {
-                        "line": 25,
+                        "line": 16,
                         "column": 35
                       }
                     }
@@ -229,39 +189,19 @@
                   "shorthand": false,
                   "computed": false,
                   "range": [
-                    331,
-                    365
+                    511,
+                    545
                   ],
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 16,
                       "column": 1
                     },
                     "end": {
-                      "line": 25,
+                      "line": 16,
                       "column": 35
                     }
-                  },
-                  "leadingComments": [
-                    {
-                      "type": "Block",
-                      "value": "*\r\n\t * The identifier of the Typed Array feature.\r\n\t ",
-                      "range": [
-                        269,
-                        326
-                      ],
-                      "loc": {
-                        "start": {
-                          "line": 21,
-                          "column": 1
-                        },
-                        "end": {
-                          "line": 23,
-                          "column": 4
-                        }
-                      }
-                    }
-                  ]
+                  }
                 },
                 {
                   "type": "Property",
@@ -269,16 +209,16 @@
                     "type": "Identifier",
                     "name": "WEBGL",
                     "range": [
-                      427,
-                      432
+                      549,
+                      554
                     ],
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 17,
                         "column": 1
                       },
                       "end": {
-                        "line": 31,
+                        "line": 17,
                         "column": 6
                       }
                     }
@@ -288,16 +228,16 @@
                     "value": "feature.webgl",
                     "raw": "\"feature.webgl\"",
                     "range": [
-                      434,
-                      449
+                      556,
+                      571
                     ],
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 17,
                         "column": 8
                       },
                       "end": {
-                        "line": 31,
+                        "line": 17,
                         "column": 23
                       }
                     }
@@ -307,39 +247,19 @@
                   "shorthand": false,
                   "computed": false,
                   "range": [
-                    427,
-                    449
+                    549,
+                    571
                   ],
                   "loc": {
                     "start": {
-                      "line": 31,
+                      "line": 17,
                       "column": 1
                     },
                     "end": {
-                      "line": 31,
+                      "line": 17,
                       "column": 23
                     }
-                  },
-                  "leadingComments": [
-                    {
-                      "type": "Block",
-                      "value": "*\r\n\t * The identifier of the WebGL feature.\r\n\t ",
-                      "range": [
-                        371,
-                        422
-                      ],
-                      "loc": {
-                        "start": {
-                          "line": 27,
-                          "column": 1
-                        },
-                        "end": {
-                          "line": 29,
-                          "column": 4
-                        }
-                      }
-                    }
-                  ]
+                  }
                 },
                 {
                   "type": "Property",
@@ -347,16 +267,16 @@
                     "type": "Identifier",
                     "name": "WORKER",
                     "range": [
-                      516,
-                      522
+                      575,
+                      581
                     ],
                     "loc": {
                       "start": {
-                        "line": 37,
+                        "line": 18,
                         "column": 1
                       },
                       "end": {
-                        "line": 37,
+                        "line": 18,
                         "column": 7
                       }
                     }
@@ -366,16 +286,16 @@
                     "value": "feature.worker",
                     "raw": "\"feature.worker\"",
                     "range": [
-                      524,
-                      540
+                      583,
+                      599
                     ],
                     "loc": {
                       "start": {
-                        "line": 37,
+                        "line": 18,
                         "column": 9
                       },
                       "end": {
-                        "line": 37,
+                        "line": 18,
                         "column": 25
                       }
                     }
@@ -385,67 +305,47 @@
                   "shorthand": false,
                   "computed": false,
                   "range": [
-                    516,
-                    540
+                    575,
+                    599
                   ],
                   "loc": {
                     "start": {
-                      "line": 37,
+                      "line": 18,
                       "column": 1
                     },
                     "end": {
-                      "line": 37,
+                      "line": 18,
                       "column": 25
                     }
-                  },
-                  "leadingComments": [
-                    {
-                      "type": "Block",
-                      "value": "*\r\n\t * The identifier of the Web Worker feature.\r\n\t ",
-                      "range": [
-                        455,
-                        511
-                      ],
-                      "loc": {
-                        "start": {
-                          "line": 33,
-                          "column": 1
-                        },
-                        "end": {
-                          "line": 35,
-                          "column": 4
-                        }
-                      }
-                    }
-                  ]
+                  }
                 }
               ],
               "range": [
-                95,
-                545
+                453,
+                604
               ],
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 12,
                   "column": 25
                 },
                 "end": {
-                  "line": 39,
+                  "line": 20,
                   "column": 1
                 }
               }
             },
             "range": [
-              83,
-              545
+              441,
+              604
             ],
             "loc": {
               "start": {
-                "line": 7,
+                "line": 12,
                 "column": 13
               },
               "end": {
-                "line": 39,
+                "line": 20,
                 "column": 1
               }
             }
@@ -453,26 +353,26 @@
         ],
         "kind": "const",
         "range": [
-          77,
-          546
+          435,
+          605
         ],
         "loc": {
           "start": {
-            "line": 7,
+            "line": 12,
             "column": 7
           },
           "end": {
-            "line": 39,
+            "line": 20,
             "column": 2
           }
         },
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+            "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n ",
             "range": [
               0,
-              66
+              424
             ],
             "loc": {
               "start": {
@@ -480,7 +380,7 @@
                 "column": 0
               },
               "end": {
-                "line": 5,
+                "line": 10,
                 "column": 3
               }
             }
@@ -491,26 +391,26 @@
       "specifiers": [],
       "source": null,
       "range": [
-        70,
-        546
+        428,
+        605
       ],
       "loc": {
         "start": {
-          "line": 7,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 39,
+          "line": 20,
           "column": 2
         }
       },
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+          "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n ",
           "range": [
             0,
-            66
+            424
           ],
           "loc": {
             "start": {
@@ -518,7 +418,7 @@
               "column": 0
             },
             "end": {
-              "line": 5,
+              "line": 10,
               "column": 3
             }
           }
@@ -528,26 +428,26 @@
   ],
   "sourceType": "module",
   "range": [
-    70,
-    546
+    428,
+    605
   ],
   "loc": {
     "start": {
-      "line": 7,
+      "line": 12,
       "column": 0
     },
     "end": {
-      "line": 39,
+      "line": 20,
       "column": 2
     }
   },
   "comments": [
     {
       "type": "Block",
-      "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n ",
+      "value": "*\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n ",
       "range": [
         0,
-        66
+        424
       ],
       "loc": {
         "start": {
@@ -555,98 +455,8 @@
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 10,
           "column": 3
-        }
-      }
-    },
-    {
-      "type": "Block",
-      "value": "*\r\n\t * The identifier of the Canvas feature.\r\n\t ",
-      "range": [
-        101,
-        153
-      ],
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 1
-        },
-        "end": {
-          "line": 11,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": "Block",
-      "value": "*\r\n\t * The identifier of the File feature.\r\n\t ",
-      "range": [
-        188,
-        238
-      ],
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 1
-        },
-        "end": {
-          "line": 17,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": "Block",
-      "value": "*\r\n\t * The identifier of the Typed Array feature.\r\n\t ",
-      "range": [
-        269,
-        326
-      ],
-      "loc": {
-        "start": {
-          "line": 21,
-          "column": 1
-        },
-        "end": {
-          "line": 23,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": "Block",
-      "value": "*\r\n\t * The identifier of the WebGL feature.\r\n\t ",
-      "range": [
-        371,
-        422
-      ],
-      "loc": {
-        "start": {
-          "line": 27,
-          "column": 1
-        },
-        "end": {
-          "line": 29,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": "Block",
-      "value": "*\r\n\t * The identifier of the Web Worker feature.\r\n\t ",
-      "range": [
-        455,
-        511
-      ],
-      "loc": {
-        "start": {
-          "line": 33,
-          "column": 1
-        },
-        "end": {
-          "line": 35,
-          "column": 4
         }
       }
     }

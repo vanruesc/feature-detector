@@ -1,39 +1,20 @@
 /**
  * An enumeration of feature ids.
  *
- * @enum {String}
+ * @type {Object}
+ * @property {String} CANVAS - The identifier of the Canvas feature.
+ * @property {String} FILE - The identifier of the File feature.
+ * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.
+ * @property {String} WEBGL - The identifier of the WebGL feature.
+ * @property {String} WORKER - The identifier of the Web Worker feature.
  */
 
 export const FeatureId = {
 
-	/**
-	 * The identifier of the Canvas feature.
-	 */
-
 	CANVAS: "feature.canvas",
-
-	/**
-	 * The identifier of the File feature.
-	 */
-
 	FILE: "feature.file",
-
-	/**
-	 * The identifier of the Typed Array feature.
-	 */
-
 	TYPED_ARRAY: "feature.typed-array",
-
-	/**
-	 * The identifier of the WebGL feature.
-	 */
-
 	WEBGL: "feature.webgl",
-
-	/**
-	 * The identifier of the Web Worker feature.
-	 */
-
 	WORKER: "feature.worker"
 
 };

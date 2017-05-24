@@ -217,8 +217,8 @@
     "longname": "src/features/feature-id.js",
     "access": null,
     "description": null,
-    "lineNumber": 7,
-    "content": "/**\r\n * An enumeration of feature ids.\r\n *\r\n * @enum {String}\r\n */\r\n\r\nexport const FeatureId = {\r\n\r\n\t/**\r\n\t * The identifier of the Canvas feature.\r\n\t */\r\n\r\n\tCANVAS: \"feature.canvas\",\r\n\r\n\t/**\r\n\t * The identifier of the File feature.\r\n\t */\r\n\r\n\tFILE: \"feature.file\",\r\n\r\n\t/**\r\n\t * The identifier of the Typed Array feature.\r\n\t */\r\n\r\n\tTYPED_ARRAY: \"feature.typed-array\",\r\n\r\n\t/**\r\n\t * The identifier of the WebGL feature.\r\n\t */\r\n\r\n\tWEBGL: \"feature.webgl\",\r\n\r\n\t/**\r\n\t * The identifier of the Web Worker feature.\r\n\t */\r\n\r\n\tWORKER: \"feature.worker\"\r\n\r\n};\r\n"
+    "lineNumber": 12,
+    "content": "/**\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n */\r\n\r\nexport const FeatureId = {\r\n\r\n\tCANVAS: \"feature.canvas\",\r\n\tFILE: \"feature.file\",\r\n\tTYPED_ARRAY: \"feature.typed-array\",\r\n\tWEBGL: \"feature.webgl\",\r\n\tWORKER: \"feature.worker\"\r\n\r\n};\r\n"
   },
   {
     "__docId__": 12,
@@ -233,17 +233,66 @@
     "importPath": "feature-detector/src/features/feature-id.js",
     "importStyle": "{FeatureId}",
     "description": "An enumeration of feature ids.",
-    "lineNumber": 7,
-    "unknown": [
+    "lineNumber": 12,
+    "properties": [
       {
-        "tagName": "@enum",
-        "tagValue": "{String}"
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "CANVAS",
+        "description": "The identifier of the Canvas feature."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "FILE",
+        "description": "The identifier of the File feature."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "TYPED_ARRAY",
+        "description": "The identifier of the Typed Array feature."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "WEBGL",
+        "description": "The identifier of the WebGL feature."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "WORKER",
+        "description": "The identifier of the Web Worker feature."
       }
     ],
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Object"
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {

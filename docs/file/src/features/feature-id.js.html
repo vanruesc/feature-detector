@@ -48,39 +48,20 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * An enumeration of feature ids.
  *
- * @enum {String}
+ * @type {Object}
+ * @property {String} CANVAS - The identifier of the Canvas feature.
+ * @property {String} FILE - The identifier of the File feature.
+ * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.
+ * @property {String} WEBGL - The identifier of the WebGL feature.
+ * @property {String} WORKER - The identifier of the Web Worker feature.
  */
 
 export const FeatureId = {
 
-	/**
-	 * The identifier of the Canvas feature.
-	 */
-
 	CANVAS: &quot;feature.canvas&quot;,
-
-	/**
-	 * The identifier of the File feature.
-	 */
-
 	FILE: &quot;feature.file&quot;,
-
-	/**
-	 * The identifier of the Typed Array feature.
-	 */
-
 	TYPED_ARRAY: &quot;feature.typed-array&quot;,
-
-	/**
-	 * The identifier of the WebGL feature.
-	 */
-
 	WEBGL: &quot;feature.webgl&quot;,
-
-	/**
-	 * The identifier of the Web Worker feature.
-	 */
-
 	WORKER: &quot;feature.worker&quot;
 
 };
