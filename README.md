@@ -61,7 +61,7 @@ import { MyFeature } from "./my-feature.js";
 const detector = new Detector();
 const MY_ID = "my-feature";
 
-detector.features.set(MY_ID, new MyFeature());
+detector.set(MY_ID, new MyFeature());
 ```
 
 
