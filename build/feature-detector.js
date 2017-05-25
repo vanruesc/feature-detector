@@ -1,5 +1,5 @@
 /**
- * feature-detector v0.0.0 build May 23 2017
+ * feature-detector v0.1.0 build May 25 2017
  * https://github.com/vanruesc/feature-detector
  * Copyright 2017 Raoul van Rüschen, Zlib
  */
@@ -162,40 +162,21 @@
   /**
    * An enumeration of feature ids.
    *
-   * @enum {String}
+   * @type {Object}
+   * @property {String} CANVAS - The identifier of the Canvas feature.
+   * @property {String} FILE - The identifier of the File feature.
+   * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.
+   * @property {String} WEBGL - The identifier of the WebGL feature.
+   * @property {String} WORKER - The identifier of the Web Worker feature.
    */
 
   var FeatureId = {
 
-  	/**
-    * The identifier of the Canvas feature.
-    */
-
-  	CANVAS: "feature.canvas",
-
-  	/**
-    * The identifier of the File feature.
-    */
-
-  	FILE: "feature.file",
-
-  	/**
-    * The identifier of the Typed Array feature.
-    */
-
-  	TYPED_ARRAY: "feature.typed-array",
-
-  	/**
-    * The identifier of the WebGL feature.
-    */
-
-  	WEBGL: "feature.webgl",
-
-  	/**
-    * The identifier of the Web Worker feature.
-    */
-
-  	WORKER: "feature.worker"
+    CANVAS: "feature.canvas",
+    FILE: "feature.file",
+    TYPED_ARRAY: "feature.typed-array",
+    WEBGL: "feature.webgl",
+    WORKER: "feature.worker"
 
   };
 
@@ -409,19 +390,160 @@
   	}
 
   	/**
-    * Retrieves the requested feature.
+    * Creates a list of either missing or supported features.
     *
-    * This is a shortcut to the get method of the features map.
+    * This search can be limited to a subset of features.
     *
-    * @param {FeatureId} featureId - The id of the feature.
-    * @return {Feature} The requested feature or undefined if it doesn't exist.
+    * @private
+    * @param {Boolean} missing - Whether only missing features should be returned.
+    * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+    * @return {Feature[]} A list of either missing or supported features.
     */
 
   	createClass(Detector, [{
+  		key: "getFeatures",
+  		value: function getFeatures(missing, featureIds) {
+
+  			var features = [];
+
+  			var featureId = void 0,
+  			    feature = void 0;
+
+  			if (featureIds.length > 0) {
+  				var _iteratorNormalCompletion = true;
+  				var _didIteratorError = false;
+  				var _iteratorError = undefined;
+
+  				try {
+
+  					for (var _iterator = featureIds[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+  						featureId = _step.value;
+
+
+  						feature = this.features.get(featureId);
+
+  						if (feature !== undefined && feature.supported === !missing) {
+
+  							features.push(feature);
+  						}
+  					}
+  				} catch (err) {
+  					_didIteratorError = true;
+  					_iteratorError = err;
+  				} finally {
+  					try {
+  						if (!_iteratorNormalCompletion && _iterator.return) {
+  							_iterator.return();
+  						}
+  					} finally {
+  						if (_didIteratorError) {
+  							throw _iteratorError;
+  						}
+  					}
+  				}
+  			} else {
+  				var _iteratorNormalCompletion2 = true;
+  				var _didIteratorError2 = false;
+  				var _iteratorError2 = undefined;
+
+  				try {
+
+  					for (var _iterator2 = this.features.values()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+  						feature = _step2.value;
+
+
+  						if (feature.supported === !missing) {
+
+  							features.push(feature);
+  						}
+  					}
+  				} catch (err) {
+  					_didIteratorError2 = true;
+  					_iteratorError2 = err;
+  				} finally {
+  					try {
+  						if (!_iteratorNormalCompletion2 && _iterator2.return) {
+  							_iterator2.return();
+  						}
+  					} finally {
+  						if (_didIteratorError2) {
+  							throw _iteratorError2;
+  						}
+  					}
+  				}
+  			}
+
+  			return features.length > 0 ? features : null;
+  		}
+
+  		/**
+     * Returns a list of missing features.
+     *
+     * This search can be limited to a subset of features.
+     *
+     * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+     * @return {Feature[]} A list of missing features or null if there are none.
+     */
+
+  	}, {
+  		key: "getMissingFeatures",
+  		value: function getMissingFeatures() {
+  			for (var _len = arguments.length, featureIds = Array(_len), _key = 0; _key < _len; _key++) {
+  				featureIds[_key] = arguments[_key];
+  			}
+
+  			return this.getFeatures(true, featureIds);
+  		}
+
+  		/**
+     * Returns a list of supported features.
+     *
+     * This search can be limited to a subset of features.
+     *
+     * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+     * @return {Feature[]} A list of supported features or null if there are none.
+     */
+
+  	}, {
+  		key: "getSupportedFeatures",
+  		value: function getSupportedFeatures() {
+  			for (var _len2 = arguments.length, featureIds = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+  				featureIds[_key2] = arguments[_key2];
+  			}
+
+  			return this.getFeatures(false, featureIds);
+  		}
+
+  		/**
+     * Retrieves the requested feature.
+     *
+     * This is a shortcut to the get method of the features map.
+     *
+     * @param {FeatureId} featureId - The id of the feature.
+     * @return {Feature} The requested feature or undefined if it doesn't exist.
+     */
+
+  	}, {
   		key: "get",
   		value: function get$$1(featureId) {
 
   			return this.features.get(featureId);
+  		}
+
+  		/**
+     * Defines a custom feature.
+     *
+     * This is a shortcut to the set method of the features map.
+     *
+     * @param {FeatureId} featureId - The id of the feature.
+     * @param {Feature} feature - The feature.
+     */
+
+  	}, {
+  		key: "set",
+  		value: function set$$1(featureId, feature) {
+
+  			return this.features.set(featureId, feature);
   		}
 
   		/**
