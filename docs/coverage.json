@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 27,
-  "actualCount": 27,
+  "expectCount": 30,
+  "actualCount": 30,
   "files": {
     "src/features/canvas.js": {
       "expectCount": 3,
@@ -9,8 +9,8 @@
       "undocumentLines": []
     },
     "src/core/detector.js": {
-      "expectCount": 5,
-      "actualCount": 5,
+      "expectCount": 8,
+      "actualCount": 8,
       "undocumentLines": []
     },
     "src/features/feature.js": {

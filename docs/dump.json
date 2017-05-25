@@ -10,7 +10,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import {\n\tFeatureId,\n\tCanvasFeature,\n\tFileFeature,\n\tTypedArrayFeature,\n\tWebGLFeature,\n\tWorkerFeature\n} from \"../features\";\n\n/**\n * Detects whether certain features are supported in the current environment.\n */\n\nexport class Detector {\n\n\t/**\n\t * Constructs a new Detector.\n\t */\n\n\tconstructor() {\n\n\t\t/**\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t */\n\n\t\tthis.features = new Map();\n\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\n\n\t}\n\n\t/**\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t */\n\n\tget(featureId) {\n\n\t\treturn this.features.get(featureId);\n\n\t}\n\n\t/**\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t */\n\n\tgetMessage(feature) {\n\n\t\treturn \"The \" + feature + \" feature is \" +\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\n\t\t\t\" in the current environment.\";\n\n\t}\n\n}\n"
+    "content": "import {\n\tFeatureId,\n\tCanvasFeature,\n\tFileFeature,\n\tTypedArrayFeature,\n\tWebGLFeature,\n\tWorkerFeature\n} from \"../features\";\n\n/**\n * Detects whether certain features are supported in the current environment.\n */\n\nexport class Detector {\n\n\t/**\n\t * Constructs a new Detector.\n\t */\n\n\tconstructor() {\n\n\t\t/**\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t */\n\n\t\tthis.features = new Map();\n\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\n\n\t}\n\n\t/**\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t */\n\n\tgetFeatures(missing, featureIds) {\n\n\t\tconst features = [];\n\n\t\tlet featureId, feature;\n\n\t\tif(featureIds.length > 0) {\n\n\t\t\tfor(featureId of featureIds) {\n\n\t\t\t\tfeature = this.features.get(featureId);\n\n\t\t\t\tif(feature !== undefined && feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t} else {\n\n\t\t\tfor(feature of this.features.values()) {\n\n\t\t\t\tif(feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t}\n\n\t\treturn (features.length > 0) ? features : null;\n\n\t}\n\n\t/**\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t */\n\n\tgetMissingFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(true, featureIds);\n\n\t}\n\n\t/**\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t */\n\n\tgetSupportedFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(false, featureIds);\n\n\t}\n\n\t/**\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t */\n\n\tget(featureId) {\n\n\t\treturn this.features.get(featureId);\n\n\t}\n\n\t/**\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t */\n\n\tset(featureId, feature) {\n\n\t\treturn this.features.set(featureId, feature);\n\n\t}\n\n\t/**\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t */\n\n\tgetMessage(feature) {\n\n\t\treturn \"The \" + feature + \" feature is \" +\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\n\t\t\t\" in the current environment.\";\n\n\t}\n\n}\n"
   },
   {
     "__docId__": 1,
@@ -67,12 +67,121 @@
     "kind": "method",
     "static": false,
     "variation": null,
+    "name": "getFeatures",
+    "memberof": "src/core/detector.js~Detector",
+    "longname": "src/core/detector.js~Detector#getFeatures",
+    "access": "private",
+    "description": "Creates a list of either missing or supported features.\n\nThis search can be limited to a subset of features.",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "missing",
+        "description": "Whether only missing features should be returned."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "FeatureId[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "featureIds",
+        "description": "The ids of the features that you are interested in. If none are supplied, all features will be checked."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Feature[]"
+      ],
+      "spread": false,
+      "description": "A list of either missing or supported features."
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 5,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getMissingFeatures",
+    "memberof": "src/core/detector.js~Detector",
+    "longname": "src/core/detector.js~Detector#getMissingFeatures",
+    "access": null,
+    "description": "Returns a list of missing features.\n\nThis search can be limited to a subset of features.",
+    "lineNumber": 99,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "FeatureId"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "featureIds",
+        "description": "The ids of the features that you are interested in. If none are supplied, all features will be checked."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Feature[]"
+      ],
+      "spread": false,
+      "description": "A list of missing features or null if there are none."
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 6,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getSupportedFeatures",
+    "memberof": "src/core/detector.js~Detector",
+    "longname": "src/core/detector.js~Detector#getSupportedFeatures",
+    "access": null,
+    "description": "Returns a list of supported features.\n\nThis search can be limited to a subset of features.",
+    "lineNumber": 114,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "FeatureId"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "featureIds",
+        "description": "The ids of the features that you are interested in. If none are supplied, all features will be checked."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Feature[]"
+      ],
+      "spread": false,
+      "description": "A list of supported features or null if there are none."
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 7,
+    "kind": "method",
+    "static": false,
+    "variation": null,
     "name": "get",
     "memberof": "src/core/detector.js~Detector",
     "longname": "src/core/detector.js~Detector#get",
     "access": null,
     "description": "Retrieves the requested feature.\n\nThis is a shortcut to the get method of the features map.",
-    "lineNumber": 50,
+    "lineNumber": 129,
     "params": [
       {
         "nullable": null,
@@ -96,7 +205,47 @@
     "generator": false
   },
   {
-    "__docId__": 5,
+    "__docId__": 8,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "set",
+    "memberof": "src/core/detector.js~Detector",
+    "longname": "src/core/detector.js~Detector#set",
+    "access": null,
+    "description": "Defines a custom feature.\n\nThis is a shortcut to the set method of the features map.",
+    "lineNumber": 144,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "FeatureId"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "featureId",
+        "description": "The id of the feature."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Feature"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "feature",
+        "description": "The feature."
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 9,
     "kind": "method",
     "static": false,
     "variation": null,
@@ -105,7 +254,7 @@
     "longname": "src/core/detector.js~Detector#getMessage",
     "access": null,
     "description": "Returns a human-readable info message for the given feature.",
-    "lineNumber": 63,
+    "lineNumber": 157,
     "params": [
       {
         "nullable": null,
@@ -129,7 +278,7 @@
     "generator": false
   },
   {
-    "__docId__": 6,
+    "__docId__": 10,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -142,7 +291,7 @@
     "content": "/**\r\n * Core components.\r\n *\r\n * @module core\r\n */\r\n\r\nexport { Detector } from \"./detector.js\";\r\n"
   },
   {
-    "__docId__": 7,
+    "__docId__": 11,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -155,7 +304,7 @@
     "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The canvas feature.\r\n */\r\n\r\nexport class CanvasFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Canvas feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Canvas\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Canvas feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.CanvasRenderingContext2D !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 8,
+    "__docId__": 12,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -174,7 +323,7 @@
     ]
   },
   {
-    "__docId__": 9,
+    "__docId__": 13,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -188,7 +337,7 @@
     "generator": false
   },
   {
-    "__docId__": 10,
+    "__docId__": 14,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -208,7 +357,7 @@
     }
   },
   {
-    "__docId__": 11,
+    "__docId__": 15,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -221,7 +370,7 @@
     "content": "/**\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n */\r\n\r\nexport const FeatureId = {\r\n\r\n\tCANVAS: \"feature.canvas\",\r\n\tFILE: \"feature.file\",\r\n\tTYPED_ARRAY: \"feature.typed-array\",\r\n\tWEBGL: \"feature.webgl\",\r\n\tWORKER: \"feature.worker\"\r\n\r\n};\r\n"
   },
   {
-    "__docId__": 12,
+    "__docId__": 16,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -296,7 +445,7 @@
     }
   },
   {
-    "__docId__": 13,
+    "__docId__": 17,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -309,7 +458,7 @@
     "content": "/**\r\n * An abstract feature.\r\n */\r\n\r\nexport class Feature {\r\n\r\n\t/**\r\n\t * Constructs a new feature.\r\n\t *\r\n\t * @param {String} [name=null] - The name of the feature.\r\n\t */\r\n\r\n\tconstructor(name = null) {\r\n\r\n\t\t/**\r\n\t\t * The name of this feature.\r\n\t\t *\r\n\t\t * @type {String}\r\n\t\t */\r\n\r\n\t\tthis.name = name;\r\n\r\n\t\t/**\r\n\t\t * The global scope of the current environment.\r\n\t\t *\r\n\t\t * This field assumes one of the following values depending on the\r\n\t\t * environment:\r\n\t\t *  - browser: window\r\n\t\t *  - worker: self\r\n\t\t *  - node.js: global\r\n\t\t *  - unknown: this\r\n\t\t *\r\n\t\t * @type {Object}\r\n\t\t * @protected\r\n\t\t */\r\n\r\n\t\tthis.root = (typeof self === \"object\" && self.self === self) ? self :\r\n\t\t\t(typeof global === \"object\" && global.global === global) ? global : this;\r\n\r\n\t\t/**\r\n\t\t * Indicates whether this feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t * @default false\r\n\t\t */\r\n\r\n\t\tthis.supported = false;\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a string representation of this object.\r\n\t *\r\n\t * @return {String} The string representation.\r\n\t */\r\n\r\n\ttoString() {\r\n\r\n\t\treturn this.name;\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 14,
+    "__docId__": 18,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -325,7 +474,7 @@
     "interface": false
   },
   {
-    "__docId__": 15,
+    "__docId__": 19,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -352,7 +501,7 @@
     "generator": false
   },
   {
-    "__docId__": 16,
+    "__docId__": 20,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -372,7 +521,7 @@
     }
   },
   {
-    "__docId__": 17,
+    "__docId__": 21,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -392,7 +541,7 @@
     }
   },
   {
-    "__docId__": 18,
+    "__docId__": 22,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -418,7 +567,7 @@
     }
   },
   {
-    "__docId__": 19,
+    "__docId__": 23,
     "kind": "method",
     "static": false,
     "variation": null,
@@ -440,7 +589,7 @@
     "generator": false
   },
   {
-    "__docId__": 20,
+    "__docId__": 24,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -453,7 +602,7 @@
     "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The File API feature.\r\n */\r\n\r\nexport class FileFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new File feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"File\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the File API is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (\r\n\t\t\tthis.root.File !== undefined &&\r\n\t\t\tthis.root.FileReader !== undefined &&\r\n\t\t\tthis.root.FileList !== undefined &&\r\n\t\t\tthis.root.Blob !== undefined\r\n\t\t);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 21,
+    "__docId__": 25,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -472,7 +621,7 @@
     ]
   },
   {
-    "__docId__": 22,
+    "__docId__": 26,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -486,7 +635,7 @@
     "generator": false
   },
   {
-    "__docId__": 23,
+    "__docId__": 27,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -506,7 +655,7 @@
     }
   },
   {
-    "__docId__": 24,
+    "__docId__": 28,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -519,7 +668,7 @@
     "content": "/**\r\n * A collection of features.\r\n *\r\n * @module features\r\n */\r\n\r\nexport { Feature } from \"./feature.js\";\r\nexport { FeatureId } from \"./feature-id.js\";\r\n\r\nexport { CanvasFeature } from \"./canvas.js\";\r\nexport { FileFeature } from \"./file.js\";\r\nexport { TypedArrayFeature } from \"./typed-array.js\";\r\nexport { WebGLFeature } from \"./webgl.js\";\r\nexport { WorkerFeature } from \"./worker.js\";\r\n"
   },
   {
-    "__docId__": 25,
+    "__docId__": 29,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -532,7 +681,7 @@
     "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The Typed Array feature.\r\n */\r\n\r\nexport class TypedArrayFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Typed Array feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Typed Array\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Typed Array feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.ArrayBuffer !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 26,
+    "__docId__": 30,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -551,7 +700,7 @@
     ]
   },
   {
-    "__docId__": 27,
+    "__docId__": 31,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -565,7 +714,7 @@
     "generator": false
   },
   {
-    "__docId__": 28,
+    "__docId__": 32,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -585,7 +734,7 @@
     }
   },
   {
-    "__docId__": 29,
+    "__docId__": 33,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -598,7 +747,7 @@
     "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The WebGL feature.\r\n */\r\n\r\nexport class WebGLFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new WebGL feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"WebGL\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the WebGL feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (function(root) {\r\n\r\n\t\t\tlet supported = (root.WebGLRenderingContext !== undefined);\r\n\t\t\tlet canvas, context;\r\n\r\n\t\t\tif(supported) {\r\n\r\n\t\t\t\tcanvas = document.createElement(\"canvas\");\r\n\t\t\t\tcontext = canvas.getContext(\"webgl\");\r\n\r\n\t\t\t\tif(context === null) {\r\n\r\n\t\t\t\t\tif(canvas.getContext(\"experimental-webgl\") === null) {\r\n\r\n\t\t\t\t\t\tsupported = false;\r\n\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\r\n\t\t\treturn supported;\r\n\r\n\t\t}(this.root));\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 30,
+    "__docId__": 34,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -617,7 +766,7 @@
     ]
   },
   {
-    "__docId__": 31,
+    "__docId__": 35,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -631,7 +780,7 @@
     "generator": false
   },
   {
-    "__docId__": 32,
+    "__docId__": 36,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -651,7 +800,7 @@
     }
   },
   {
-    "__docId__": 33,
+    "__docId__": 37,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -664,7 +813,7 @@
     "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The Web Worker feature.\r\n */\r\n\r\nexport class WorkerFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Worker feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Web Worker\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Worker feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.Worker !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
-    "__docId__": 34,
+    "__docId__": 38,
     "kind": "class",
     "static": true,
     "variation": null,
@@ -683,7 +832,7 @@
     ]
   },
   {
-    "__docId__": 35,
+    "__docId__": 39,
     "kind": "constructor",
     "static": false,
     "variation": null,
@@ -697,7 +846,7 @@
     "generator": false
   },
   {
-    "__docId__": 36,
+    "__docId__": 40,
     "kind": "member",
     "static": false,
     "variation": null,
@@ -717,7 +866,7 @@
     }
   },
   {
-    "__docId__": 37,
+    "__docId__": 41,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -730,7 +879,7 @@
     "content": "/**\r\n * Exposure of the library components.\r\n *\r\n * @module feature-detector\r\n */\r\n\r\nexport { Detector } from \"./core\";\r\n\r\nexport {\r\n\tFeature,\r\n\tFeatureId,\r\n\tCanvasFeature,\r\n\tFileFeature,\r\n\tTypedArrayFeature,\r\n\tWebGLFeature,\r\n\tWorkerFeature\r\n} from \"./features\";\r\n"
   },
   {
-    "__docId__": 39,
+    "__docId__": 43,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -743,7 +892,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 40,
+    "__docId__": 44,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -756,7 +905,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 41,
+    "__docId__": 45,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -769,7 +918,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 42,
+    "__docId__": 46,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -782,7 +931,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 43,
+    "__docId__": 47,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -795,7 +944,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 44,
+    "__docId__": 48,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -808,7 +957,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 45,
+    "__docId__": 49,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -821,7 +970,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 46,
+    "__docId__": 50,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -834,7 +983,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 47,
+    "__docId__": 51,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -847,7 +996,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 48,
+    "__docId__": 52,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -860,7 +1009,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 49,
+    "__docId__": 53,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -873,7 +1022,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 50,
+    "__docId__": 54,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -886,7 +1035,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 51,
+    "__docId__": 55,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -899,7 +1048,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 56,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -912,7 +1061,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 57,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -925,7 +1074,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 54,
+    "__docId__": 58,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -938,7 +1087,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 59,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -951,7 +1100,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 60,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -964,7 +1113,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 57,
+    "__docId__": 61,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -977,7 +1126,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 62,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -990,7 +1139,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 63,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1003,7 +1152,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 60,
+    "__docId__": 64,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1016,7 +1165,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 61,
+    "__docId__": 65,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1029,7 +1178,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 62,
+    "__docId__": 66,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1042,7 +1191,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 63,
+    "__docId__": 67,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1055,7 +1204,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 64,
+    "__docId__": 68,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1068,7 +1217,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 65,
+    "__docId__": 69,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1081,7 +1230,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 66,
+    "__docId__": 70,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1094,7 +1243,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 67,
+    "__docId__": 71,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1107,7 +1256,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 68,
+    "__docId__": 72,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1120,7 +1269,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 69,
+    "__docId__": 73,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1133,7 +1282,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 70,
+    "__docId__": 74,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1146,7 +1295,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 71,
+    "__docId__": 75,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1159,7 +1308,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 72,
+    "__docId__": 76,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1172,7 +1321,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 73,
+    "__docId__": 77,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1185,7 +1334,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 74,
+    "__docId__": 78,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1198,7 +1347,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 75,
+    "__docId__": 79,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1211,7 +1360,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 76,
+    "__docId__": 80,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1224,7 +1373,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 77,
+    "__docId__": 81,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1237,7 +1386,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 78,
+    "__docId__": 82,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1250,7 +1399,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 79,
+    "__docId__": 83,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1263,7 +1412,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 80,
+    "__docId__": 84,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1276,7 +1425,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 81,
+    "__docId__": 85,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1289,7 +1438,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 82,
+    "__docId__": 86,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1302,7 +1451,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 83,
+    "__docId__": 87,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1315,7 +1464,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 84,
+    "__docId__": 88,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1328,7 +1477,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 85,
+    "__docId__": 89,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1341,7 +1490,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 87,
+    "__docId__": 91,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1354,7 +1503,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 88,
+    "__docId__": 92,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1367,7 +1516,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 89,
+    "__docId__": 93,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1380,7 +1529,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 90,
+    "__docId__": 94,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1393,7 +1542,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 91,
+    "__docId__": 95,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1406,7 +1555,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 92,
+    "__docId__": 96,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1419,7 +1568,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 93,
+    "__docId__": 97,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1432,7 +1581,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 94,
+    "__docId__": 98,
     "kind": "external",
     "static": true,
     "variation": null,

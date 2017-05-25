@@ -408,6 +408,24 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/core/detector.js~detector#getmissingfeatures",
+    "class/src/core/detector.js~Detector.html#instance-method-getMissingFeatures",
+    "src/core/detector.js~Detector#getMissingFeatures",
+    "method"
+  ],
+  [
+    "src/core/detector.js~detector#getsupportedfeatures",
+    "class/src/core/detector.js~Detector.html#instance-method-getSupportedFeatures",
+    "src/core/detector.js~Detector#getSupportedFeatures",
+    "method"
+  ],
+  [
+    "src/core/detector.js~detector#set",
+    "class/src/core/detector.js~Detector.html#instance-method-set",
+    "src/core/detector.js~Detector#set",
+    "method"
+  ],
+  [
     "src/core/index.js",
     "file/src/core/index.js.html",
     "src/core/index.js",
