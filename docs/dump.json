@@ -10,7 +10,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import {\n\tFeatureId,\n\tCanvasFeature,\n\tFileFeature,\n\tTypedArrayFeature,\n\tWebGLFeature,\n\tWorkerFeature\n} from \"../features\";\n\n/**\n * Detects whether certain features are supported in the current environment.\n */\n\nexport class Detector {\n\n\t/**\n\t * Constructs a new Detector.\n\t */\n\n\tconstructor() {\n\n\t\t/**\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t */\n\n\t\tthis.features = new Map();\n\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\n\n\t}\n\n\t/**\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t */\n\n\tgetFeatures(missing, featureIds) {\n\n\t\tconst features = [];\n\n\t\tlet featureId, feature;\n\n\t\tif(featureIds.length > 0) {\n\n\t\t\tfor(featureId of featureIds) {\n\n\t\t\t\tfeature = this.features.get(featureId);\n\n\t\t\t\tif(feature !== undefined && feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t} else {\n\n\t\t\tfor(feature of this.features.values()) {\n\n\t\t\t\tif(feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t}\n\n\t\treturn (features.length > 0) ? features : null;\n\n\t}\n\n\t/**\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t */\n\n\tgetMissingFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(true, featureIds);\n\n\t}\n\n\t/**\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t */\n\n\tgetSupportedFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(false, featureIds);\n\n\t}\n\n\t/**\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t */\n\n\tget(featureId) {\n\n\t\treturn this.features.get(featureId);\n\n\t}\n\n\t/**\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t */\n\n\tset(featureId, feature) {\n\n\t\treturn this.features.set(featureId, feature);\n\n\t}\n\n\t/**\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t */\n\n\tgetMessage(feature) {\n\n\t\treturn \"The \" + feature + \" feature is \" +\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\n\t\t\t\" in the current environment.\";\n\n\t}\n\n}\n"
+    "content": "import {\n\tFeatureId,\n\tCanvasFeature,\n\tFileFeature,\n\tTypedArrayFeature,\n\tWebGLFeature,\n\tWorkerFeature\n} from \"../features\";\n\n/**\n * Detects whether certain features are supported in the current environment.\n */\n\nexport class Detector {\n\n\t/**\n\t * Constructs a new Detector.\n\t */\n\n\tconstructor() {\n\n\t\t/**\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t */\n\n\t\tthis.features = new Map();\n\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\n\n\t}\n\n\t/**\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t */\n\n\tgetFeatures(missing, featureIds) {\n\n\t\tconst features = [];\n\n\t\tlet featureId, feature;\n\n\t\tif(featureIds.length > 0) {\n\n\t\t\tfor(featureId of featureIds) {\n\n\t\t\t\tfeature = this.features.get(featureId);\n\n\t\t\t\tif(feature !== undefined && feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t} else {\n\n\t\t\tfor(feature of this.features.values()) {\n\n\t\t\t\tif(feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t}\n\n\t\treturn (features.length > 0) ? features : null;\n\n\t}\n\n\t/**\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t */\n\n\tgetMissingFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(true, featureIds);\n\n\t}\n\n\t/**\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t */\n\n\tgetSupportedFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(false, featureIds);\n\n\t}\n\n\t/**\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t */\n\n\tget(featureId) {\n\n\t\treturn this.features.get(featureId);\n\n\t}\n\n\t/**\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t * @return {Map} The feature map.\n\t */\n\n\tset(featureId, feature) {\n\n\t\treturn this.features.set(featureId, feature);\n\n\t}\n\n\t/**\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t */\n\n\tgetMessage(feature) {\n\n\t\treturn \"The \" + feature + \" feature is \" +\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\n\t\t\t\" in the current environment.\";\n\n\t}\n\n}\n"
   },
   {
     "__docId__": 1,
@@ -120,9 +120,9 @@
       {
         "nullable": null,
         "types": [
-          "FeatureId"
+          "...FeatureId"
         ],
-        "spread": false,
+        "spread": true,
         "optional": false,
         "name": "featureIds",
         "description": "The ids of the features that you are interested in. If none are supplied, all features will be checked."
@@ -153,9 +153,9 @@
       {
         "nullable": null,
         "types": [
-          "FeatureId"
+          "...FeatureId"
         ],
-        "spread": false,
+        "spread": true,
         "optional": false,
         "name": "featureIds",
         "description": "The ids of the features that you are interested in. If none are supplied, all features will be checked."
@@ -214,7 +214,7 @@
     "longname": "src/core/detector.js~Detector#set",
     "access": null,
     "description": "Defines a custom feature.\n\nThis is a shortcut to the set method of the features map.",
-    "lineNumber": 144,
+    "lineNumber": 145,
     "params": [
       {
         "nullable": null,
@@ -238,9 +238,12 @@
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Map"
+      ],
+      "spread": false,
+      "description": "The feature map."
     },
     "generator": false
   },
@@ -254,7 +257,7 @@
     "longname": "src/core/detector.js~Detector#getMessage",
     "access": null,
     "description": "Returns a human-readable info message for the given feature.",
-    "lineNumber": 157,
+    "lineNumber": 158,
     "params": [
       {
         "nullable": null,

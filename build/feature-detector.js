@@ -481,7 +481,7 @@
      *
      * This search can be limited to a subset of features.
      *
-     * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+     * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
      * @return {Feature[]} A list of missing features or null if there are none.
      */
 
@@ -500,7 +500,7 @@
      *
      * This search can be limited to a subset of features.
      *
-     * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+     * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
      * @return {Feature[]} A list of supported features or null if there are none.
      */
 
@@ -537,6 +537,7 @@
      *
      * @param {FeatureId} featureId - The id of the feature.
      * @param {Feature} feature - The feature.
+     * @return {Map} The feature map.
      */
 
   	}, {
