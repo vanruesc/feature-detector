@@ -39,6 +39,85 @@ export class Detector {
 	}
 
 	/**
+	 * Creates a list of either missing or supported features.
+	 *
+	 * This search can be limited to a subset of features.
+	 *
+	 * @private
+	 * @param {Boolean} missing - Whether only missing features should be returned.
+	 * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+	 * @return {Feature[]} A list of either missing or supported features.
+	 */
+
+	getFeatures(missing, featureIds) {
+
+		const features = [];
+
+		let featureId, feature;
+
+		if(featureIds.length > 0) {
+
+			for(featureId of featureIds) {
+
+				feature = this.features.get(featureId);
+
+				if(feature !== undefined && feature.supported === !missing) {
+
+					features.push(feature);
+
+				}
+
+			}
+
+		} else {
+
+			for(feature of this.features.values()) {
+
+				if(feature.supported === !missing) {
+
+					features.push(feature);
+
+				}
+
+			}
+
+		}
+
+		return (features.length > 0) ? features : null;
+
+	}
+
+	/**
+	 * Returns a list of missing features.
+	 *
+	 * This search can be limited to a subset of features.
+	 *
+	 * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+	 * @return {Feature[]} A list of missing features or null if there are none.
+	 */
+
+	getMissingFeatures(...featureIds) {
+
+		return this.getFeatures(true, featureIds);
+
+	}
+
+	/**
+	 * Returns a list of supported features.
+	 *
+	 * This search can be limited to a subset of features.
+	 *
+	 * @param {FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.
+	 * @return {Feature[]} A list of supported features or null if there are none.
+	 */
+
+	getSupportedFeatures(...featureIds) {
+
+		return this.getFeatures(false, featureIds);
+
+	}
+
+	/**
 	 * Retrieves the requested feature.
 	 *
 	 * This is a shortcut to the get method of the features map.
@@ -50,6 +129,21 @@ export class Detector {
 	get(featureId) {
 
 		return this.features.get(featureId);
+
+	}
+
+	/**
+	 * Defines a custom feature.
+	 *
+	 * This is a shortcut to the set method of the features map.
+	 *
+	 * @param {FeatureId} featureId - The id of the feature.
+	 * @param {Feature} feature - The feature.
+	 */
+
+	set(featureId, feature) {
+
+		return this.features.set(featureId, feature);
 
 	}
 
