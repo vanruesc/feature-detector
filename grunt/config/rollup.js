@@ -6,12 +6,18 @@ module.exports = function(grunt) {
 	return {
 
 		options: {
-			plugins: [
+			plugins() {
+				return grunt.option("production") ? [
 					resolve({
 						jsnext: true
 					}),
 					babel()
-			]
+				] : [
+					resolve({
+						jsnext: true
+					})
+				];
+			}
 		},
 
 		lib: {
