@@ -1,5 +1,5 @@
 /**
- * feature-detector v0.1.2 build May 28 2017
+ * feature-detector v0.1.3 build Aug 02 2017
  * https://github.com/vanruesc/feature-detector
  * Copyright 2017 Raoul van Rüschen, Zlib
  */
@@ -7,7 +7,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.FEATUREDETECTOR = global.FEATUREDETECTOR || {})));
+  (factory((global.FEATUREDETECTOR = {})));
 }(this, (function (exports) { 'use strict';
 
   var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
