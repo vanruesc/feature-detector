@@ -1,4 +1,4 @@
-import { Feature } from "./feature.js";
+import { Feature } from "./Feature.js";
 
 /**
  * The canvas feature.

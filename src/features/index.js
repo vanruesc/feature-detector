@@ -4,11 +4,11 @@
  * @module features
  */
 
-export { Feature } from "./feature.js";
-export { FeatureId } from "./feature-id.js";
+export { Feature } from "./Feature.js";
+export { FeatureId } from "./FeatureId.js";
 
-export { CanvasFeature } from "./canvas.js";
-export { FileFeature } from "./file.js";
-export { TypedArrayFeature } from "./typed-array.js";
-export { WebGLFeature } from "./webgl.js";
-export { WorkerFeature } from "./worker.js";
+export { CanvasFeature } from "./CanvasFeature.js";
+export { FileFeature } from "./FileFeature.js";
+export { TypedArrayFeature } from "./TypedArrayFeature.js";
+export { WebGLFeature } from "./WebGLFeature.js";
+export { WorkerFeature } from "./WorkerFeature.js";
