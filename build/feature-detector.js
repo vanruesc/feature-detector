@@ -1,5 +1,5 @@
 /**
- * feature-detector v0.1.3 build Aug 02 2017
+ * feature-detector v0.1.4 build Aug 03 2017
  * https://github.com/vanruesc/feature-detector
  * Copyright 2017 Raoul van Rüschen, Zlib
  */
