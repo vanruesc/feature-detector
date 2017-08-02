@@ -10,8 +10,8 @@
             "type": "Identifier",
             "name": "FeatureId",
             "range": [
-              10,
-              19
+              11,
+              20
             ],
             "loc": {
               "start": {
@@ -28,8 +28,8 @@
             "type": "Identifier",
             "name": "FeatureId",
             "range": [
-              10,
-              19
+              11,
+              20
             ],
             "loc": {
               "start": {
@@ -43,8 +43,8 @@
             }
           },
           "range": [
-            10,
-            19
+            11,
+            20
           ],
           "loc": {
             "start": {
@@ -63,8 +63,8 @@
             "type": "Identifier",
             "name": "CanvasFeature",
             "range": [
-              22,
-              35
+              24,
+              37
             ],
             "loc": {
               "start": {
@@ -81,8 +81,8 @@
             "type": "Identifier",
             "name": "CanvasFeature",
             "range": [
-              22,
-              35
+              24,
+              37
             ],
             "loc": {
               "start": {
@@ -96,8 +96,8 @@
             }
           },
           "range": [
-            22,
-            35
+            24,
+            37
           ],
           "loc": {
             "start": {
@@ -116,8 +116,8 @@
             "type": "Identifier",
             "name": "FileFeature",
             "range": [
-              38,
-              49
+              41,
+              52
             ],
             "loc": {
               "start": {
@@ -134,8 +134,8 @@
             "type": "Identifier",
             "name": "FileFeature",
             "range": [
-              38,
-              49
+              41,
+              52
             ],
             "loc": {
               "start": {
@@ -149,8 +149,8 @@
             }
           },
           "range": [
-            38,
-            49
+            41,
+            52
           ],
           "loc": {
             "start": {
@@ -169,8 +169,8 @@
             "type": "Identifier",
             "name": "TypedArrayFeature",
             "range": [
-              52,
-              69
+              56,
+              73
             ],
             "loc": {
               "start": {
@@ -187,8 +187,8 @@
             "type": "Identifier",
             "name": "TypedArrayFeature",
             "range": [
-              52,
-              69
+              56,
+              73
             ],
             "loc": {
               "start": {
@@ -202,8 +202,8 @@
             }
           },
           "range": [
-            52,
-            69
+            56,
+            73
           ],
           "loc": {
             "start": {
@@ -222,8 +222,8 @@
             "type": "Identifier",
             "name": "WebGLFeature",
             "range": [
-              72,
-              84
+              77,
+              89
             ],
             "loc": {
               "start": {
@@ -240,8 +240,8 @@
             "type": "Identifier",
             "name": "WebGLFeature",
             "range": [
-              72,
-              84
+              77,
+              89
             ],
             "loc": {
               "start": {
@@ -255,8 +255,8 @@
             }
           },
           "range": [
-            72,
-            84
+            77,
+            89
           ],
           "loc": {
             "start": {
@@ -275,8 +275,8 @@
             "type": "Identifier",
             "name": "WorkerFeature",
             "range": [
-              87,
-              100
+              93,
+              106
             ],
             "loc": {
               "start": {
@@ -293,8 +293,8 @@
             "type": "Identifier",
             "name": "WorkerFeature",
             "range": [
-              87,
-              100
+              93,
+              106
             ],
             "loc": {
               "start": {
@@ -308,8 +308,8 @@
             }
           },
           "range": [
-            87,
-            100
+            93,
+            106
           ],
           "loc": {
             "start": {
@@ -328,8 +328,8 @@
         "value": "../features",
         "raw": "\"../features\"",
         "range": [
-          108,
-          121
+          115,
+          128
         ],
         "loc": {
           "start": {
@@ -344,7 +344,7 @@
       },
       "range": [
         0,
-        122
+        129
       ],
       "loc": {
         "start": {
@@ -359,10 +359,10 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Detects whether certain features are supported in the current environment.\n ",
+          "value": "*\r\n * Detects whether certain features are supported in the current environment.\r\n ",
           "range": [
-            124,
-            209
+            133,
+            220
           ],
           "loc": {
             "start": {
@@ -385,8 +385,8 @@
           "type": "Identifier",
           "name": "Detector",
           "range": [
-            224,
-            232
+            237,
+            245
           ],
           "loc": {
             "start": {
@@ -409,8 +409,8 @@
                 "type": "Identifier",
                 "name": "constructor",
                 "range": [
-                  279,
-                  290
+                  298,
+                  309
                 ],
                 "loc": {
                   "start": {
@@ -441,8 +441,8 @@
                           "object": {
                             "type": "ThisExpression",
                             "range": [
-                              488,
-                              492
+                              518,
+                              522
                             ],
                             "loc": {
                               "start": {
@@ -459,8 +459,8 @@
                             "type": "Identifier",
                             "name": "features",
                             "range": [
-                              493,
-                              501
+                              523,
+                              531
                             ],
                             "loc": {
                               "start": {
@@ -474,8 +474,8 @@
                             }
                           },
                           "range": [
-                            488,
-                            501
+                            518,
+                            531
                           ],
                           "loc": {
                             "start": {
@@ -494,8 +494,8 @@
                             "type": "Identifier",
                             "name": "Map",
                             "range": [
-                              508,
-                              511
+                              538,
+                              541
                             ],
                             "loc": {
                               "start": {
@@ -510,8 +510,8 @@
                           },
                           "arguments": [],
                           "range": [
-                            504,
-                            513
+                            534,
+                            543
                           ],
                           "loc": {
                             "start": {
@@ -525,8 +525,8 @@
                           }
                         },
                         "range": [
-                          488,
-                          513
+                          518,
+                          543
                         ],
                         "loc": {
                           "start": {
@@ -540,8 +540,8 @@
                         }
                       },
                       "range": [
-                        488,
-                        514
+                        518,
+                        544
                       ],
                       "loc": {
                         "start": {
@@ -556,10 +556,10 @@
                       "leadingComments": [
                         {
                           "type": "Block",
-                          "value": "*\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t ",
+                          "value": "*\r\n\t\t * A feature map.\r\n\t\t *\r\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\r\n\t\t * Custom Features may also be added to this map.\r\n\t\t *\r\n\t\t * @type {Map}\r\n\t\t ",
                           "range": [
-                            298,
-                            484
+                            319,
+                            512
                           ],
                           "loc": {
                             "start": {
@@ -587,8 +587,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                518,
-                                522
+                                550,
+                                554
                               ],
                               "loc": {
                                 "start": {
@@ -605,8 +605,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                523,
-                                531
+                                555,
+                                563
                               ],
                               "loc": {
                                 "start": {
@@ -620,8 +620,8 @@
                               }
                             },
                             "range": [
-                              518,
-                              531
+                              550,
+                              563
                             ],
                             "loc": {
                               "start": {
@@ -638,8 +638,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              532,
-                              535
+                              564,
+                              567
                             ],
                             "loc": {
                               "start": {
@@ -653,8 +653,8 @@
                             }
                           },
                           "range": [
-                            518,
-                            535
+                            550,
+                            567
                           ],
                           "loc": {
                             "start": {
@@ -675,8 +675,8 @@
                               "type": "Identifier",
                               "name": "FeatureId",
                               "range": [
-                                536,
-                                545
+                                568,
+                                577
                               ],
                               "loc": {
                                 "start": {
@@ -693,8 +693,8 @@
                               "type": "Identifier",
                               "name": "CANVAS",
                               "range": [
-                                546,
-                                552
+                                578,
+                                584
                               ],
                               "loc": {
                                 "start": {
@@ -708,8 +708,8 @@
                               }
                             },
                             "range": [
-                              536,
-                              552
+                              568,
+                              584
                             ],
                             "loc": {
                               "start": {
@@ -728,8 +728,8 @@
                               "type": "Identifier",
                               "name": "CanvasFeature",
                               "range": [
-                                558,
-                                571
+                                590,
+                                603
                               ],
                               "loc": {
                                 "start": {
@@ -744,8 +744,8 @@
                             },
                             "arguments": [],
                             "range": [
-                              554,
-                              573
+                              586,
+                              605
                             ],
                             "loc": {
                               "start": {
@@ -760,8 +760,8 @@
                           }
                         ],
                         "range": [
-                          518,
-                          574
+                          550,
+                          606
                         ],
                         "loc": {
                           "start": {
@@ -775,8 +775,8 @@
                         }
                       },
                       "range": [
-                        518,
-                        575
+                        550,
+                        607
                       ],
                       "loc": {
                         "start": {
@@ -802,8 +802,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                578,
-                                582
+                                611,
+                                615
                               ],
                               "loc": {
                                 "start": {
@@ -820,8 +820,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                583,
-                                591
+                                616,
+                                624
                               ],
                               "loc": {
                                 "start": {
@@ -835,8 +835,8 @@
                               }
                             },
                             "range": [
-                              578,
-                              591
+                              611,
+                              624
                             ],
                             "loc": {
                               "start": {
@@ -853,8 +853,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              592,
-                              595
+                              625,
+                              628
                             ],
                             "loc": {
                               "start": {
@@ -868,8 +868,8 @@
                             }
                           },
                           "range": [
-                            578,
-                            595
+                            611,
+                            628
                           ],
                           "loc": {
                             "start": {
@@ -890,8 +890,8 @@
                               "type": "Identifier",
                               "name": "FeatureId",
                               "range": [
-                                596,
-                                605
+                                629,
+                                638
                               ],
                               "loc": {
                                 "start": {
@@ -908,8 +908,8 @@
                               "type": "Identifier",
                               "name": "FILE",
                               "range": [
-                                606,
-                                610
+                                639,
+                                643
                               ],
                               "loc": {
                                 "start": {
@@ -923,8 +923,8 @@
                               }
                             },
                             "range": [
-                              596,
-                              610
+                              629,
+                              643
                             ],
                             "loc": {
                               "start": {
@@ -943,8 +943,8 @@
                               "type": "Identifier",
                               "name": "FileFeature",
                               "range": [
-                                616,
-                                627
+                                649,
+                                660
                               ],
                               "loc": {
                                 "start": {
@@ -959,8 +959,8 @@
                             },
                             "arguments": [],
                             "range": [
-                              612,
-                              629
+                              645,
+                              662
                             ],
                             "loc": {
                               "start": {
@@ -975,8 +975,8 @@
                           }
                         ],
                         "range": [
-                          578,
-                          630
+                          611,
+                          663
                         ],
                         "loc": {
                           "start": {
@@ -990,8 +990,8 @@
                         }
                       },
                       "range": [
-                        578,
-                        631
+                        611,
+                        664
                       ],
                       "loc": {
                         "start": {
@@ -1017,8 +1017,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                634,
-                                638
+                                668,
+                                672
                               ],
                               "loc": {
                                 "start": {
@@ -1035,8 +1035,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                639,
-                                647
+                                673,
+                                681
                               ],
                               "loc": {
                                 "start": {
@@ -1050,8 +1050,8 @@
                               }
                             },
                             "range": [
-                              634,
-                              647
+                              668,
+                              681
                             ],
                             "loc": {
                               "start": {
@@ -1068,8 +1068,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              648,
-                              651
+                              682,
+                              685
                             ],
                             "loc": {
                               "start": {
@@ -1083,8 +1083,8 @@
                             }
                           },
                           "range": [
-                            634,
-                            651
+                            668,
+                            685
                           ],
                           "loc": {
                             "start": {
@@ -1105,8 +1105,8 @@
                               "type": "Identifier",
                               "name": "FeatureId",
                               "range": [
-                                652,
-                                661
+                                686,
+                                695
                               ],
                               "loc": {
                                 "start": {
@@ -1123,8 +1123,8 @@
                               "type": "Identifier",
                               "name": "TYPED_ARRAY",
                               "range": [
-                                662,
-                                673
+                                696,
+                                707
                               ],
                               "loc": {
                                 "start": {
@@ -1138,8 +1138,8 @@
                               }
                             },
                             "range": [
-                              652,
-                              673
+                              686,
+                              707
                             ],
                             "loc": {
                               "start": {
@@ -1158,8 +1158,8 @@
                               "type": "Identifier",
                               "name": "TypedArrayFeature",
                               "range": [
-                                679,
-                                696
+                                713,
+                                730
                               ],
                               "loc": {
                                 "start": {
@@ -1174,8 +1174,8 @@
                             },
                             "arguments": [],
                             "range": [
-                              675,
-                              698
+                              709,
+                              732
                             ],
                             "loc": {
                               "start": {
@@ -1190,8 +1190,8 @@
                           }
                         ],
                         "range": [
-                          634,
-                          699
+                          668,
+                          733
                         ],
                         "loc": {
                           "start": {
@@ -1205,8 +1205,8 @@
                         }
                       },
                       "range": [
-                        634,
-                        700
+                        668,
+                        734
                       ],
                       "loc": {
                         "start": {
@@ -1232,8 +1232,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                703,
-                                707
+                                738,
+                                742
                               ],
                               "loc": {
                                 "start": {
@@ -1250,8 +1250,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                708,
-                                716
+                                743,
+                                751
                               ],
                               "loc": {
                                 "start": {
@@ -1265,8 +1265,8 @@
                               }
                             },
                             "range": [
-                              703,
-                              716
+                              738,
+                              751
                             ],
                             "loc": {
                               "start": {
@@ -1283,8 +1283,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              717,
-                              720
+                              752,
+                              755
                             ],
                             "loc": {
                               "start": {
@@ -1298,8 +1298,8 @@
                             }
                           },
                           "range": [
-                            703,
-                            720
+                            738,
+                            755
                           ],
                           "loc": {
                             "start": {
@@ -1320,8 +1320,8 @@
                               "type": "Identifier",
                               "name": "FeatureId",
                               "range": [
-                                721,
-                                730
+                                756,
+                                765
                               ],
                               "loc": {
                                 "start": {
@@ -1338,8 +1338,8 @@
                               "type": "Identifier",
                               "name": "WEBGL",
                               "range": [
-                                731,
-                                736
+                                766,
+                                771
                               ],
                               "loc": {
                                 "start": {
@@ -1353,8 +1353,8 @@
                               }
                             },
                             "range": [
-                              721,
-                              736
+                              756,
+                              771
                             ],
                             "loc": {
                               "start": {
@@ -1373,8 +1373,8 @@
                               "type": "Identifier",
                               "name": "WebGLFeature",
                               "range": [
-                                742,
-                                754
+                                777,
+                                789
                               ],
                               "loc": {
                                 "start": {
@@ -1389,8 +1389,8 @@
                             },
                             "arguments": [],
                             "range": [
-                              738,
-                              756
+                              773,
+                              791
                             ],
                             "loc": {
                               "start": {
@@ -1405,8 +1405,8 @@
                           }
                         ],
                         "range": [
-                          703,
-                          757
+                          738,
+                          792
                         ],
                         "loc": {
                           "start": {
@@ -1420,8 +1420,8 @@
                         }
                       },
                       "range": [
-                        703,
-                        758
+                        738,
+                        793
                       ],
                       "loc": {
                         "start": {
@@ -1447,8 +1447,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                761,
-                                765
+                                797,
+                                801
                               ],
                               "loc": {
                                 "start": {
@@ -1465,8 +1465,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                766,
-                                774
+                                802,
+                                810
                               ],
                               "loc": {
                                 "start": {
@@ -1480,8 +1480,8 @@
                               }
                             },
                             "range": [
-                              761,
-                              774
+                              797,
+                              810
                             ],
                             "loc": {
                               "start": {
@@ -1498,8 +1498,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              775,
-                              778
+                              811,
+                              814
                             ],
                             "loc": {
                               "start": {
@@ -1513,8 +1513,8 @@
                             }
                           },
                           "range": [
-                            761,
-                            778
+                            797,
+                            814
                           ],
                           "loc": {
                             "start": {
@@ -1535,8 +1535,8 @@
                               "type": "Identifier",
                               "name": "FeatureId",
                               "range": [
-                                779,
-                                788
+                                815,
+                                824
                               ],
                               "loc": {
                                 "start": {
@@ -1553,8 +1553,8 @@
                               "type": "Identifier",
                               "name": "WORKER",
                               "range": [
-                                789,
-                                795
+                                825,
+                                831
                               ],
                               "loc": {
                                 "start": {
@@ -1568,8 +1568,8 @@
                               }
                             },
                             "range": [
-                              779,
-                              795
+                              815,
+                              831
                             ],
                             "loc": {
                               "start": {
@@ -1588,8 +1588,8 @@
                               "type": "Identifier",
                               "name": "WorkerFeature",
                               "range": [
-                                801,
-                                814
+                                837,
+                                850
                               ],
                               "loc": {
                                 "start": {
@@ -1604,8 +1604,8 @@
                             },
                             "arguments": [],
                             "range": [
-                              797,
-                              816
+                              833,
+                              852
                             ],
                             "loc": {
                               "start": {
@@ -1620,8 +1620,8 @@
                           }
                         ],
                         "range": [
-                          761,
-                          817
+                          797,
+                          853
                         ],
                         "loc": {
                           "start": {
@@ -1635,8 +1635,8 @@
                         }
                       },
                       "range": [
-                        761,
-                        818
+                        797,
+                        854
                       ],
                       "loc": {
                         "start": {
@@ -1651,8 +1651,8 @@
                     }
                   ],
                   "range": [
-                    293,
-                    822
+                    312,
+                    860
                   ],
                   "loc": {
                     "start": {
@@ -1668,8 +1668,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  290,
-                  822
+                  309,
+                  860
                 ],
                 "loc": {
                   "start": {
@@ -1685,8 +1685,8 @@
               "kind": "constructor",
               "computed": false,
               "range": [
-                279,
-                822
+                298,
+                860
               ],
               "loc": {
                 "start": {
@@ -1701,10 +1701,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Constructs a new Detector.\n\t ",
+                  "value": "*\r\n\t * Constructs a new Detector.\r\n\t ",
                   "range": [
-                    237,
-                    276
+                    252,
+                    293
                   ],
                   "loc": {
                     "start": {
@@ -1721,10 +1721,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t ",
+                  "value": "*\r\n\t * Creates a list of either missing or supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @private\r\n\t * @param {Boolean} missing - Whether only missing features should be returned.\r\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of either missing or supported features.\r\n\t ",
                   "range": [
-                    825,
-                    1265
+                    865,
+                    1314
                   ],
                   "loc": {
                     "start": {
@@ -1746,8 +1746,8 @@
                 "type": "Identifier",
                 "name": "getFeatures",
                 "range": [
-                  1268,
-                  1279
+                  1319,
+                  1330
                 ],
                 "loc": {
                   "start": {
@@ -1768,8 +1768,8 @@
                     "type": "Identifier",
                     "name": "missing",
                     "range": [
-                      1280,
-                      1287
+                      1331,
+                      1338
                     ],
                     "loc": {
                       "start": {
@@ -1786,8 +1786,8 @@
                     "type": "Identifier",
                     "name": "featureIds",
                     "range": [
-                      1289,
-                      1299
+                      1340,
+                      1350
                     ],
                     "loc": {
                       "start": {
@@ -1813,8 +1813,8 @@
                             "type": "Identifier",
                             "name": "features",
                             "range": [
-                              1312,
-                              1320
+                              1365,
+                              1373
                             ],
                             "loc": {
                               "start": {
@@ -1831,8 +1831,8 @@
                             "type": "ArrayExpression",
                             "elements": [],
                             "range": [
-                              1323,
-                              1325
+                              1376,
+                              1378
                             ],
                             "loc": {
                               "start": {
@@ -1846,8 +1846,8 @@
                             }
                           },
                           "range": [
-                            1312,
-                            1325
+                            1365,
+                            1378
                           ],
                           "loc": {
                             "start": {
@@ -1863,8 +1863,8 @@
                       ],
                       "kind": "const",
                       "range": [
-                        1306,
-                        1326
+                        1359,
+                        1379
                       ],
                       "loc": {
                         "start": {
@@ -1886,8 +1886,8 @@
                             "type": "Identifier",
                             "name": "featureId",
                             "range": [
-                              1334,
-                              1343
+                              1389,
+                              1398
                             ],
                             "loc": {
                               "start": {
@@ -1902,8 +1902,8 @@
                           },
                           "init": null,
                           "range": [
-                            1334,
-                            1343
+                            1389,
+                            1398
                           ],
                           "loc": {
                             "start": {
@@ -1922,8 +1922,8 @@
                             "type": "Identifier",
                             "name": "feature",
                             "range": [
-                              1345,
-                              1352
+                              1400,
+                              1407
                             ],
                             "loc": {
                               "start": {
@@ -1938,8 +1938,8 @@
                           },
                           "init": null,
                           "range": [
-                            1345,
-                            1352
+                            1400,
+                            1407
                           ],
                           "loc": {
                             "start": {
@@ -1955,8 +1955,8 @@
                       ],
                       "kind": "let",
                       "range": [
-                        1330,
-                        1353
+                        1385,
+                        1408
                       ],
                       "loc": {
                         "start": {
@@ -1981,8 +1981,8 @@
                             "type": "Identifier",
                             "name": "featureIds",
                             "range": [
-                              1360,
-                              1370
+                              1417,
+                              1427
                             ],
                             "loc": {
                               "start": {
@@ -1999,8 +1999,8 @@
                             "type": "Identifier",
                             "name": "length",
                             "range": [
-                              1371,
-                              1377
+                              1428,
+                              1434
                             ],
                             "loc": {
                               "start": {
@@ -2014,8 +2014,8 @@
                             }
                           },
                           "range": [
-                            1360,
-                            1377
+                            1417,
+                            1434
                           ],
                           "loc": {
                             "start": {
@@ -2033,8 +2033,8 @@
                           "value": 0,
                           "raw": "0",
                           "range": [
-                            1380,
-                            1381
+                            1437,
+                            1438
                           ],
                           "loc": {
                             "start": {
@@ -2048,8 +2048,8 @@
                           }
                         },
                         "range": [
-                          1360,
-                          1381
+                          1417,
+                          1438
                         ],
                         "loc": {
                           "start": {
@@ -2071,8 +2071,8 @@
                               "type": "Identifier",
                               "name": "featureId",
                               "range": [
-                                1393,
-                                1402
+                                1452,
+                                1461
                               ],
                               "loc": {
                                 "start": {
@@ -2089,8 +2089,8 @@
                               "type": "Identifier",
                               "name": "featureIds",
                               "range": [
-                                1406,
-                                1416
+                                1465,
+                                1475
                               ],
                               "loc": {
                                 "start": {
@@ -2115,8 +2115,8 @@
                                       "type": "Identifier",
                                       "name": "feature",
                                       "range": [
-                                        1425,
-                                        1432
+                                        1486,
+                                        1493
                                       ],
                                       "loc": {
                                         "start": {
@@ -2140,8 +2140,8 @@
                                           "object": {
                                             "type": "ThisExpression",
                                             "range": [
-                                              1435,
-                                              1439
+                                              1496,
+                                              1500
                                             ],
                                             "loc": {
                                               "start": {
@@ -2158,8 +2158,8 @@
                                             "type": "Identifier",
                                             "name": "features",
                                             "range": [
-                                              1440,
-                                              1448
+                                              1501,
+                                              1509
                                             ],
                                             "loc": {
                                               "start": {
@@ -2173,8 +2173,8 @@
                                             }
                                           },
                                           "range": [
-                                            1435,
-                                            1448
+                                            1496,
+                                            1509
                                           ],
                                           "loc": {
                                             "start": {
@@ -2191,8 +2191,8 @@
                                           "type": "Identifier",
                                           "name": "get",
                                           "range": [
-                                            1449,
-                                            1452
+                                            1510,
+                                            1513
                                           ],
                                           "loc": {
                                             "start": {
@@ -2206,8 +2206,8 @@
                                           }
                                         },
                                         "range": [
-                                          1435,
-                                          1452
+                                          1496,
+                                          1513
                                         ],
                                         "loc": {
                                           "start": {
@@ -2225,8 +2225,8 @@
                                           "type": "Identifier",
                                           "name": "featureId",
                                           "range": [
-                                            1453,
-                                            1462
+                                            1514,
+                                            1523
                                           ],
                                           "loc": {
                                             "start": {
@@ -2241,8 +2241,8 @@
                                         }
                                       ],
                                       "range": [
-                                        1435,
-                                        1463
+                                        1496,
+                                        1524
                                       ],
                                       "loc": {
                                         "start": {
@@ -2256,8 +2256,8 @@
                                       }
                                     },
                                     "range": [
-                                      1425,
-                                      1463
+                                      1486,
+                                      1524
                                     ],
                                     "loc": {
                                       "start": {
@@ -2271,8 +2271,8 @@
                                     }
                                   },
                                   "range": [
-                                    1425,
-                                    1464
+                                    1486,
+                                    1525
                                   ],
                                   "loc": {
                                     "start": {
@@ -2297,8 +2297,8 @@
                                         "type": "Identifier",
                                         "name": "feature",
                                         "range": [
-                                          1473,
-                                          1480
+                                          1536,
+                                          1543
                                         ],
                                         "loc": {
                                           "start": {
@@ -2315,8 +2315,8 @@
                                         "type": "Identifier",
                                         "name": "undefined",
                                         "range": [
-                                          1485,
-                                          1494
+                                          1548,
+                                          1557
                                         ],
                                         "loc": {
                                           "start": {
@@ -2330,8 +2330,8 @@
                                         }
                                       },
                                       "range": [
-                                        1473,
-                                        1494
+                                        1536,
+                                        1557
                                       ],
                                       "loc": {
                                         "start": {
@@ -2354,8 +2354,8 @@
                                           "type": "Identifier",
                                           "name": "feature",
                                           "range": [
-                                            1498,
-                                            1505
+                                            1561,
+                                            1568
                                           ],
                                           "loc": {
                                             "start": {
@@ -2372,8 +2372,8 @@
                                           "type": "Identifier",
                                           "name": "supported",
                                           "range": [
-                                            1506,
-                                            1515
+                                            1569,
+                                            1578
                                           ],
                                           "loc": {
                                             "start": {
@@ -2387,8 +2387,8 @@
                                           }
                                         },
                                         "range": [
-                                          1498,
-                                          1515
+                                          1561,
+                                          1578
                                         ],
                                         "loc": {
                                           "start": {
@@ -2408,8 +2408,8 @@
                                           "type": "Identifier",
                                           "name": "missing",
                                           "range": [
-                                            1521,
-                                            1528
+                                            1584,
+                                            1591
                                           ],
                                           "loc": {
                                             "start": {
@@ -2424,8 +2424,8 @@
                                         },
                                         "prefix": true,
                                         "range": [
-                                          1520,
-                                          1528
+                                          1583,
+                                          1591
                                         ],
                                         "loc": {
                                           "start": {
@@ -2439,8 +2439,8 @@
                                         }
                                       },
                                       "range": [
-                                        1498,
-                                        1528
+                                        1561,
+                                        1591
                                       ],
                                       "loc": {
                                         "start": {
@@ -2454,8 +2454,8 @@
                                       }
                                     },
                                     "range": [
-                                      1473,
-                                      1528
+                                      1536,
+                                      1591
                                     ],
                                     "loc": {
                                       "start": {
@@ -2482,8 +2482,8 @@
                                               "type": "Identifier",
                                               "name": "features",
                                               "range": [
-                                                1538,
-                                                1546
+                                                1603,
+                                                1611
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2500,8 +2500,8 @@
                                               "type": "Identifier",
                                               "name": "push",
                                               "range": [
-                                                1547,
-                                                1551
+                                                1612,
+                                                1616
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2515,8 +2515,8 @@
                                               }
                                             },
                                             "range": [
-                                              1538,
-                                              1551
+                                              1603,
+                                              1616
                                             ],
                                             "loc": {
                                               "start": {
@@ -2534,8 +2534,8 @@
                                               "type": "Identifier",
                                               "name": "feature",
                                               "range": [
-                                                1552,
-                                                1559
+                                                1617,
+                                                1624
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2550,8 +2550,8 @@
                                             }
                                           ],
                                           "range": [
-                                            1538,
-                                            1560
+                                            1603,
+                                            1625
                                           ],
                                           "loc": {
                                             "start": {
@@ -2565,8 +2565,8 @@
                                           }
                                         },
                                         "range": [
-                                          1538,
-                                          1561
+                                          1603,
+                                          1626
                                         ],
                                         "loc": {
                                           "start": {
@@ -2581,8 +2581,8 @@
                                       }
                                     ],
                                     "range": [
-                                      1530,
-                                      1568
+                                      1593,
+                                      1635
                                     ],
                                     "loc": {
                                       "start": {
@@ -2597,8 +2597,8 @@
                                   },
                                   "alternate": null,
                                   "range": [
-                                    1470,
-                                    1568
+                                    1533,
+                                    1635
                                   ],
                                   "loc": {
                                     "start": {
@@ -2613,8 +2613,8 @@
                                 }
                               ],
                               "range": [
-                                1418,
-                                1574
+                                1477,
+                                1643
                               ],
                               "loc": {
                                 "start": {
@@ -2628,8 +2628,8 @@
                               }
                             },
                             "range": [
-                              1389,
-                              1574
+                              1448,
+                              1643
                             ],
                             "loc": {
                               "start": {
@@ -2644,8 +2644,8 @@
                           }
                         ],
                         "range": [
-                          1383,
-                          1579
+                          1440,
+                          1650
                         ],
                         "loc": {
                           "start": {
@@ -2667,8 +2667,8 @@
                               "type": "Identifier",
                               "name": "feature",
                               "range": [
-                                1595,
-                                1602
+                                1668,
+                                1675
                               ],
                               "loc": {
                                 "start": {
@@ -2692,8 +2692,8 @@
                                   "object": {
                                     "type": "ThisExpression",
                                     "range": [
-                                      1606,
-                                      1610
+                                      1679,
+                                      1683
                                     ],
                                     "loc": {
                                       "start": {
@@ -2710,8 +2710,8 @@
                                     "type": "Identifier",
                                     "name": "features",
                                     "range": [
-                                      1611,
-                                      1619
+                                      1684,
+                                      1692
                                     ],
                                     "loc": {
                                       "start": {
@@ -2725,8 +2725,8 @@
                                     }
                                   },
                                   "range": [
-                                    1606,
-                                    1619
+                                    1679,
+                                    1692
                                   ],
                                   "loc": {
                                     "start": {
@@ -2743,8 +2743,8 @@
                                   "type": "Identifier",
                                   "name": "values",
                                   "range": [
-                                    1620,
-                                    1626
+                                    1693,
+                                    1699
                                   ],
                                   "loc": {
                                     "start": {
@@ -2758,8 +2758,8 @@
                                   }
                                 },
                                 "range": [
-                                  1606,
-                                  1626
+                                  1679,
+                                  1699
                                 ],
                                 "loc": {
                                   "start": {
@@ -2774,8 +2774,8 @@
                               },
                               "arguments": [],
                               "range": [
-                                1606,
-                                1628
+                                1679,
+                                1701
                               ],
                               "loc": {
                                 "start": {
@@ -2803,8 +2803,8 @@
                                         "type": "Identifier",
                                         "name": "feature",
                                         "range": [
-                                          1640,
-                                          1647
+                                          1715,
+                                          1722
                                         ],
                                         "loc": {
                                           "start": {
@@ -2821,8 +2821,8 @@
                                         "type": "Identifier",
                                         "name": "supported",
                                         "range": [
-                                          1648,
-                                          1657
+                                          1723,
+                                          1732
                                         ],
                                         "loc": {
                                           "start": {
@@ -2836,8 +2836,8 @@
                                         }
                                       },
                                       "range": [
-                                        1640,
-                                        1657
+                                        1715,
+                                        1732
                                       ],
                                       "loc": {
                                         "start": {
@@ -2857,8 +2857,8 @@
                                         "type": "Identifier",
                                         "name": "missing",
                                         "range": [
-                                          1663,
-                                          1670
+                                          1738,
+                                          1745
                                         ],
                                         "loc": {
                                           "start": {
@@ -2873,8 +2873,8 @@
                                       },
                                       "prefix": true,
                                       "range": [
-                                        1662,
-                                        1670
+                                        1737,
+                                        1745
                                       ],
                                       "loc": {
                                         "start": {
@@ -2888,8 +2888,8 @@
                                       }
                                     },
                                     "range": [
-                                      1640,
-                                      1670
+                                      1715,
+                                      1745
                                     ],
                                     "loc": {
                                       "start": {
@@ -2916,8 +2916,8 @@
                                               "type": "Identifier",
                                               "name": "features",
                                               "range": [
-                                                1680,
-                                                1688
+                                                1757,
+                                                1765
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2934,8 +2934,8 @@
                                               "type": "Identifier",
                                               "name": "push",
                                               "range": [
-                                                1689,
-                                                1693
+                                                1766,
+                                                1770
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2949,8 +2949,8 @@
                                               }
                                             },
                                             "range": [
-                                              1680,
-                                              1693
+                                              1757,
+                                              1770
                                             ],
                                             "loc": {
                                               "start": {
@@ -2968,8 +2968,8 @@
                                               "type": "Identifier",
                                               "name": "feature",
                                               "range": [
-                                                1694,
-                                                1701
+                                                1771,
+                                                1778
                                               ],
                                               "loc": {
                                                 "start": {
@@ -2984,8 +2984,8 @@
                                             }
                                           ],
                                           "range": [
-                                            1680,
-                                            1702
+                                            1757,
+                                            1779
                                           ],
                                           "loc": {
                                             "start": {
@@ -2999,8 +2999,8 @@
                                           }
                                         },
                                         "range": [
-                                          1680,
-                                          1703
+                                          1757,
+                                          1780
                                         ],
                                         "loc": {
                                           "start": {
@@ -3015,8 +3015,8 @@
                                       }
                                     ],
                                     "range": [
-                                      1672,
-                                      1710
+                                      1747,
+                                      1789
                                     ],
                                     "loc": {
                                       "start": {
@@ -3031,8 +3031,8 @@
                                   },
                                   "alternate": null,
                                   "range": [
-                                    1637,
-                                    1710
+                                    1712,
+                                    1789
                                   ],
                                   "loc": {
                                     "start": {
@@ -3047,8 +3047,8 @@
                                 }
                               ],
                               "range": [
-                                1630,
-                                1716
+                                1703,
+                                1797
                               ],
                               "loc": {
                                 "start": {
@@ -3062,8 +3062,8 @@
                               }
                             },
                             "range": [
-                              1591,
-                              1716
+                              1664,
+                              1797
                             ],
                             "loc": {
                               "start": {
@@ -3078,8 +3078,8 @@
                           }
                         ],
                         "range": [
-                          1585,
-                          1721
+                          1656,
+                          1804
                         ],
                         "loc": {
                           "start": {
@@ -3093,8 +3093,8 @@
                         }
                       },
                       "range": [
-                        1357,
-                        1721
+                        1414,
+                        1804
                       ],
                       "loc": {
                         "start": {
@@ -3121,8 +3121,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                1733,
-                                1741
+                                1818,
+                                1826
                               ],
                               "loc": {
                                 "start": {
@@ -3139,8 +3139,8 @@
                               "type": "Identifier",
                               "name": "length",
                               "range": [
-                                1742,
-                                1748
+                                1827,
+                                1833
                               ],
                               "loc": {
                                 "start": {
@@ -3154,8 +3154,8 @@
                               }
                             },
                             "range": [
-                              1733,
-                              1748
+                              1818,
+                              1833
                             ],
                             "loc": {
                               "start": {
@@ -3173,8 +3173,8 @@
                             "value": 0,
                             "raw": "0",
                             "range": [
-                              1751,
-                              1752
+                              1836,
+                              1837
                             ],
                             "loc": {
                               "start": {
@@ -3188,8 +3188,8 @@
                             }
                           },
                           "range": [
-                            1733,
-                            1752
+                            1818,
+                            1837
                           ],
                           "loc": {
                             "start": {
@@ -3206,8 +3206,8 @@
                           "type": "Identifier",
                           "name": "features",
                           "range": [
-                            1756,
-                            1764
+                            1841,
+                            1849
                           ],
                           "loc": {
                             "start": {
@@ -3225,8 +3225,8 @@
                           "value": null,
                           "raw": "null",
                           "range": [
-                            1767,
-                            1771
+                            1852,
+                            1856
                           ],
                           "loc": {
                             "start": {
@@ -3240,8 +3240,8 @@
                           }
                         },
                         "range": [
-                          1732,
-                          1771
+                          1817,
+                          1856
                         ],
                         "loc": {
                           "start": {
@@ -3255,8 +3255,8 @@
                         }
                       },
                       "range": [
-                        1725,
-                        1772
+                        1810,
+                        1857
                       ],
                       "loc": {
                         "start": {
@@ -3271,8 +3271,8 @@
                     }
                   ],
                   "range": [
-                    1301,
-                    1776
+                    1352,
+                    1863
                   ],
                   "loc": {
                     "start": {
@@ -3288,8 +3288,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  1279,
-                  1776
+                  1330,
+                  1863
                 ],
                 "loc": {
                   "start": {
@@ -3305,8 +3305,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                1268,
-                1776
+                1319,
+                1863
               ],
               "loc": {
                 "start": {
@@ -3321,10 +3321,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t ",
+                  "value": "*\r\n\t * Creates a list of either missing or supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @private\r\n\t * @param {Boolean} missing - Whether only missing features should be returned.\r\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of either missing or supported features.\r\n\t ",
                   "range": [
-                    825,
-                    1265
+                    865,
+                    1314
                   ],
                   "loc": {
                     "start": {
@@ -3341,10 +3341,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t ",
+                  "value": "*\r\n\t * Returns a list of missing features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of missing features or null if there are none.\r\n\t ",
                   "range": [
-                    1779,
-                    2112
+                    1868,
+                    2208
                   ],
                   "loc": {
                     "start": {
@@ -3366,8 +3366,8 @@
                 "type": "Identifier",
                 "name": "getMissingFeatures",
                 "range": [
-                  2115,
-                  2133
+                  2213,
+                  2231
                 ],
                 "loc": {
                   "start": {
@@ -3390,8 +3390,8 @@
                       "type": "Identifier",
                       "name": "featureIds",
                       "range": [
-                        2137,
-                        2147
+                        2235,
+                        2245
                       ],
                       "loc": {
                         "start": {
@@ -3405,8 +3405,8 @@
                       }
                     },
                     "range": [
-                      2134,
-                      2147
+                      2232,
+                      2245
                     ],
                     "loc": {
                       "start": {
@@ -3433,8 +3433,8 @@
                           "object": {
                             "type": "ThisExpression",
                             "range": [
-                              2161,
-                              2165
+                              2261,
+                              2265
                             ],
                             "loc": {
                               "start": {
@@ -3451,8 +3451,8 @@
                             "type": "Identifier",
                             "name": "getFeatures",
                             "range": [
-                              2166,
-                              2177
+                              2266,
+                              2277
                             ],
                             "loc": {
                               "start": {
@@ -3466,8 +3466,8 @@
                             }
                           },
                           "range": [
-                            2161,
-                            2177
+                            2261,
+                            2277
                           ],
                           "loc": {
                             "start": {
@@ -3486,8 +3486,8 @@
                             "value": true,
                             "raw": "true",
                             "range": [
-                              2178,
-                              2182
+                              2278,
+                              2282
                             ],
                             "loc": {
                               "start": {
@@ -3504,8 +3504,8 @@
                             "type": "Identifier",
                             "name": "featureIds",
                             "range": [
-                              2184,
-                              2194
+                              2284,
+                              2294
                             ],
                             "loc": {
                               "start": {
@@ -3520,8 +3520,8 @@
                           }
                         ],
                         "range": [
-                          2161,
-                          2195
+                          2261,
+                          2295
                         ],
                         "loc": {
                           "start": {
@@ -3535,8 +3535,8 @@
                         }
                       },
                       "range": [
-                        2154,
-                        2196
+                        2254,
+                        2296
                       ],
                       "loc": {
                         "start": {
@@ -3551,8 +3551,8 @@
                     }
                   ],
                   "range": [
-                    2149,
-                    2200
+                    2247,
+                    2302
                   ],
                   "loc": {
                     "start": {
@@ -3568,8 +3568,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  2133,
-                  2200
+                  2231,
+                  2302
                 ],
                 "loc": {
                   "start": {
@@ -3585,8 +3585,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                2115,
-                2200
+                2213,
+                2302
               ],
               "loc": {
                 "start": {
@@ -3601,10 +3601,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t ",
+                  "value": "*\r\n\t * Returns a list of missing features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of missing features or null if there are none.\r\n\t ",
                   "range": [
-                    1779,
-                    2112
+                    1868,
+                    2208
                   ],
                   "loc": {
                     "start": {
@@ -3621,10 +3621,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t ",
+                  "value": "*\r\n\t * Returns a list of supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of supported features or null if there are none.\r\n\t ",
                   "range": [
-                    2203,
-                    2540
+                    2307,
+                    2651
                   ],
                   "loc": {
                     "start": {
@@ -3646,8 +3646,8 @@
                 "type": "Identifier",
                 "name": "getSupportedFeatures",
                 "range": [
-                  2543,
-                  2563
+                  2656,
+                  2676
                 ],
                 "loc": {
                   "start": {
@@ -3670,8 +3670,8 @@
                       "type": "Identifier",
                       "name": "featureIds",
                       "range": [
-                        2567,
-                        2577
+                        2680,
+                        2690
                       ],
                       "loc": {
                         "start": {
@@ -3685,8 +3685,8 @@
                       }
                     },
                     "range": [
-                      2564,
-                      2577
+                      2677,
+                      2690
                     ],
                     "loc": {
                       "start": {
@@ -3713,8 +3713,8 @@
                           "object": {
                             "type": "ThisExpression",
                             "range": [
-                              2591,
-                              2595
+                              2706,
+                              2710
                             ],
                             "loc": {
                               "start": {
@@ -3731,8 +3731,8 @@
                             "type": "Identifier",
                             "name": "getFeatures",
                             "range": [
-                              2596,
-                              2607
+                              2711,
+                              2722
                             ],
                             "loc": {
                               "start": {
@@ -3746,8 +3746,8 @@
                             }
                           },
                           "range": [
-                            2591,
-                            2607
+                            2706,
+                            2722
                           ],
                           "loc": {
                             "start": {
@@ -3766,8 +3766,8 @@
                             "value": false,
                             "raw": "false",
                             "range": [
-                              2608,
-                              2613
+                              2723,
+                              2728
                             ],
                             "loc": {
                               "start": {
@@ -3784,8 +3784,8 @@
                             "type": "Identifier",
                             "name": "featureIds",
                             "range": [
-                              2615,
-                              2625
+                              2730,
+                              2740
                             ],
                             "loc": {
                               "start": {
@@ -3800,8 +3800,8 @@
                           }
                         ],
                         "range": [
-                          2591,
-                          2626
+                          2706,
+                          2741
                         ],
                         "loc": {
                           "start": {
@@ -3815,8 +3815,8 @@
                         }
                       },
                       "range": [
-                        2584,
-                        2627
+                        2699,
+                        2742
                       ],
                       "loc": {
                         "start": {
@@ -3831,8 +3831,8 @@
                     }
                   ],
                   "range": [
-                    2579,
-                    2631
+                    2692,
+                    2748
                   ],
                   "loc": {
                     "start": {
@@ -3848,8 +3848,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  2563,
-                  2631
+                  2676,
+                  2748
                 ],
                 "loc": {
                   "start": {
@@ -3865,8 +3865,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                2543,
-                2631
+                2656,
+                2748
               ],
               "loc": {
                 "start": {
@@ -3881,10 +3881,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t ",
+                  "value": "*\r\n\t * Returns a list of supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of supported features or null if there are none.\r\n\t ",
                   "range": [
-                    2203,
-                    2540
+                    2307,
+                    2651
                   ],
                   "loc": {
                     "start": {
@@ -3901,10 +3901,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t ",
+                  "value": "*\r\n\t * Retrieves the requested feature.\r\n\t *\r\n\t * This is a shortcut to the get method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\r\n\t ",
                   "range": [
-                    2634,
-                    2885
+                    2753,
+                    3011
                   ],
                   "loc": {
                     "start": {
@@ -3926,8 +3926,8 @@
                 "type": "Identifier",
                 "name": "get",
                 "range": [
-                  2888,
-                  2891
+                  3016,
+                  3019
                 ],
                 "loc": {
                   "start": {
@@ -3948,8 +3948,8 @@
                     "type": "Identifier",
                     "name": "featureId",
                     "range": [
-                      2892,
-                      2901
+                      3020,
+                      3029
                     ],
                     "loc": {
                       "start": {
@@ -3979,8 +3979,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                2915,
-                                2919
+                                3045,
+                                3049
                               ],
                               "loc": {
                                 "start": {
@@ -3997,8 +3997,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                2920,
-                                2928
+                                3050,
+                                3058
                               ],
                               "loc": {
                                 "start": {
@@ -4012,8 +4012,8 @@
                               }
                             },
                             "range": [
-                              2915,
-                              2928
+                              3045,
+                              3058
                             ],
                             "loc": {
                               "start": {
@@ -4030,8 +4030,8 @@
                             "type": "Identifier",
                             "name": "get",
                             "range": [
-                              2929,
-                              2932
+                              3059,
+                              3062
                             ],
                             "loc": {
                               "start": {
@@ -4045,8 +4045,8 @@
                             }
                           },
                           "range": [
-                            2915,
-                            2932
+                            3045,
+                            3062
                           ],
                           "loc": {
                             "start": {
@@ -4064,8 +4064,8 @@
                             "type": "Identifier",
                             "name": "featureId",
                             "range": [
-                              2933,
-                              2942
+                              3063,
+                              3072
                             ],
                             "loc": {
                               "start": {
@@ -4080,8 +4080,8 @@
                           }
                         ],
                         "range": [
-                          2915,
-                          2943
+                          3045,
+                          3073
                         ],
                         "loc": {
                           "start": {
@@ -4095,8 +4095,8 @@
                         }
                       },
                       "range": [
-                        2908,
-                        2944
+                        3038,
+                        3074
                       ],
                       "loc": {
                         "start": {
@@ -4111,8 +4111,8 @@
                     }
                   ],
                   "range": [
-                    2903,
-                    2948
+                    3031,
+                    3080
                   ],
                   "loc": {
                     "start": {
@@ -4128,8 +4128,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  2891,
-                  2948
+                  3019,
+                  3080
                 ],
                 "loc": {
                   "start": {
@@ -4145,8 +4145,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                2888,
-                2948
+                3016,
+                3080
               ],
               "loc": {
                 "start": {
@@ -4161,10 +4161,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t ",
+                  "value": "*\r\n\t * Retrieves the requested feature.\r\n\t *\r\n\t * This is a shortcut to the get method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\r\n\t ",
                   "range": [
-                    2634,
-                    2885
+                    2753,
+                    3011
                   ],
                   "loc": {
                     "start": {
@@ -4181,10 +4181,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t * @return {Map} The feature map.\n\t ",
+                  "value": "*\r\n\t * Defines a custom feature.\r\n\t *\r\n\t * This is a shortcut to the set method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @param {Feature} feature - The feature.\r\n\t * @return {Map} The feature map.\r\n\t ",
                   "range": [
-                    2951,
-                    3196
+                    3085,
+                    3338
                   ],
                   "loc": {
                     "start": {
@@ -4206,8 +4206,8 @@
                 "type": "Identifier",
                 "name": "set",
                 "range": [
-                  3199,
-                  3202
+                  3343,
+                  3346
                 ],
                 "loc": {
                   "start": {
@@ -4228,8 +4228,8 @@
                     "type": "Identifier",
                     "name": "featureId",
                     "range": [
-                      3203,
-                      3212
+                      3347,
+                      3356
                     ],
                     "loc": {
                       "start": {
@@ -4246,8 +4246,8 @@
                     "type": "Identifier",
                     "name": "feature",
                     "range": [
-                      3214,
-                      3221
+                      3358,
+                      3365
                     ],
                     "loc": {
                       "start": {
@@ -4277,8 +4277,8 @@
                             "object": {
                               "type": "ThisExpression",
                               "range": [
-                                3235,
-                                3239
+                                3381,
+                                3385
                               ],
                               "loc": {
                                 "start": {
@@ -4295,8 +4295,8 @@
                               "type": "Identifier",
                               "name": "features",
                               "range": [
-                                3240,
-                                3248
+                                3386,
+                                3394
                               ],
                               "loc": {
                                 "start": {
@@ -4310,8 +4310,8 @@
                               }
                             },
                             "range": [
-                              3235,
-                              3248
+                              3381,
+                              3394
                             ],
                             "loc": {
                               "start": {
@@ -4328,8 +4328,8 @@
                             "type": "Identifier",
                             "name": "set",
                             "range": [
-                              3249,
-                              3252
+                              3395,
+                              3398
                             ],
                             "loc": {
                               "start": {
@@ -4343,8 +4343,8 @@
                             }
                           },
                           "range": [
-                            3235,
-                            3252
+                            3381,
+                            3398
                           ],
                           "loc": {
                             "start": {
@@ -4362,8 +4362,8 @@
                             "type": "Identifier",
                             "name": "featureId",
                             "range": [
-                              3253,
-                              3262
+                              3399,
+                              3408
                             ],
                             "loc": {
                               "start": {
@@ -4380,8 +4380,8 @@
                             "type": "Identifier",
                             "name": "feature",
                             "range": [
-                              3264,
-                              3271
+                              3410,
+                              3417
                             ],
                             "loc": {
                               "start": {
@@ -4396,8 +4396,8 @@
                           }
                         ],
                         "range": [
-                          3235,
-                          3272
+                          3381,
+                          3418
                         ],
                         "loc": {
                           "start": {
@@ -4411,8 +4411,8 @@
                         }
                       },
                       "range": [
-                        3228,
-                        3273
+                        3374,
+                        3419
                       ],
                       "loc": {
                         "start": {
@@ -4427,8 +4427,8 @@
                     }
                   ],
                   "range": [
-                    3223,
-                    3277
+                    3367,
+                    3425
                   ],
                   "loc": {
                     "start": {
@@ -4444,8 +4444,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  3202,
-                  3277
+                  3346,
+                  3425
                 ],
                 "loc": {
                   "start": {
@@ -4461,8 +4461,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                3199,
-                3277
+                3343,
+                3425
               ],
               "loc": {
                 "start": {
@@ -4477,10 +4477,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t * @return {Map} The feature map.\n\t ",
+                  "value": "*\r\n\t * Defines a custom feature.\r\n\t *\r\n\t * This is a shortcut to the set method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @param {Feature} feature - The feature.\r\n\t * @return {Map} The feature map.\r\n\t ",
                   "range": [
-                    2951,
-                    3196
+                    3085,
+                    3338
                   ],
                   "loc": {
                     "start": {
@@ -4497,10 +4497,10 @@
               "trailingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t ",
+                  "value": "*\r\n\t * Returns a human-readable info message for the given feature.\r\n\t *\r\n\t * @param {Feature} feature - A feature.\r\n\t * @return {String} The info message.\r\n\t ",
                   "range": [
-                    3280,
-                    3438
+                    3430,
+                    3593
                   ],
                   "loc": {
                     "start": {
@@ -4522,8 +4522,8 @@
                 "type": "Identifier",
                 "name": "getMessage",
                 "range": [
-                  3441,
-                  3451
+                  3598,
+                  3608
                 ],
                 "loc": {
                   "start": {
@@ -4544,8 +4544,8 @@
                     "type": "Identifier",
                     "name": "feature",
                     "range": [
-                      3452,
-                      3459
+                      3609,
+                      3616
                     ],
                     "loc": {
                       "start": {
@@ -4581,8 +4581,8 @@
                                 "value": "The ",
                                 "raw": "\"The \"",
                                 "range": [
-                                  3473,
-                                  3479
+                                  3632,
+                                  3638
                                 ],
                                 "loc": {
                                   "start": {
@@ -4599,8 +4599,8 @@
                                 "type": "Identifier",
                                 "name": "feature",
                                 "range": [
-                                  3482,
-                                  3489
+                                  3641,
+                                  3648
                                 ],
                                 "loc": {
                                   "start": {
@@ -4614,8 +4614,8 @@
                                 }
                               },
                               "range": [
-                                3473,
-                                3489
+                                3632,
+                                3648
                               ],
                               "loc": {
                                 "start": {
@@ -4633,8 +4633,8 @@
                               "value": " feature is ",
                               "raw": "\" feature is \"",
                               "range": [
-                                3492,
-                                3506
+                                3651,
+                                3665
                               ],
                               "loc": {
                                 "start": {
@@ -4648,8 +4648,8 @@
                               }
                             },
                             "range": [
-                              3473,
-                              3506
+                              3632,
+                              3665
                             ],
                             "loc": {
                               "start": {
@@ -4671,8 +4671,8 @@
                                 "type": "Identifier",
                                 "name": "feature",
                                 "range": [
-                                  3513,
-                                  3520
+                                  3673,
+                                  3680
                                 ],
                                 "loc": {
                                   "start": {
@@ -4689,8 +4689,8 @@
                                 "type": "Identifier",
                                 "name": "supported",
                                 "range": [
-                                  3521,
-                                  3530
+                                  3681,
+                                  3690
                                 ],
                                 "loc": {
                                   "start": {
@@ -4704,8 +4704,8 @@
                                 }
                               },
                               "range": [
-                                3513,
-                                3530
+                                3673,
+                                3690
                               ],
                               "loc": {
                                 "start": {
@@ -4723,8 +4723,8 @@
                               "value": "supported",
                               "raw": "\"supported\"",
                               "range": [
-                                3533,
-                                3544
+                                3693,
+                                3704
                               ],
                               "loc": {
                                 "start": {
@@ -4742,8 +4742,8 @@
                               "value": "missing",
                               "raw": "\"missing\"",
                               "range": [
-                                3547,
-                                3556
+                                3707,
+                                3716
                               ],
                               "loc": {
                                 "start": {
@@ -4757,8 +4757,8 @@
                               }
                             },
                             "range": [
-                              3513,
-                              3556
+                              3673,
+                              3716
                             ],
                             "loc": {
                               "start": {
@@ -4772,8 +4772,8 @@
                             }
                           },
                           "range": [
-                            3473,
-                            3557
+                            3632,
+                            3717
                           ],
                           "loc": {
                             "start": {
@@ -4791,8 +4791,8 @@
                           "value": " in the current environment.",
                           "raw": "\" in the current environment.\"",
                           "range": [
-                            3563,
-                            3593
+                            3724,
+                            3754
                           ],
                           "loc": {
                             "start": {
@@ -4806,8 +4806,8 @@
                           }
                         },
                         "range": [
-                          3473,
-                          3593
+                          3632,
+                          3754
                         ],
                         "loc": {
                           "start": {
@@ -4821,8 +4821,8 @@
                         }
                       },
                       "range": [
-                        3466,
-                        3594
+                        3625,
+                        3755
                       ],
                       "loc": {
                         "start": {
@@ -4837,8 +4837,8 @@
                     }
                   ],
                   "range": [
-                    3461,
-                    3598
+                    3618,
+                    3761
                   ],
                   "loc": {
                     "start": {
@@ -4854,8 +4854,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  3451,
-                  3598
+                  3608,
+                  3761
                 ],
                 "loc": {
                   "start": {
@@ -4871,8 +4871,8 @@
               "kind": "method",
               "computed": false,
               "range": [
-                3441,
-                3598
+                3598,
+                3761
               ],
               "loc": {
                 "start": {
@@ -4887,10 +4887,10 @@
               "leadingComments": [
                 {
                   "type": "Block",
-                  "value": "*\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t ",
+                  "value": "*\r\n\t * Returns a human-readable info message for the given feature.\r\n\t *\r\n\t * @param {Feature} feature - A feature.\r\n\t * @return {String} The info message.\r\n\t ",
                   "range": [
-                    3280,
-                    3438
+                    3430,
+                    3593
                   ],
                   "loc": {
                     "start": {
@@ -4908,8 +4908,8 @@
             }
           ],
           "range": [
-            233,
-            3601
+            246,
+            3766
           ],
           "loc": {
             "start": {
@@ -4923,8 +4923,8 @@
           }
         },
         "range": [
-          218,
-          3601
+          231,
+          3766
         ],
         "loc": {
           "start": {
@@ -4939,10 +4939,10 @@
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\n * Detects whether certain features are supported in the current environment.\n ",
+            "value": "*\r\n * Detects whether certain features are supported in the current environment.\r\n ",
             "range": [
-              124,
-              209
+              133,
+              220
             ],
             "loc": {
               "start": {
@@ -4961,8 +4961,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        211,
-        3601
+        224,
+        3766
       ],
       "loc": {
         "start": {
@@ -4977,10 +4977,10 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * Detects whether certain features are supported in the current environment.\n ",
+          "value": "*\r\n * Detects whether certain features are supported in the current environment.\r\n ",
           "range": [
-            124,
-            209
+            133,
+            220
           ],
           "loc": {
             "start": {
@@ -4999,7 +4999,7 @@
   "sourceType": "module",
   "range": [
     0,
-    3601
+    3766
   ],
   "loc": {
     "start": {
@@ -5014,10 +5014,10 @@
   "comments": [
     {
       "type": "Block",
-      "value": "*\n * Detects whether certain features are supported in the current environment.\n ",
+      "value": "*\r\n * Detects whether certain features are supported in the current environment.\r\n ",
       "range": [
-        124,
-        209
+        133,
+        220
       ],
       "loc": {
         "start": {
@@ -5032,10 +5032,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Constructs a new Detector.\n\t ",
+      "value": "*\r\n\t * Constructs a new Detector.\r\n\t ",
       "range": [
-        237,
-        276
+        252,
+        293
       ],
       "loc": {
         "start": {
@@ -5050,10 +5050,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t ",
+      "value": "*\r\n\t\t * A feature map.\r\n\t\t *\r\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\r\n\t\t * Custom Features may also be added to this map.\r\n\t\t *\r\n\t\t * @type {Map}\r\n\t\t ",
       "range": [
-        298,
-        484
+        319,
+        512
       ],
       "loc": {
         "start": {
@@ -5068,10 +5068,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t ",
+      "value": "*\r\n\t * Creates a list of either missing or supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @private\r\n\t * @param {Boolean} missing - Whether only missing features should be returned.\r\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of either missing or supported features.\r\n\t ",
       "range": [
-        825,
-        1265
+        865,
+        1314
       ],
       "loc": {
         "start": {
@@ -5086,10 +5086,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t ",
+      "value": "*\r\n\t * Returns a list of missing features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of missing features or null if there are none.\r\n\t ",
       "range": [
-        1779,
-        2112
+        1868,
+        2208
       ],
       "loc": {
         "start": {
@@ -5104,10 +5104,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t ",
+      "value": "*\r\n\t * Returns a list of supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of supported features or null if there are none.\r\n\t ",
       "range": [
-        2203,
-        2540
+        2307,
+        2651
       ],
       "loc": {
         "start": {
@@ -5122,10 +5122,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t ",
+      "value": "*\r\n\t * Retrieves the requested feature.\r\n\t *\r\n\t * This is a shortcut to the get method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\r\n\t ",
       "range": [
-        2634,
-        2885
+        2753,
+        3011
       ],
       "loc": {
         "start": {
@@ -5140,10 +5140,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t * @return {Map} The feature map.\n\t ",
+      "value": "*\r\n\t * Defines a custom feature.\r\n\t *\r\n\t * This is a shortcut to the set method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @param {Feature} feature - The feature.\r\n\t * @return {Map} The feature map.\r\n\t ",
       "range": [
-        2951,
-        3196
+        3085,
+        3338
       ],
       "loc": {
         "start": {
@@ -5158,10 +5158,10 @@
     },
     {
       "type": "Block",
-      "value": "*\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t ",
+      "value": "*\r\n\t * Returns a human-readable info message for the given feature.\r\n\t *\r\n\t * @param {Feature} feature - A feature.\r\n\t * @return {String} The info message.\r\n\t ",
       "range": [
-        3280,
-        3438
+        3430,
+        3593
       ],
       "loc": {
         "start": {

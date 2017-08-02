@@ -4,13 +4,13 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/core/detector.js",
+    "name": "src/core/Detector.js",
     "memberof": null,
-    "longname": "src/core/detector.js",
+    "longname": "src/core/Detector.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import {\n\tFeatureId,\n\tCanvasFeature,\n\tFileFeature,\n\tTypedArrayFeature,\n\tWebGLFeature,\n\tWorkerFeature\n} from \"../features\";\n\n/**\n * Detects whether certain features are supported in the current environment.\n */\n\nexport class Detector {\n\n\t/**\n\t * Constructs a new Detector.\n\t */\n\n\tconstructor() {\n\n\t\t/**\n\t\t * A feature map.\n\t\t *\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\n\t\t * Custom Features may also be added to this map.\n\t\t *\n\t\t * @type {Map}\n\t\t */\n\n\t\tthis.features = new Map();\n\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\n\n\t}\n\n\t/**\n\t * Creates a list of either missing or supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @private\n\t * @param {Boolean} missing - Whether only missing features should be returned.\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of either missing or supported features.\n\t */\n\n\tgetFeatures(missing, featureIds) {\n\n\t\tconst features = [];\n\n\t\tlet featureId, feature;\n\n\t\tif(featureIds.length > 0) {\n\n\t\t\tfor(featureId of featureIds) {\n\n\t\t\t\tfeature = this.features.get(featureId);\n\n\t\t\t\tif(feature !== undefined && feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t} else {\n\n\t\t\tfor(feature of this.features.values()) {\n\n\t\t\t\tif(feature.supported === !missing) {\n\n\t\t\t\t\tfeatures.push(feature);\n\n\t\t\t\t}\n\n\t\t\t}\n\n\t\t}\n\n\t\treturn (features.length > 0) ? features : null;\n\n\t}\n\n\t/**\n\t * Returns a list of missing features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of missing features or null if there are none.\n\t */\n\n\tgetMissingFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(true, featureIds);\n\n\t}\n\n\t/**\n\t * Returns a list of supported features.\n\t *\n\t * This search can be limited to a subset of features.\n\t *\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\n\t * @return {Feature[]} A list of supported features or null if there are none.\n\t */\n\n\tgetSupportedFeatures(...featureIds) {\n\n\t\treturn this.getFeatures(false, featureIds);\n\n\t}\n\n\t/**\n\t * Retrieves the requested feature.\n\t *\n\t * This is a shortcut to the get method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\n\t */\n\n\tget(featureId) {\n\n\t\treturn this.features.get(featureId);\n\n\t}\n\n\t/**\n\t * Defines a custom feature.\n\t *\n\t * This is a shortcut to the set method of the features map.\n\t *\n\t * @param {FeatureId} featureId - The id of the feature.\n\t * @param {Feature} feature - The feature.\n\t * @return {Map} The feature map.\n\t */\n\n\tset(featureId, feature) {\n\n\t\treturn this.features.set(featureId, feature);\n\n\t}\n\n\t/**\n\t * Returns a human-readable info message for the given feature.\n\t *\n\t * @param {Feature} feature - A feature.\n\t * @return {String} The info message.\n\t */\n\n\tgetMessage(feature) {\n\n\t\treturn \"The \" + feature + \" feature is \" +\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\n\t\t\t\" in the current environment.\";\n\n\t}\n\n}\n"
+    "content": "import {\r\n\tFeatureId,\r\n\tCanvasFeature,\r\n\tFileFeature,\r\n\tTypedArrayFeature,\r\n\tWebGLFeature,\r\n\tWorkerFeature\r\n} from \"../features\";\r\n\r\n/**\r\n * Detects whether certain features are supported in the current environment.\r\n */\r\n\r\nexport class Detector {\r\n\r\n\t/**\r\n\t * Constructs a new Detector.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\t/**\r\n\t\t * A feature map.\r\n\t\t *\r\n\t\t * Each Feature in the map can be retrieved using its respective FeatureId.\r\n\t\t * Custom Features may also be added to this map.\r\n\t\t *\r\n\t\t * @type {Map}\r\n\t\t */\r\n\r\n\t\tthis.features = new Map();\r\n\r\n\t\tthis.features.set(FeatureId.CANVAS, new CanvasFeature());\r\n\t\tthis.features.set(FeatureId.FILE, new FileFeature());\r\n\t\tthis.features.set(FeatureId.TYPED_ARRAY, new TypedArrayFeature());\r\n\t\tthis.features.set(FeatureId.WEBGL, new WebGLFeature());\r\n\t\tthis.features.set(FeatureId.WORKER, new WorkerFeature());\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Creates a list of either missing or supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @private\r\n\t * @param {Boolean} missing - Whether only missing features should be returned.\r\n\t * @param {FeatureId[]} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of either missing or supported features.\r\n\t */\r\n\r\n\tgetFeatures(missing, featureIds) {\r\n\r\n\t\tconst features = [];\r\n\r\n\t\tlet featureId, feature;\r\n\r\n\t\tif(featureIds.length > 0) {\r\n\r\n\t\t\tfor(featureId of featureIds) {\r\n\r\n\t\t\t\tfeature = this.features.get(featureId);\r\n\r\n\t\t\t\tif(feature !== undefined && feature.supported === !missing) {\r\n\r\n\t\t\t\t\tfeatures.push(feature);\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\r\n\t\t} else {\r\n\r\n\t\t\tfor(feature of this.features.values()) {\r\n\r\n\t\t\t\tif(feature.supported === !missing) {\r\n\r\n\t\t\t\t\tfeatures.push(feature);\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\r\n\t\t}\r\n\r\n\t\treturn (features.length > 0) ? features : null;\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a list of missing features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of missing features or null if there are none.\r\n\t */\r\n\r\n\tgetMissingFeatures(...featureIds) {\r\n\r\n\t\treturn this.getFeatures(true, featureIds);\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a list of supported features.\r\n\t *\r\n\t * This search can be limited to a subset of features.\r\n\t *\r\n\t * @param {...FeatureId} featureIds - The ids of the features that you are interested in. If none are supplied, all features will be checked.\r\n\t * @return {Feature[]} A list of supported features or null if there are none.\r\n\t */\r\n\r\n\tgetSupportedFeatures(...featureIds) {\r\n\r\n\t\treturn this.getFeatures(false, featureIds);\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Retrieves the requested feature.\r\n\t *\r\n\t * This is a shortcut to the get method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @return {Feature} The requested feature or undefined if it doesn't exist.\r\n\t */\r\n\r\n\tget(featureId) {\r\n\r\n\t\treturn this.features.get(featureId);\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Defines a custom feature.\r\n\t *\r\n\t * This is a shortcut to the set method of the features map.\r\n\t *\r\n\t * @param {FeatureId} featureId - The id of the feature.\r\n\t * @param {Feature} feature - The feature.\r\n\t * @return {Map} The feature map.\r\n\t */\r\n\r\n\tset(featureId, feature) {\r\n\r\n\t\treturn this.features.set(featureId, feature);\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a human-readable info message for the given feature.\r\n\t *\r\n\t * @param {Feature} feature - A feature.\r\n\t * @return {String} The info message.\r\n\t */\r\n\r\n\tgetMessage(feature) {\r\n\r\n\t\treturn \"The \" + feature + \" feature is \" +\r\n\t\t\t(feature.supported ? \"supported\" : \"missing\") +\r\n\t\t\t\" in the current environment.\";\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 1,
@@ -18,11 +18,11 @@
     "static": true,
     "variation": null,
     "name": "Detector",
-    "memberof": "src/core/detector.js",
-    "longname": "src/core/detector.js~Detector",
+    "memberof": "src/core/Detector.js",
+    "longname": "src/core/Detector.js~Detector",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/core/detector.js",
+    "importPath": "feature-detector/src/core/Detector.js",
     "importStyle": "{Detector}",
     "description": "Detects whether certain features are supported in the current environment.",
     "lineNumber": 14,
@@ -34,8 +34,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#constructor",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#constructor",
     "access": null,
     "description": "Constructs a new Detector.",
     "lineNumber": 20,
@@ -48,8 +48,8 @@
     "static": false,
     "variation": null,
     "name": "features",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#features",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#features",
     "access": null,
     "description": "A feature map.\n\nEach Feature in the map can be retrieved using its respective FeatureId.\nCustom Features may also be added to this map.",
     "lineNumber": 31,
@@ -68,8 +68,8 @@
     "static": false,
     "variation": null,
     "name": "getFeatures",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#getFeatures",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#getFeatures",
     "access": "private",
     "description": "Creates a list of either missing or supported features.\n\nThis search can be limited to a subset of features.",
     "lineNumber": 52,
@@ -111,8 +111,8 @@
     "static": false,
     "variation": null,
     "name": "getMissingFeatures",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#getMissingFeatures",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#getMissingFeatures",
     "access": null,
     "description": "Returns a list of missing features.\n\nThis search can be limited to a subset of features.",
     "lineNumber": 99,
@@ -144,8 +144,8 @@
     "static": false,
     "variation": null,
     "name": "getSupportedFeatures",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#getSupportedFeatures",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#getSupportedFeatures",
     "access": null,
     "description": "Returns a list of supported features.\n\nThis search can be limited to a subset of features.",
     "lineNumber": 114,
@@ -177,8 +177,8 @@
     "static": false,
     "variation": null,
     "name": "get",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#get",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#get",
     "access": null,
     "description": "Retrieves the requested feature.\n\nThis is a shortcut to the get method of the features map.",
     "lineNumber": 129,
@@ -210,8 +210,8 @@
     "static": false,
     "variation": null,
     "name": "set",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#set",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#set",
     "access": null,
     "description": "Defines a custom feature.\n\nThis is a shortcut to the set method of the features map.",
     "lineNumber": 145,
@@ -253,8 +253,8 @@
     "static": false,
     "variation": null,
     "name": "getMessage",
-    "memberof": "src/core/detector.js~Detector",
-    "longname": "src/core/detector.js~Detector#getMessage",
+    "memberof": "src/core/Detector.js~Detector",
+    "longname": "src/core/Detector.js~Detector#getMessage",
     "access": null,
     "description": "Returns a human-readable info message for the given feature.",
     "lineNumber": 158,
@@ -298,13 +298,13 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/canvas.js",
+    "name": "src/features/CanvasFeature.js",
     "memberof": null,
-    "longname": "src/features/canvas.js",
+    "longname": "src/features/CanvasFeature.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The canvas feature.\r\n */\r\n\r\nexport class CanvasFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Canvas feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Canvas\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Canvas feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.CanvasRenderingContext2D !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
+    "content": "import { Feature } from \"./Feature.js\";\r\n\r\n/**\r\n * The canvas feature.\r\n */\r\n\r\nexport class CanvasFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Canvas feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Canvas\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Canvas feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.CanvasRenderingContext2D !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 12,
@@ -312,17 +312,17 @@
     "static": true,
     "variation": null,
     "name": "CanvasFeature",
-    "memberof": "src/features/canvas.js",
-    "longname": "src/features/canvas.js~CanvasFeature",
+    "memberof": "src/features/CanvasFeature.js",
+    "longname": "src/features/CanvasFeature.js~CanvasFeature",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/canvas.js",
+    "importPath": "feature-detector/src/features/CanvasFeature.js",
     "importStyle": "{CanvasFeature}",
     "description": "The canvas feature.",
     "lineNumber": 7,
     "interface": false,
     "extends": [
-      "src/features/feature.js~Feature"
+      "src/features/Feature.js~Feature"
     ]
   },
   {
@@ -331,8 +331,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/features/canvas.js~CanvasFeature",
-    "longname": "src/features/canvas.js~CanvasFeature#constructor",
+    "memberof": "src/features/CanvasFeature.js~CanvasFeature",
+    "longname": "src/features/CanvasFeature.js~CanvasFeature#constructor",
     "access": null,
     "description": "Constructs a new Canvas feature.",
     "lineNumber": 13,
@@ -345,8 +345,8 @@
     "static": false,
     "variation": null,
     "name": "supported",
-    "memberof": "src/features/canvas.js~CanvasFeature",
-    "longname": "src/features/canvas.js~CanvasFeature#supported",
+    "memberof": "src/features/CanvasFeature.js~CanvasFeature",
+    "longname": "src/features/CanvasFeature.js~CanvasFeature#supported",
     "access": null,
     "description": "Indicates whether the Canvas feature is supported.",
     "lineNumber": 23,
@@ -364,25 +364,169 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/feature-id.js",
+    "name": "src/features/Feature.js",
     "memberof": null,
-    "longname": "src/features/feature-id.js",
+    "longname": "src/features/Feature.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 5,
+    "content": "/**\r\n * An abstract feature.\r\n */\r\n\r\nexport class Feature {\r\n\r\n\t/**\r\n\t * Constructs a new feature.\r\n\t *\r\n\t * @param {String} [name=null] - The name of the feature.\r\n\t */\r\n\r\n\tconstructor(name = null) {\r\n\r\n\t\t/**\r\n\t\t * The name of this feature.\r\n\t\t *\r\n\t\t * @type {String}\r\n\t\t */\r\n\r\n\t\tthis.name = name;\r\n\r\n\t\t/**\r\n\t\t * The global scope of the current environment.\r\n\t\t *\r\n\t\t * This field assumes one of the following values depending on the\r\n\t\t * environment:\r\n\t\t *  - browser: window\r\n\t\t *  - worker: self\r\n\t\t *  - node.js: global\r\n\t\t *  - unknown: this\r\n\t\t *\r\n\t\t * @type {Object}\r\n\t\t * @protected\r\n\t\t */\r\n\r\n\t\tthis.root = (typeof self === \"object\" && self.self === self) ? self :\r\n\t\t\t(typeof global === \"object\" && global.global === global) ? global : this;\r\n\r\n\t\t/**\r\n\t\t * Indicates whether this feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t * @default false\r\n\t\t */\r\n\r\n\t\tthis.supported = false;\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a string representation of this object.\r\n\t *\r\n\t * @return {String} The string representation.\r\n\t */\r\n\r\n\ttoString() {\r\n\r\n\t\treturn this.name;\r\n\r\n\t}\r\n\r\n}\r\n"
+  },
+  {
+    "__docId__": 16,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Feature",
+    "memberof": "src/features/Feature.js",
+    "longname": "src/features/Feature.js~Feature",
+    "access": null,
+    "export": true,
+    "importPath": "feature-detector/src/features/Feature.js",
+    "importStyle": "{Feature}",
+    "description": "An abstract feature.",
+    "lineNumber": 5,
+    "interface": false
+  },
+  {
+    "__docId__": 17,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "src/features/Feature.js~Feature",
+    "longname": "src/features/Feature.js~Feature#constructor",
+    "access": null,
+    "description": "Constructs a new feature.",
+    "lineNumber": 13,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "name",
+        "description": "The name of the feature."
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 18,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "name",
+    "memberof": "src/features/Feature.js~Feature",
+    "longname": "src/features/Feature.js~Feature#name",
+    "access": null,
+    "description": "The name of this feature.",
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 19,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "root",
+    "memberof": "src/features/Feature.js~Feature",
+    "longname": "src/features/Feature.js~Feature#root",
+    "access": "protected",
+    "description": "The global scope of the current environment.\n\nThis field assumes one of the following values depending on the\nenvironment:\n - browser: window\n - worker: self\n - node.js: global\n - unknown: this",
+    "lineNumber": 37,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "supported",
+    "memberof": "src/features/Feature.js~Feature",
+    "longname": "src/features/Feature.js~Feature#supported",
+    "access": null,
+    "description": "Indicates whether this feature is supported.",
+    "lineNumber": 47,
+    "unknown": [
+      {
+        "tagName": "@default",
+        "tagValue": "false"
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toString",
+    "memberof": "src/features/Feature.js~Feature",
+    "longname": "src/features/Feature.js~Feature#toString",
+    "access": null,
+    "description": "Returns a string representation of this object.",
+    "lineNumber": 57,
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The string representation."
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/features/FeatureId.js",
+    "memberof": null,
+    "longname": "src/features/FeatureId.js",
     "access": null,
     "description": null,
     "lineNumber": 12,
     "content": "/**\r\n * An enumeration of feature ids.\r\n *\r\n * @type {Object}\r\n * @property {String} CANVAS - The identifier of the Canvas feature.\r\n * @property {String} FILE - The identifier of the File feature.\r\n * @property {String} TYPED_ARRAY - The identifier of the Typed Array feature.\r\n * @property {String} WEBGL - The identifier of the WebGL feature.\r\n * @property {String} WORKER - The identifier of the Web Worker feature.\r\n */\r\n\r\nexport const FeatureId = {\r\n\r\n\tCANVAS: \"feature.canvas\",\r\n\tFILE: \"feature.file\",\r\n\tTYPED_ARRAY: \"feature.typed-array\",\r\n\tWEBGL: \"feature.webgl\",\r\n\tWORKER: \"feature.worker\"\r\n\r\n};\r\n"
   },
   {
-    "__docId__": 16,
+    "__docId__": 23,
     "kind": "variable",
     "static": true,
     "variation": null,
     "name": "FeatureId",
-    "memberof": "src/features/feature-id.js",
-    "longname": "src/features/feature-id.js~FeatureId",
+    "memberof": "src/features/FeatureId.js",
+    "longname": "src/features/FeatureId.js~FeatureId",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/feature-id.js",
+    "importPath": "feature-detector/src/features/FeatureId.js",
     "importStyle": "{FeatureId}",
     "description": "An enumeration of feature ids.",
     "lineNumber": 12,
@@ -448,161 +592,17 @@
     }
   },
   {
-    "__docId__": 17,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "src/features/feature.js",
-    "memberof": null,
-    "longname": "src/features/feature.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 5,
-    "content": "/**\r\n * An abstract feature.\r\n */\r\n\r\nexport class Feature {\r\n\r\n\t/**\r\n\t * Constructs a new feature.\r\n\t *\r\n\t * @param {String} [name=null] - The name of the feature.\r\n\t */\r\n\r\n\tconstructor(name = null) {\r\n\r\n\t\t/**\r\n\t\t * The name of this feature.\r\n\t\t *\r\n\t\t * @type {String}\r\n\t\t */\r\n\r\n\t\tthis.name = name;\r\n\r\n\t\t/**\r\n\t\t * The global scope of the current environment.\r\n\t\t *\r\n\t\t * This field assumes one of the following values depending on the\r\n\t\t * environment:\r\n\t\t *  - browser: window\r\n\t\t *  - worker: self\r\n\t\t *  - node.js: global\r\n\t\t *  - unknown: this\r\n\t\t *\r\n\t\t * @type {Object}\r\n\t\t * @protected\r\n\t\t */\r\n\r\n\t\tthis.root = (typeof self === \"object\" && self.self === self) ? self :\r\n\t\t\t(typeof global === \"object\" && global.global === global) ? global : this;\r\n\r\n\t\t/**\r\n\t\t * Indicates whether this feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t * @default false\r\n\t\t */\r\n\r\n\t\tthis.supported = false;\r\n\r\n\t}\r\n\r\n\t/**\r\n\t * Returns a string representation of this object.\r\n\t *\r\n\t * @return {String} The string representation.\r\n\t */\r\n\r\n\ttoString() {\r\n\r\n\t\treturn this.name;\r\n\r\n\t}\r\n\r\n}\r\n"
-  },
-  {
-    "__docId__": 18,
-    "kind": "class",
-    "static": true,
-    "variation": null,
-    "name": "Feature",
-    "memberof": "src/features/feature.js",
-    "longname": "src/features/feature.js~Feature",
-    "access": null,
-    "export": true,
-    "importPath": "feature-detector/src/features/feature.js",
-    "importStyle": "{Feature}",
-    "description": "An abstract feature.",
-    "lineNumber": 5,
-    "interface": false
-  },
-  {
-    "__docId__": 19,
-    "kind": "constructor",
-    "static": false,
-    "variation": null,
-    "name": "constructor",
-    "memberof": "src/features/feature.js~Feature",
-    "longname": "src/features/feature.js~Feature#constructor",
-    "access": null,
-    "description": "Constructs a new feature.",
-    "lineNumber": 13,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "String"
-        ],
-        "spread": false,
-        "optional": true,
-        "defaultValue": "null",
-        "defaultRaw": null,
-        "name": "name",
-        "description": "The name of the feature."
-      }
-    ],
-    "generator": false
-  },
-  {
-    "__docId__": 20,
-    "kind": "member",
-    "static": false,
-    "variation": null,
-    "name": "name",
-    "memberof": "src/features/feature.js~Feature",
-    "longname": "src/features/feature.js~Feature#name",
-    "access": null,
-    "description": "The name of this feature.",
-    "lineNumber": 21,
-    "type": {
-      "nullable": null,
-      "types": [
-        "String"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 21,
-    "kind": "member",
-    "static": false,
-    "variation": null,
-    "name": "root",
-    "memberof": "src/features/feature.js~Feature",
-    "longname": "src/features/feature.js~Feature#root",
-    "access": "protected",
-    "description": "The global scope of the current environment.\n\nThis field assumes one of the following values depending on the\nenvironment:\n - browser: window\n - worker: self\n - node.js: global\n - unknown: this",
-    "lineNumber": 37,
-    "type": {
-      "nullable": null,
-      "types": [
-        "Object"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 22,
-    "kind": "member",
-    "static": false,
-    "variation": null,
-    "name": "supported",
-    "memberof": "src/features/feature.js~Feature",
-    "longname": "src/features/feature.js~Feature#supported",
-    "access": null,
-    "description": "Indicates whether this feature is supported.",
-    "lineNumber": 47,
-    "unknown": [
-      {
-        "tagName": "@default",
-        "tagValue": "false"
-      }
-    ],
-    "type": {
-      "nullable": null,
-      "types": [
-        "Boolean"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 23,
-    "kind": "method",
-    "static": false,
-    "variation": null,
-    "name": "toString",
-    "memberof": "src/features/feature.js~Feature",
-    "longname": "src/features/feature.js~Feature#toString",
-    "access": null,
-    "description": "Returns a string representation of this object.",
-    "lineNumber": 57,
-    "params": [],
-    "return": {
-      "nullable": null,
-      "types": [
-        "String"
-      ],
-      "spread": false,
-      "description": "The string representation."
-    },
-    "generator": false
-  },
-  {
     "__docId__": 24,
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/file.js",
+    "name": "src/features/FileFeature.js",
     "memberof": null,
-    "longname": "src/features/file.js",
+    "longname": "src/features/FileFeature.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The File API feature.\r\n */\r\n\r\nexport class FileFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new File feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"File\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the File API is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (\r\n\t\t\tthis.root.File !== undefined &&\r\n\t\t\tthis.root.FileReader !== undefined &&\r\n\t\t\tthis.root.FileList !== undefined &&\r\n\t\t\tthis.root.Blob !== undefined\r\n\t\t);\r\n\r\n\t}\r\n\r\n}\r\n"
+    "content": "import { Feature } from \"./Feature.js\";\r\n\r\n/**\r\n * The File API feature.\r\n */\r\n\r\nexport class FileFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new File feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"File\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the File API is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (\r\n\t\t\tthis.root.File !== undefined &&\r\n\t\t\tthis.root.FileReader !== undefined &&\r\n\t\t\tthis.root.FileList !== undefined &&\r\n\t\t\tthis.root.Blob !== undefined\r\n\t\t);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 25,
@@ -610,17 +610,17 @@
     "static": true,
     "variation": null,
     "name": "FileFeature",
-    "memberof": "src/features/file.js",
-    "longname": "src/features/file.js~FileFeature",
+    "memberof": "src/features/FileFeature.js",
+    "longname": "src/features/FileFeature.js~FileFeature",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/file.js",
+    "importPath": "feature-detector/src/features/FileFeature.js",
     "importStyle": "{FileFeature}",
     "description": "The File API feature.",
     "lineNumber": 7,
     "interface": false,
     "extends": [
-      "src/features/feature.js~Feature"
+      "src/features/Feature.js~Feature"
     ]
   },
   {
@@ -629,8 +629,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/features/file.js~FileFeature",
-    "longname": "src/features/file.js~FileFeature#constructor",
+    "memberof": "src/features/FileFeature.js~FileFeature",
+    "longname": "src/features/FileFeature.js~FileFeature#constructor",
     "access": null,
     "description": "Constructs a new File feature.",
     "lineNumber": 13,
@@ -643,8 +643,8 @@
     "static": false,
     "variation": null,
     "name": "supported",
-    "memberof": "src/features/file.js~FileFeature",
-    "longname": "src/features/file.js~FileFeature#supported",
+    "memberof": "src/features/FileFeature.js~FileFeature",
+    "longname": "src/features/FileFeature.js~FileFeature#supported",
     "access": null,
     "description": "Indicates whether the File API is supported.",
     "lineNumber": 23,
@@ -668,20 +668,20 @@
     "access": null,
     "description": null,
     "lineNumber": 7,
-    "content": "/**\r\n * A collection of features.\r\n *\r\n * @module features\r\n */\r\n\r\nexport { Feature } from \"./feature.js\";\r\nexport { FeatureId } from \"./feature-id.js\";\r\n\r\nexport { CanvasFeature } from \"./canvas.js\";\r\nexport { FileFeature } from \"./file.js\";\r\nexport { TypedArrayFeature } from \"./typed-array.js\";\r\nexport { WebGLFeature } from \"./webgl.js\";\r\nexport { WorkerFeature } from \"./worker.js\";\r\n"
+    "content": "/**\r\n * A collection of features.\r\n *\r\n * @module features\r\n */\r\n\r\nexport { Feature } from \"./Feature.js\";\r\nexport { FeatureId } from \"./FeatureId.js\";\r\n\r\nexport { CanvasFeature } from \"./CanvasFeature.js\";\r\nexport { FileFeature } from \"./FileFeature.js\";\r\nexport { TypedArrayFeature } from \"./TypedArrayFeature.js\";\r\nexport { WebGLFeature } from \"./WebGLFeature.js\";\r\nexport { WorkerFeature } from \"./WorkerFeature.js\";\r\n"
   },
   {
     "__docId__": 29,
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/typed-array.js",
+    "name": "src/features/TypedArrayFeature.js",
     "memberof": null,
-    "longname": "src/features/typed-array.js",
+    "longname": "src/features/TypedArrayFeature.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The Typed Array feature.\r\n */\r\n\r\nexport class TypedArrayFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Typed Array feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Typed Array\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Typed Array feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.ArrayBuffer !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
+    "content": "import { Feature } from \"./Feature.js\";\r\n\r\n/**\r\n * The Typed Array feature.\r\n */\r\n\r\nexport class TypedArrayFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Typed Array feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Typed Array\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Typed Array feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.ArrayBuffer !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 30,
@@ -689,17 +689,17 @@
     "static": true,
     "variation": null,
     "name": "TypedArrayFeature",
-    "memberof": "src/features/typed-array.js",
-    "longname": "src/features/typed-array.js~TypedArrayFeature",
+    "memberof": "src/features/TypedArrayFeature.js",
+    "longname": "src/features/TypedArrayFeature.js~TypedArrayFeature",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/typed-array.js",
+    "importPath": "feature-detector/src/features/TypedArrayFeature.js",
     "importStyle": "{TypedArrayFeature}",
     "description": "The Typed Array feature.",
     "lineNumber": 7,
     "interface": false,
     "extends": [
-      "src/features/feature.js~Feature"
+      "src/features/Feature.js~Feature"
     ]
   },
   {
@@ -708,8 +708,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/features/typed-array.js~TypedArrayFeature",
-    "longname": "src/features/typed-array.js~TypedArrayFeature#constructor",
+    "memberof": "src/features/TypedArrayFeature.js~TypedArrayFeature",
+    "longname": "src/features/TypedArrayFeature.js~TypedArrayFeature#constructor",
     "access": null,
     "description": "Constructs a new Typed Array feature.",
     "lineNumber": 13,
@@ -722,8 +722,8 @@
     "static": false,
     "variation": null,
     "name": "supported",
-    "memberof": "src/features/typed-array.js~TypedArrayFeature",
-    "longname": "src/features/typed-array.js~TypedArrayFeature#supported",
+    "memberof": "src/features/TypedArrayFeature.js~TypedArrayFeature",
+    "longname": "src/features/TypedArrayFeature.js~TypedArrayFeature#supported",
     "access": null,
     "description": "Indicates whether the Typed Array feature is supported.",
     "lineNumber": 23,
@@ -741,13 +741,13 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/webgl.js",
+    "name": "src/features/WebGLFeature.js",
     "memberof": null,
-    "longname": "src/features/webgl.js",
+    "longname": "src/features/WebGLFeature.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The WebGL feature.\r\n */\r\n\r\nexport class WebGLFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new WebGL feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"WebGL\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the WebGL feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (function(root) {\r\n\r\n\t\t\tlet supported = (root.WebGLRenderingContext !== undefined);\r\n\t\t\tlet canvas, context;\r\n\r\n\t\t\tif(supported) {\r\n\r\n\t\t\t\tcanvas = document.createElement(\"canvas\");\r\n\t\t\t\tcontext = canvas.getContext(\"webgl\");\r\n\r\n\t\t\t\tif(context === null) {\r\n\r\n\t\t\t\t\tif(canvas.getContext(\"experimental-webgl\") === null) {\r\n\r\n\t\t\t\t\t\tsupported = false;\r\n\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\r\n\t\t\treturn supported;\r\n\r\n\t\t}(this.root));\r\n\r\n\t}\r\n\r\n}\r\n"
+    "content": "import { Feature } from \"./Feature.js\";\r\n\r\n/**\r\n * The WebGL feature.\r\n */\r\n\r\nexport class WebGLFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new WebGL feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"WebGL\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the WebGL feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (function(root) {\r\n\r\n\t\t\tlet supported = (root.WebGLRenderingContext !== undefined);\r\n\t\t\tlet canvas, context;\r\n\r\n\t\t\tif(supported) {\r\n\r\n\t\t\t\tcanvas = document.createElement(\"canvas\");\r\n\t\t\t\tcontext = canvas.getContext(\"webgl\");\r\n\r\n\t\t\t\tif(context === null) {\r\n\r\n\t\t\t\t\tif(canvas.getContext(\"experimental-webgl\") === null) {\r\n\r\n\t\t\t\t\t\tsupported = false;\r\n\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\r\n\t\t\treturn supported;\r\n\r\n\t\t}(this.root));\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 34,
@@ -755,17 +755,17 @@
     "static": true,
     "variation": null,
     "name": "WebGLFeature",
-    "memberof": "src/features/webgl.js",
-    "longname": "src/features/webgl.js~WebGLFeature",
+    "memberof": "src/features/WebGLFeature.js",
+    "longname": "src/features/WebGLFeature.js~WebGLFeature",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/webgl.js",
+    "importPath": "feature-detector/src/features/WebGLFeature.js",
     "importStyle": "{WebGLFeature}",
     "description": "The WebGL feature.",
     "lineNumber": 7,
     "interface": false,
     "extends": [
-      "src/features/feature.js~Feature"
+      "src/features/Feature.js~Feature"
     ]
   },
   {
@@ -774,8 +774,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/features/webgl.js~WebGLFeature",
-    "longname": "src/features/webgl.js~WebGLFeature#constructor",
+    "memberof": "src/features/WebGLFeature.js~WebGLFeature",
+    "longname": "src/features/WebGLFeature.js~WebGLFeature#constructor",
     "access": null,
     "description": "Constructs a new WebGL feature.",
     "lineNumber": 13,
@@ -788,8 +788,8 @@
     "static": false,
     "variation": null,
     "name": "supported",
-    "memberof": "src/features/webgl.js~WebGLFeature",
-    "longname": "src/features/webgl.js~WebGLFeature#supported",
+    "memberof": "src/features/WebGLFeature.js~WebGLFeature",
+    "longname": "src/features/WebGLFeature.js~WebGLFeature#supported",
     "access": null,
     "description": "Indicates whether the WebGL feature is supported.",
     "lineNumber": 23,
@@ -807,13 +807,13 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "src/features/worker.js",
+    "name": "src/features/WorkerFeature.js",
     "memberof": null,
-    "longname": "src/features/worker.js",
+    "longname": "src/features/WorkerFeature.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import { Feature } from \"./feature.js\";\r\n\r\n/**\r\n * The Web Worker feature.\r\n */\r\n\r\nexport class WorkerFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Worker feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Web Worker\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Worker feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.Worker !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
+    "content": "import { Feature } from \"./Feature.js\";\r\n\r\n/**\r\n * The Web Worker feature.\r\n */\r\n\r\nexport class WorkerFeature extends Feature {\r\n\r\n\t/**\r\n\t * Constructs a new Worker feature.\r\n\t */\r\n\r\n\tconstructor() {\r\n\r\n\t\tsuper(\"Web Worker\");\r\n\r\n\t\t/**\r\n\t\t * Indicates whether the Worker feature is supported.\r\n\t\t *\r\n\t\t * @type {Boolean}\r\n\t\t */\r\n\r\n\t\tthis.supported = (this.root.Worker !== undefined);\r\n\r\n\t}\r\n\r\n}\r\n"
   },
   {
     "__docId__": 38,
@@ -821,17 +821,17 @@
     "static": true,
     "variation": null,
     "name": "WorkerFeature",
-    "memberof": "src/features/worker.js",
-    "longname": "src/features/worker.js~WorkerFeature",
+    "memberof": "src/features/WorkerFeature.js",
+    "longname": "src/features/WorkerFeature.js~WorkerFeature",
     "access": null,
     "export": true,
-    "importPath": "feature-detector/src/features/worker.js",
+    "importPath": "feature-detector/src/features/WorkerFeature.js",
     "importStyle": "{WorkerFeature}",
     "description": "The Web Worker feature.",
     "lineNumber": 7,
     "interface": false,
     "extends": [
-      "src/features/feature.js~Feature"
+      "src/features/Feature.js~Feature"
     ]
   },
   {
@@ -840,8 +840,8 @@
     "static": false,
     "variation": null,
     "name": "constructor",
-    "memberof": "src/features/worker.js~WorkerFeature",
-    "longname": "src/features/worker.js~WorkerFeature#constructor",
+    "memberof": "src/features/WorkerFeature.js~WorkerFeature",
+    "longname": "src/features/WorkerFeature.js~WorkerFeature#constructor",
     "access": null,
     "description": "Constructs a new Worker feature.",
     "lineNumber": 13,
@@ -854,8 +854,8 @@
     "static": false,
     "variation": null,
     "name": "supported",
-    "memberof": "src/features/worker.js~WorkerFeature",
-    "longname": "src/features/worker.js~WorkerFeature#supported",
+    "memberof": "src/features/WorkerFeature.js~WorkerFeature",
+    "longname": "src/features/WorkerFeature.js~WorkerFeature#supported",
     "access": null,
     "description": "Indicates whether the Worker feature is supported.",
     "lineNumber": 23,

@@ -3,42 +3,42 @@
   "expectCount": 30,
   "actualCount": 30,
   "files": {
-    "src/features/canvas.js": {
+    "src/features/CanvasFeature.js": {
       "expectCount": 3,
       "actualCount": 3,
       "undocumentLines": []
     },
-    "src/core/detector.js": {
+    "src/core/Detector.js": {
       "expectCount": 8,
       "actualCount": 8,
       "undocumentLines": []
     },
-    "src/features/feature.js": {
+    "src/features/Feature.js": {
       "expectCount": 6,
       "actualCount": 6,
       "undocumentLines": []
     },
-    "src/features/feature-id.js": {
+    "src/features/FeatureId.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/features/file.js": {
+    "src/features/FileFeature.js": {
       "expectCount": 3,
       "actualCount": 3,
       "undocumentLines": []
     },
-    "src/features/typed-array.js": {
+    "src/features/TypedArrayFeature.js": {
       "expectCount": 3,
       "actualCount": 3,
       "undocumentLines": []
     },
-    "src/features/webgl.js": {
+    "src/features/WebGLFeature.js": {
       "expectCount": 3,
       "actualCount": 3,
       "undocumentLines": []
     },
-    "src/features/worker.js": {
+    "src/features/WorkerFeature.js": {
       "expectCount": 3,
       "actualCount": 3,
       "undocumentLines": []

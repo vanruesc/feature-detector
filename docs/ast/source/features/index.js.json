@@ -61,8 +61,8 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./feature.js",
-        "raw": "\"./feature.js\"",
+        "value": "./Feature.js",
+        "raw": "\"./Feature.js\"",
         "range": [
           91,
           105
@@ -173,11 +173,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./feature-id.js",
-        "raw": "\"./feature-id.js\"",
+        "value": "./FeatureId.js",
+        "raw": "\"./FeatureId.js\"",
         "range": [
           134,
-          151
+          150
         ],
         "loc": {
           "start": {
@@ -186,13 +186,13 @@
           },
           "end": {
             "line": 8,
-            "column": 43
+            "column": 42
           }
         }
       },
       "range": [
         108,
-        152
+        151
       ],
       "loc": {
         "start": {
@@ -201,7 +201,7 @@
         },
         "end": {
           "line": 8,
-          "column": 44
+          "column": 43
         }
       }
     },
@@ -215,8 +215,8 @@
             "type": "Identifier",
             "name": "CanvasFeature",
             "range": [
-              165,
-              178
+              164,
+              177
             ],
             "loc": {
               "start": {
@@ -233,8 +233,8 @@
             "type": "Identifier",
             "name": "CanvasFeature",
             "range": [
-              165,
-              178
+              164,
+              177
             ],
             "loc": {
               "start": {
@@ -248,8 +248,8 @@
             }
           },
           "range": [
-            165,
-            178
+            164,
+            177
           ],
           "loc": {
             "start": {
@@ -265,11 +265,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./canvas.js",
-        "raw": "\"./canvas.js\"",
+        "value": "./CanvasFeature.js",
+        "raw": "\"./CanvasFeature.js\"",
         "range": [
-          186,
-          199
+          185,
+          205
         ],
         "loc": {
           "start": {
@@ -278,13 +278,13 @@
           },
           "end": {
             "line": 10,
-            "column": 43
+            "column": 50
           }
         }
       },
       "range": [
-        156,
-        200
+        155,
+        206
       ],
       "loc": {
         "start": {
@@ -293,7 +293,7 @@
         },
         "end": {
           "line": 10,
-          "column": 44
+          "column": 51
         }
       }
     },
@@ -307,8 +307,8 @@
             "type": "Identifier",
             "name": "FileFeature",
             "range": [
-              211,
-              222
+              217,
+              228
             ],
             "loc": {
               "start": {
@@ -325,8 +325,8 @@
             "type": "Identifier",
             "name": "FileFeature",
             "range": [
-              211,
-              222
+              217,
+              228
             ],
             "loc": {
               "start": {
@@ -340,8 +340,8 @@
             }
           },
           "range": [
-            211,
-            222
+            217,
+            228
           ],
           "loc": {
             "start": {
@@ -357,11 +357,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./file.js",
-        "raw": "\"./file.js\"",
+        "value": "./FileFeature.js",
+        "raw": "\"./FileFeature.js\"",
         "range": [
-          230,
-          241
+          236,
+          254
         ],
         "loc": {
           "start": {
@@ -370,13 +370,13 @@
           },
           "end": {
             "line": 11,
-            "column": 39
+            "column": 46
           }
         }
       },
       "range": [
-        202,
-        242
+        208,
+        255
       ],
       "loc": {
         "start": {
@@ -385,7 +385,7 @@
         },
         "end": {
           "line": 11,
-          "column": 40
+          "column": 47
         }
       }
     },
@@ -399,8 +399,8 @@
             "type": "Identifier",
             "name": "TypedArrayFeature",
             "range": [
-              253,
-              270
+              266,
+              283
             ],
             "loc": {
               "start": {
@@ -417,8 +417,8 @@
             "type": "Identifier",
             "name": "TypedArrayFeature",
             "range": [
-              253,
-              270
+              266,
+              283
             ],
             "loc": {
               "start": {
@@ -432,8 +432,8 @@
             }
           },
           "range": [
-            253,
-            270
+            266,
+            283
           ],
           "loc": {
             "start": {
@@ -449,11 +449,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./typed-array.js",
-        "raw": "\"./typed-array.js\"",
+        "value": "./TypedArrayFeature.js",
+        "raw": "\"./TypedArrayFeature.js\"",
         "range": [
-          278,
-          296
+          291,
+          315
         ],
         "loc": {
           "start": {
@@ -462,13 +462,13 @@
           },
           "end": {
             "line": 12,
-            "column": 52
+            "column": 58
           }
         }
       },
       "range": [
-        244,
-        297
+        257,
+        316
       ],
       "loc": {
         "start": {
@@ -477,7 +477,7 @@
         },
         "end": {
           "line": 12,
-          "column": 53
+          "column": 59
         }
       }
     },
@@ -491,8 +491,8 @@
             "type": "Identifier",
             "name": "WebGLFeature",
             "range": [
-              308,
-              320
+              327,
+              339
             ],
             "loc": {
               "start": {
@@ -509,8 +509,8 @@
             "type": "Identifier",
             "name": "WebGLFeature",
             "range": [
-              308,
-              320
+              327,
+              339
             ],
             "loc": {
               "start": {
@@ -524,8 +524,8 @@
             }
           },
           "range": [
-            308,
-            320
+            327,
+            339
           ],
           "loc": {
             "start": {
@@ -541,11 +541,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./webgl.js",
-        "raw": "\"./webgl.js\"",
+        "value": "./WebGLFeature.js",
+        "raw": "\"./WebGLFeature.js\"",
         "range": [
-          328,
-          340
+          347,
+          366
         ],
         "loc": {
           "start": {
@@ -554,13 +554,13 @@
           },
           "end": {
             "line": 13,
-            "column": 41
+            "column": 48
           }
         }
       },
       "range": [
-        299,
-        341
+        318,
+        367
       ],
       "loc": {
         "start": {
@@ -569,7 +569,7 @@
         },
         "end": {
           "line": 13,
-          "column": 42
+          "column": 49
         }
       }
     },
@@ -583,8 +583,8 @@
             "type": "Identifier",
             "name": "WorkerFeature",
             "range": [
-              352,
-              365
+              378,
+              391
             ],
             "loc": {
               "start": {
@@ -601,8 +601,8 @@
             "type": "Identifier",
             "name": "WorkerFeature",
             "range": [
-              352,
-              365
+              378,
+              391
             ],
             "loc": {
               "start": {
@@ -616,8 +616,8 @@
             }
           },
           "range": [
-            352,
-            365
+            378,
+            391
           ],
           "loc": {
             "start": {
@@ -633,11 +633,11 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./worker.js",
-        "raw": "\"./worker.js\"",
+        "value": "./WorkerFeature.js",
+        "raw": "\"./WorkerFeature.js\"",
         "range": [
-          373,
-          386
+          399,
+          419
         ],
         "loc": {
           "start": {
@@ -646,13 +646,13 @@
           },
           "end": {
             "line": 14,
-            "column": 43
+            "column": 50
           }
         }
       },
       "range": [
-        343,
-        387
+        369,
+        420
       ],
       "loc": {
         "start": {
@@ -661,7 +661,7 @@
         },
         "end": {
           "line": 14,
-          "column": 44
+          "column": 51
         }
       }
     }
@@ -669,7 +669,7 @@
   "sourceType": "module",
   "range": [
     67,
-    387
+    420
   ],
   "loc": {
     "start": {
@@ -678,7 +678,7 @@
     },
     "end": {
       "line": 14,
-      "column": 44
+      "column": 51
     }
   },
   "comments": [

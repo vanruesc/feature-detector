@@ -1,50 +1,50 @@
 window.esdocSearchIndex = [
   [
-    "feature-detector/src/features/canvas.js~canvasfeature",
-    "class/src/features/canvas.js~CanvasFeature.html",
-    "<span>CanvasFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/canvas.js</span>",
+    "feature-detector/src/features/canvasfeature.js~canvasfeature",
+    "class/src/features/CanvasFeature.js~CanvasFeature.html",
+    "<span>CanvasFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/CanvasFeature.js</span>",
     "class"
   ],
   [
     "feature-detector/src/core/detector.js~detector",
-    "class/src/core/detector.js~Detector.html",
-    "<span>Detector</span> <span class=\"search-result-import-path\">feature-detector/src/core/detector.js</span>",
+    "class/src/core/Detector.js~Detector.html",
+    "<span>Detector</span> <span class=\"search-result-import-path\">feature-detector/src/core/Detector.js</span>",
     "class"
   ],
   [
     "feature-detector/src/features/feature.js~feature",
-    "class/src/features/feature.js~Feature.html",
-    "<span>Feature</span> <span class=\"search-result-import-path\">feature-detector/src/features/feature.js</span>",
+    "class/src/features/Feature.js~Feature.html",
+    "<span>Feature</span> <span class=\"search-result-import-path\">feature-detector/src/features/Feature.js</span>",
     "class"
   ],
   [
-    "feature-detector/src/features/feature-id.js~featureid",
+    "feature-detector/src/features/featureid.js~featureid",
     "variable/index.html#static-variable-FeatureId",
-    "<span>FeatureId</span> <span class=\"search-result-import-path\">feature-detector/src/features/feature-id.js</span>",
+    "<span>FeatureId</span> <span class=\"search-result-import-path\">feature-detector/src/features/FeatureId.js</span>",
     "variable"
   ],
   [
-    "feature-detector/src/features/file.js~filefeature",
-    "class/src/features/file.js~FileFeature.html",
-    "<span>FileFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/file.js</span>",
+    "feature-detector/src/features/filefeature.js~filefeature",
+    "class/src/features/FileFeature.js~FileFeature.html",
+    "<span>FileFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/FileFeature.js</span>",
     "class"
   ],
   [
-    "feature-detector/src/features/typed-array.js~typedarrayfeature",
-    "class/src/features/typed-array.js~TypedArrayFeature.html",
-    "<span>TypedArrayFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/typed-array.js</span>",
+    "feature-detector/src/features/typedarrayfeature.js~typedarrayfeature",
+    "class/src/features/TypedArrayFeature.js~TypedArrayFeature.html",
+    "<span>TypedArrayFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/TypedArrayFeature.js</span>",
     "class"
   ],
   [
-    "feature-detector/src/features/webgl.js~webglfeature",
-    "class/src/features/webgl.js~WebGLFeature.html",
-    "<span>WebGLFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/webgl.js</span>",
+    "feature-detector/src/features/webglfeature.js~webglfeature",
+    "class/src/features/WebGLFeature.js~WebGLFeature.html",
+    "<span>WebGLFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/WebGLFeature.js</span>",
     "class"
   ],
   [
-    "feature-detector/src/features/worker.js~workerfeature",
-    "class/src/features/worker.js~WorkerFeature.html",
-    "<span>WorkerFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/worker.js</span>",
+    "feature-detector/src/features/workerfeature.js~workerfeature",
+    "class/src/features/WorkerFeature.js~WorkerFeature.html",
+    "<span>WorkerFeature</span> <span class=\"search-result-import-path\">feature-detector/src/features/WorkerFeature.js</span>",
     "class"
   ],
   [
@@ -379,50 +379,50 @@ window.esdocSearchIndex = [
   ],
   [
     "src/core/detector.js",
-    "file/src/core/detector.js.html",
-    "src/core/detector.js",
+    "file/src/core/Detector.js.html",
+    "src/core/Detector.js",
     "file"
   ],
   [
     "src/core/detector.js~detector#constructor",
-    "class/src/core/detector.js~Detector.html#instance-constructor-constructor",
-    "src/core/detector.js~Detector#constructor",
+    "class/src/core/Detector.js~Detector.html#instance-constructor-constructor",
+    "src/core/Detector.js~Detector#constructor",
     "method"
   ],
   [
     "src/core/detector.js~detector#features",
-    "class/src/core/detector.js~Detector.html#instance-member-features",
-    "src/core/detector.js~Detector#features",
+    "class/src/core/Detector.js~Detector.html#instance-member-features",
+    "src/core/Detector.js~Detector#features",
     "member"
   ],
   [
     "src/core/detector.js~detector#get",
-    "class/src/core/detector.js~Detector.html#instance-method-get",
-    "src/core/detector.js~Detector#get",
+    "class/src/core/Detector.js~Detector.html#instance-method-get",
+    "src/core/Detector.js~Detector#get",
     "method"
   ],
   [
     "src/core/detector.js~detector#getmessage",
-    "class/src/core/detector.js~Detector.html#instance-method-getMessage",
-    "src/core/detector.js~Detector#getMessage",
+    "class/src/core/Detector.js~Detector.html#instance-method-getMessage",
+    "src/core/Detector.js~Detector#getMessage",
     "method"
   ],
   [
     "src/core/detector.js~detector#getmissingfeatures",
-    "class/src/core/detector.js~Detector.html#instance-method-getMissingFeatures",
-    "src/core/detector.js~Detector#getMissingFeatures",
+    "class/src/core/Detector.js~Detector.html#instance-method-getMissingFeatures",
+    "src/core/Detector.js~Detector#getMissingFeatures",
     "method"
   ],
   [
     "src/core/detector.js~detector#getsupportedfeatures",
-    "class/src/core/detector.js~Detector.html#instance-method-getSupportedFeatures",
-    "src/core/detector.js~Detector#getSupportedFeatures",
+    "class/src/core/Detector.js~Detector.html#instance-method-getSupportedFeatures",
+    "src/core/Detector.js~Detector#getSupportedFeatures",
     "method"
   ],
   [
     "src/core/detector.js~detector#set",
-    "class/src/core/detector.js~Detector.html#instance-method-set",
-    "src/core/detector.js~Detector#set",
+    "class/src/core/Detector.js~Detector.html#instance-method-set",
+    "src/core/Detector.js~Detector#set",
     "method"
   ],
   [
@@ -432,81 +432,135 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/features/canvas.js",
-    "file/src/features/canvas.js.html",
-    "src/features/canvas.js",
+    "src/features/canvasfeature.js",
+    "file/src/features/CanvasFeature.js.html",
+    "src/features/CanvasFeature.js",
     "file"
   ],
   [
-    "src/features/canvas.js~canvasfeature#constructor",
-    "class/src/features/canvas.js~CanvasFeature.html#instance-constructor-constructor",
-    "src/features/canvas.js~CanvasFeature#constructor",
+    "src/features/canvasfeature.js~canvasfeature#constructor",
+    "class/src/features/CanvasFeature.js~CanvasFeature.html#instance-constructor-constructor",
+    "src/features/CanvasFeature.js~CanvasFeature#constructor",
     "method"
   ],
   [
-    "src/features/canvas.js~canvasfeature#supported",
-    "class/src/features/canvas.js~CanvasFeature.html#instance-member-supported",
-    "src/features/canvas.js~CanvasFeature#supported",
+    "src/features/canvasfeature.js~canvasfeature#supported",
+    "class/src/features/CanvasFeature.js~CanvasFeature.html#instance-member-supported",
+    "src/features/CanvasFeature.js~CanvasFeature#supported",
     "member"
   ],
   [
-    "src/features/feature-id.js",
-    "file/src/features/feature-id.js.html",
-    "src/features/feature-id.js",
-    "file"
-  ],
-  [
     "src/features/feature.js",
-    "file/src/features/feature.js.html",
-    "src/features/feature.js",
+    "file/src/features/Feature.js.html",
+    "src/features/Feature.js",
     "file"
   ],
   [
     "src/features/feature.js~feature#constructor",
-    "class/src/features/feature.js~Feature.html#instance-constructor-constructor",
-    "src/features/feature.js~Feature#constructor",
+    "class/src/features/Feature.js~Feature.html#instance-constructor-constructor",
+    "src/features/Feature.js~Feature#constructor",
     "method"
   ],
   [
     "src/features/feature.js~feature#name",
-    "class/src/features/feature.js~Feature.html#instance-member-name",
-    "src/features/feature.js~Feature#name",
+    "class/src/features/Feature.js~Feature.html#instance-member-name",
+    "src/features/Feature.js~Feature#name",
     "member"
   ],
   [
     "src/features/feature.js~feature#root",
-    "class/src/features/feature.js~Feature.html#instance-member-root",
-    "src/features/feature.js~Feature#root",
+    "class/src/features/Feature.js~Feature.html#instance-member-root",
+    "src/features/Feature.js~Feature#root",
     "member"
   ],
   [
     "src/features/feature.js~feature#supported",
-    "class/src/features/feature.js~Feature.html#instance-member-supported",
-    "src/features/feature.js~Feature#supported",
+    "class/src/features/Feature.js~Feature.html#instance-member-supported",
+    "src/features/Feature.js~Feature#supported",
     "member"
   ],
   [
     "src/features/feature.js~feature#tostring",
-    "class/src/features/feature.js~Feature.html#instance-method-toString",
-    "src/features/feature.js~Feature#toString",
+    "class/src/features/Feature.js~Feature.html#instance-method-toString",
+    "src/features/Feature.js~Feature#toString",
     "method"
   ],
   [
-    "src/features/file.js",
-    "file/src/features/file.js.html",
-    "src/features/file.js",
+    "src/features/featureid.js",
+    "file/src/features/FeatureId.js.html",
+    "src/features/FeatureId.js",
     "file"
   ],
   [
-    "src/features/file.js~filefeature#constructor",
-    "class/src/features/file.js~FileFeature.html#instance-constructor-constructor",
-    "src/features/file.js~FileFeature#constructor",
+    "src/features/filefeature.js",
+    "file/src/features/FileFeature.js.html",
+    "src/features/FileFeature.js",
+    "file"
+  ],
+  [
+    "src/features/filefeature.js~filefeature#constructor",
+    "class/src/features/FileFeature.js~FileFeature.html#instance-constructor-constructor",
+    "src/features/FileFeature.js~FileFeature#constructor",
     "method"
   ],
   [
-    "src/features/file.js~filefeature#supported",
-    "class/src/features/file.js~FileFeature.html#instance-member-supported",
-    "src/features/file.js~FileFeature#supported",
+    "src/features/filefeature.js~filefeature#supported",
+    "class/src/features/FileFeature.js~FileFeature.html#instance-member-supported",
+    "src/features/FileFeature.js~FileFeature#supported",
+    "member"
+  ],
+  [
+    "src/features/typedarrayfeature.js",
+    "file/src/features/TypedArrayFeature.js.html",
+    "src/features/TypedArrayFeature.js",
+    "file"
+  ],
+  [
+    "src/features/typedarrayfeature.js~typedarrayfeature#constructor",
+    "class/src/features/TypedArrayFeature.js~TypedArrayFeature.html#instance-constructor-constructor",
+    "src/features/TypedArrayFeature.js~TypedArrayFeature#constructor",
+    "method"
+  ],
+  [
+    "src/features/typedarrayfeature.js~typedarrayfeature#supported",
+    "class/src/features/TypedArrayFeature.js~TypedArrayFeature.html#instance-member-supported",
+    "src/features/TypedArrayFeature.js~TypedArrayFeature#supported",
+    "member"
+  ],
+  [
+    "src/features/webglfeature.js",
+    "file/src/features/WebGLFeature.js.html",
+    "src/features/WebGLFeature.js",
+    "file"
+  ],
+  [
+    "src/features/webglfeature.js~webglfeature#constructor",
+    "class/src/features/WebGLFeature.js~WebGLFeature.html#instance-constructor-constructor",
+    "src/features/WebGLFeature.js~WebGLFeature#constructor",
+    "method"
+  ],
+  [
+    "src/features/webglfeature.js~webglfeature#supported",
+    "class/src/features/WebGLFeature.js~WebGLFeature.html#instance-member-supported",
+    "src/features/WebGLFeature.js~WebGLFeature#supported",
+    "member"
+  ],
+  [
+    "src/features/workerfeature.js",
+    "file/src/features/WorkerFeature.js.html",
+    "src/features/WorkerFeature.js",
+    "file"
+  ],
+  [
+    "src/features/workerfeature.js~workerfeature#constructor",
+    "class/src/features/WorkerFeature.js~WorkerFeature.html#instance-constructor-constructor",
+    "src/features/WorkerFeature.js~WorkerFeature#constructor",
+    "method"
+  ],
+  [
+    "src/features/workerfeature.js~workerfeature#supported",
+    "class/src/features/WorkerFeature.js~WorkerFeature.html#instance-member-supported",
+    "src/features/WorkerFeature.js~WorkerFeature#supported",
     "member"
   ],
   [
@@ -514,60 +568,6 @@ window.esdocSearchIndex = [
     "file/src/features/index.js.html",
     "src/features/index.js",
     "file"
-  ],
-  [
-    "src/features/typed-array.js",
-    "file/src/features/typed-array.js.html",
-    "src/features/typed-array.js",
-    "file"
-  ],
-  [
-    "src/features/typed-array.js~typedarrayfeature#constructor",
-    "class/src/features/typed-array.js~TypedArrayFeature.html#instance-constructor-constructor",
-    "src/features/typed-array.js~TypedArrayFeature#constructor",
-    "method"
-  ],
-  [
-    "src/features/typed-array.js~typedarrayfeature#supported",
-    "class/src/features/typed-array.js~TypedArrayFeature.html#instance-member-supported",
-    "src/features/typed-array.js~TypedArrayFeature#supported",
-    "member"
-  ],
-  [
-    "src/features/webgl.js",
-    "file/src/features/webgl.js.html",
-    "src/features/webgl.js",
-    "file"
-  ],
-  [
-    "src/features/webgl.js~webglfeature#constructor",
-    "class/src/features/webgl.js~WebGLFeature.html#instance-constructor-constructor",
-    "src/features/webgl.js~WebGLFeature#constructor",
-    "method"
-  ],
-  [
-    "src/features/webgl.js~webglfeature#supported",
-    "class/src/features/webgl.js~WebGLFeature.html#instance-member-supported",
-    "src/features/webgl.js~WebGLFeature#supported",
-    "member"
-  ],
-  [
-    "src/features/worker.js",
-    "file/src/features/worker.js.html",
-    "src/features/worker.js",
-    "file"
-  ],
-  [
-    "src/features/worker.js~workerfeature#constructor",
-    "class/src/features/worker.js~WorkerFeature.html#instance-constructor-constructor",
-    "src/features/worker.js~WorkerFeature#constructor",
-    "method"
-  ],
-  [
-    "src/features/worker.js~workerfeature#supported",
-    "class/src/features/worker.js~WorkerFeature.html#instance-member-supported",
-    "src/features/worker.js~WorkerFeature#supported",
-    "member"
   ],
   [
     "src/index.js",

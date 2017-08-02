@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">Feature | API Document</title>
+  <title data-ice="title">CanvasFeature | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -45,24 +45,24 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Feature} from &apos;<span><a href="file/src/features/Feature.js.html#lineNumber5">feature-detector/src/features/Feature.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {CanvasFeature} from &apos;<span><a href="file/src/features/CanvasFeature.js.html#lineNumber7">feature-detector/src/features/CanvasFeature.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/features/Feature.js.html#lineNumber5">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/features/CanvasFeature.js.html#lineNumber7">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">Feature</h1>
+  <h1 data-ice="name">CanvasFeature</h1>
 
   
 
   
   
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/src/features/Feature.js~Feature.html">Feature</a></span> &#x2192; CanvasFeature</div></div>
   
-  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/src/features/CanvasFeature.js~CanvasFeature.html">CanvasFeature</a></span>, <span><a href="class/src/features/FileFeature.js~FileFeature.html">FileFeature</a></span>, <span><a href="class/src/features/TypedArrayFeature.js~TypedArrayFeature.html">TypedArrayFeature</a></span>, <span><a href="class/src/features/WebGLFeature.js~WebGLFeature.html">WebGLFeature</a></span>, <span><a href="class/src/features/WorkerFeature.js~WorkerFeature.html">WorkerFeature</a></span></div></div>
   
   
   
@@ -71,7 +71,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>An abstract feature.</p>
+  <div class="description" data-ice="description"><p>The canvas feature.</p>
 </div>
 
   
@@ -100,13 +100,13 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="class/src/features/Feature.js~Feature.html#instance-constructor-constructor">constructor</a></span></span><span data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
+           <span data-ice="name"><span><a href="class/src/features/CanvasFeature.js~CanvasFeature.html#instance-constructor-constructor">constructor</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Constructs a new feature.</p>
+        <div data-ice="description"><p>Constructs a new Canvas feature.</p>
 </div>
       </div>
     </td>
@@ -120,6 +120,41 @@
 </div>
 <div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+           <span data-ice="name"><span><a href="class/src/features/CanvasFeature.js~CanvasFeature.html#instance-member-supported">supported</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Indicates whether the Canvas feature is supported.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="inherited-summary" data-ice="inheritedSummary"><h2>Inherited Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3"><span class="toggle closed"></span> From class <span><a href="class/src/features/Feature.js~Feature.html">Feature</a></span></td></tr></thead>
   <tbody>
   
   <tr data-ice="target">
@@ -174,13 +209,7 @@
       
     </td>
   </tr>
-</tbody>
-</table>
-<table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Protected Members</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
+<tr data-ice="target">
     <td>
       <span class="access" data-ice="access">protected</span>
       
@@ -206,14 +235,7 @@
       
     </td>
   </tr>
-</tbody>
-</table>
-</div>
-<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
+<tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
       
@@ -245,8 +267,6 @@
 
 
 
-
-
 <div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
 
 <div class="detail" data-ice="detail">
@@ -256,41 +276,23 @@
     
     
     
-    <span data-ice="name">constructor</span><span data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
+    <span data-ice="name">constructor</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/features/Feature.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/features/CanvasFeature.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Constructs a new feature.</p>
+  <div data-ice="description"><p>Constructs a new Canvas feature.</p>
 </div>
 
-  
+  <div data-ice="override"><h4>Override:</h4><span><a href="class/src/features/Feature.js~Feature.html#instance-constructor-constructor">Feature#constructor</a></span></div>
 
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">name</td>
-      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: null</li></ul></td>
-      <td data-ice="description"><p>The name of the feature.</p>
-</td>
-    </tr>
-</tbody>
-  </table>
-</div>
+  <div data-ice="properties">
 </div>
 
   
@@ -312,47 +314,6 @@
 <div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-name">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">name</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/features/Feature.js.html#lineNumber21">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>The name of this feature.</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-member-supported">
     <span class="access" data-ice="access">public</span>
     
@@ -363,68 +324,17 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/features/Feature.js.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/features/CanvasFeature.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>Indicates whether this feature is supported.</p>
+  <div data-ice="description"><p>Indicates whether the Canvas feature is supported.</p>
 </div>
 
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<h2 data-ice="title">Protected Members</h2>
-
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-root">
-    <span class="access" data-ice="access">protected</span>
-    
-    
-    
-    
-    <span data-ice="name">root</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/features/Feature.js.html#lineNumber37">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>The global scope of the current environment.</p>
-<p>This field assumes one of the following values depending on the
-environment:</p>
-<ul>
-<li>browser: window</li>
-<li>worker: self</li>
-<li>node.js: global</li>
-<li>unknown: this</li>
-</ul>
-</div>
-
-  
+  <div data-ice="override"><h4>Override:</h4><span><a href="class/src/features/Feature.js~Feature.html#instance-member-supported">Feature#supported</a></span></div>
 
   <div data-ice="properties">
 </div>
@@ -445,61 +355,7 @@ environment:</p>
   
 </div>
 </div>
-<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-toString">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">toString</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/features/Feature.js.html#lineNumber57">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>Returns a string representation of this object.</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tr>
-        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
-        <td class="return-desc" data-ice="returnDescription"><p>The string representation.</p>
-</td>
-      </tr>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-</div>
 </div>
 
 <footer class="footer">
