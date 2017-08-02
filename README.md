@@ -56,7 +56,7 @@ export class MyFeature extends Feature {
 
 ```javascript
 import { Detector } from "feature-detector";
-import { MyFeature } from "./my-feature.js";
+import { MyFeature } from "./MyFeature.js";
 
 const detector = new Detector();
 const MY_ID = "my-feature";
