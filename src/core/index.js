@@ -4,4 +4,4 @@
  * @module core
  */
 
-export { Detector } from "./detector.js";
+export { Detector } from "./Detector.js";
