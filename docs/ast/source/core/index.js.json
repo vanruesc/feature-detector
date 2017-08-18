@@ -61,8 +61,8 @@
       ],
       "source": {
         "type": "Literal",
-        "value": "./detector.js",
-        "raw": "\"./detector.js\"",
+        "value": "./Detector.js",
+        "raw": "\"./Detector.js\"",
         "range": [
           79,
           94

@@ -291,7 +291,7 @@
     "access": null,
     "description": null,
     "lineNumber": 7,
-    "content": "/**\r\n * Core components.\r\n *\r\n * @module core\r\n */\r\n\r\nexport { Detector } from \"./detector.js\";\r\n"
+    "content": "/**\r\n * Core components.\r\n *\r\n * @module core\r\n */\r\n\r\nexport { Detector } from \"./Detector.js\";\r\n"
   },
   {
     "__docId__": 11,

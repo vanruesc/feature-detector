@@ -1,6 +1,6 @@
 {
 	"name": "feature-detector",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "A tool for detecting environment features.",
 	"homepage": "https://github.com/vanruesc/feature-detector",
 	"main": "build/feature-detector.js",
