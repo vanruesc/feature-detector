@@ -5,6 +5,7 @@
 	"homepage": "https://github.com/vanruesc/feature-detector",
 	"main": "build/feature-detector.js",
 	"module": "src/index.js",
+	"sideEffects": false,
 	"license": "Zlib",
 
 	"keywords": [
